@@ -1,5 +1,5 @@
-# Bank Codes
+# Banks
 
 |ID|Name|Description|
 |----|----|----|
-|1000|Canara Bank||
+|5000|Canara Bank||

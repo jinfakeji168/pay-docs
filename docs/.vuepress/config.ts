@@ -1,4 +1,5 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
+import { navbar, sidebar } from './configs'
 
 export default defineUserConfig({
     base: '/',
@@ -8,6 +9,10 @@ export default defineUserConfig({
             lang: 'en-US',
             title: 'Pay Docs',
             description: ' '
+        },
+        '/zh/': {
+            lang: 'zh-CN',
+            title: 'Pay Docs'
         }
     },
 
@@ -16,28 +21,16 @@ export default defineUserConfig({
 
         locales: {
             '/': {
-                sidebar: [
-                    '/README.md',
-                    '/signature.md',
-                    {
-                        text: 'API Reference',
-                        children: [
-                            '/trade-api.md',
-                            '/transfer-api.md',
-                        ],
-                        collapsible: true,
-                    },
-                    {
-                        text: 'Notification',
-                        children: [
-                            '/trade-notification.md',
-                            '/transfer-notification.md',
-                        ],
-                        collapsible: true,
-                    },
-                    '/channels.md',
-                    '/bank-codes.md',
-                ]
+                navbar: navbar.en,
+                sidebar: sidebar.en,
+            },
+            '/zh/': {
+                navbar: navbar.zh,
+                sidebar: sidebar.zh,
+
+                selectLanguageName: '简体中文',
+                selectLanguageText: '选择语言',
+                selectLanguageAriaLabel: '选择语言'
             }
         }
     }),

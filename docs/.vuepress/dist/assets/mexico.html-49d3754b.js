@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-1d72b6c5","path":"/transfers/extra/mexico.html","title":"墨西哥","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"transfers/extra/mexico.md"}');export{e as data};

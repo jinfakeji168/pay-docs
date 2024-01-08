@@ -1,12 +1,21 @@
+# 大洋支付商户文档
 
-```sh
+### 安装依赖
+
+```shell
 npm i
 ```
 
-```sh
+### 开发模式
+
+```shell
 npm run docs:dev
 ```
 
-```sh
+### 编译
+
+```shell
 npm run docs:build
 ```
+
+编译输出目录： `/path/to/docs/.vuepress/dist`

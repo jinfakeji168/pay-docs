@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-c57caf0c","path":"/payments/notifications.html","title":"代收通知","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"通知参数","slug":"通知参数","link":"#通知参数","children":[]},{"level":3,"title":"商户应答","slug":"商户应答","link":"#商户应答","children":[]}],"git":{},"filePathRelative":"payments/notifications.md"}');export{t as data};

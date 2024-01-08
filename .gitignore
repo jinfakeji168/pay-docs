@@ -1,9 +1,5 @@
 .idea
 .vscode
 node_modules
-
-docs/.vuepress/.temp
-docs/.vuepress/.cache
-docs/.vuepress/dist
-
-.DS_Store
+.temp
+.cache

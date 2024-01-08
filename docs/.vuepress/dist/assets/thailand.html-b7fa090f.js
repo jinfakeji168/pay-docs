@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-7eb480f3","path":"/transfers/extra/thailand.html","title":"泰国","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"transfers/extra/thailand.md"}');export{t as data};

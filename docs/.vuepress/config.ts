@@ -13,6 +13,9 @@ export default defineUserConfig({
     },
 
     theme: defaultTheme({
+        editLink: false,
+        contributors: false,
+
         locales: {
             '/' : {
                 navbar: navbar,

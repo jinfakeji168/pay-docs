@@ -2,14 +2,14 @@
 
 ## 状态说明
 
-| HTTP Status                | 说明                  |
+| HTTP Status Cod            | 说明                  |
 |----------------------------|---------------------|
 | 200 OK	                 | 查询成功                |
 | 201 Created	             | 下单成功		              |
 | 403 Forbidden		         | 签名错误                |
 | 404 Not Found	             | 订单未找到               |
 | 422 Unprocessable Content	 | 表单验证不通过（提交的参数未通过验证） |
-| 429 Too Many Requests	     | 限流（多次提交“恶意”参数会被限流）       |
+| 429 Too Many Requests	     | 限流（通常不会响应这个错误）       |
 | 500 Internal Server Error  | 服务器错误               |
 
 ## 成功示例

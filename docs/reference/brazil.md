@@ -25,14 +25,15 @@ curl -X POST \
   }'
 ```
 
-```json{4,6}
+```json{4,6,8}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
   "amount": "100.00",
   "trade_no": "100000012023072123389872",
   "out_trade_no": "20230101000000",
   "payment_url": "https://example.com/cashier",
-  "created_at": "2023-01-01T01:01:01.000000Z"
+  "created_at": "2023-01-01T01:01:01.000000Z",
+  "qr_code_text": ""
 }
 ```
 

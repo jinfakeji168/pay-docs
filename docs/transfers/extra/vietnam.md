@@ -62,6 +62,8 @@
 | SCB   | Sai Gon Joint Stock Commercial Bank |
 | EIB   | Eximbank                            |
 | SHBVN | Shinhan Bank Vietnam                |
+| Oceanbank | Oceanbank                |
+| NAB | NAM A bank                |
 
 
 ## MoMo

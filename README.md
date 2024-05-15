@@ -1,21 +1,21 @@
-# 大洋支付商户文档
+# Docs for DaYangPay merchants
 
-### 安装依赖
+### Dependencies
 
 ```shell
 npm i
 ```
 
-### 开发模式
+### Dev
 
 ```shell
 npm run docs:dev
 ```
 
-### 编译
+### Build
 
 ```shell
 npm run docs:build
 ```
 
-编译输出目录： `/path/to/docs/.vuepress/dist`
+output path: `/path/to/docs/.vuepress/dist`

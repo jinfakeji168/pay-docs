@@ -29,6 +29,7 @@ export const navbarZh: NavbarConfig = [
         '/reference/mexico.md',
         '/reference/philippines.md',
         '/reference/thailand.md',
+        '/reference/ukraine.md',
         '/reference/vietnam.md',
     ],
   },

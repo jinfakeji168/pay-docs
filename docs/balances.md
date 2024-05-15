@@ -13,13 +13,11 @@
 
 示例：
 
-`https://api.example.com/api/v1/user/balances?client_key=YOUR_CLIENT_KEY&signature=YOUR_SIGNATURE`
-
-```json
-{
-  "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-  "signature": ""
-}
+```shell
+curl -X GET \
+  https://example.com/api/v1/user/balances?client_key=YOUR_CLIENT_KEY&signature=YOUR_SIGNATURE \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json"
 ```
 
 ### 响应参数

@@ -28,13 +28,13 @@ curl -X POST \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
-    "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
+    "client_key": "YOUR_CLIENT_KEY",
     "amount": "100.00",
     "channel_id": "1000",
     "out_trade_no": "20230101000000",
     "notify_url": "https://example.com/notify/url",
     "extra": "{\"foo\":\"bar\"}",
-    "signature": ""
+    "signature": "YOUR_SIGNATURE"
   }'
 ```
 

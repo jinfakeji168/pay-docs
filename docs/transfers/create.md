@@ -25,18 +25,22 @@
 
 示例：
 
-```json
-{
-  "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-  "amount": "100",
-  "channel_id": "5003",
-  "out_transfer_no": "20230101000000",
-  "notify_url": "https://example.com/notify/url",
-  "payee_account": "1234567890",
-  "payee_name": "Sammy Shark",
-  "extra": "{\"bank_code\":\"BANK\"}",
-  "signature": ""
-}
+```shell
+curl -X POST \
+  https://example.com/api/v1/transfers \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_key": "YOUR_CLIENT_KEY",
+    "amount": "100",
+    "channel_id": "5003",
+    "out_transfer_no": "20230101000000",
+    "notify_url": "https://example.com/notify/url",
+    "payee_account": "1234567890",
+    "payee_name": "Sammy Shark",
+    "extra": "{\"bank_code\":\"BANK\"}",
+    "signature": "YOUR_SIGNATURE"
+  }'
 ```
 
 ### 响应参数

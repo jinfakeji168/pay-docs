@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-ce3ef81e","path":"/transfers/notifications.html","title":"代付通知","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"通知参数","slug":"通知参数","link":"#通知参数","children":[]},{"level":3,"title":"商户应答","slug":"商户应答","link":"#商户应答","children":[]}],"git":{},"filePathRelative":"transfers/notifications.md"}');export{e as data};

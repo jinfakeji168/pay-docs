@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-71097b00","path":"/responses.html","title":"响应","lang":"en-US","frontmatter":{},"headers":[{"level":3,"title":"成功示例","slug":"成功示例","link":"#成功示例","children":[]},{"level":3,"title":"错误示例","slug":"错误示例","link":"#错误示例","children":[]}],"git":{},"filePathRelative":"responses.md"}');export{e as data};

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-bacffc40","path":"/payments/channels.html","title":"代收通道","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"payments/channels.md"}');export{e as data};

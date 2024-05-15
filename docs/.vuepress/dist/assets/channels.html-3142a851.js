@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-5afd9809","path":"/transfers/channels.html","title":"代付通道","lang":"en-US","frontmatter":{},"headers":[],"git":{},"filePathRelative":"transfers/channels.md"}');export{e as data};

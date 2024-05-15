@@ -29,7 +29,7 @@ Content-Type: `application/json`
 
 代付成功：
 
-```shell
+```shell{14}
 curl -X POST \
   https://your-domain-name.com/webhook-url \
   -H "Accept: application/json" \
@@ -49,7 +49,7 @@ curl -X POST \
 
 代付失败：
 
-```shell
+```shell{14}
 curl -X POST \
   https://your-domain-name.com/webhook-url \
   -H "Accept: application/json" \

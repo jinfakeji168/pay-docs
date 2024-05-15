@@ -1,8 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { sidebar } from './sidebar';
-import { navbar } from './navbar';
+import { navbarZh, sidebarZh  } from './configs/index';
 
 export default defineUserConfig({
     base: '/',
@@ -11,19 +10,23 @@ export default defineUserConfig({
         '/': {
             lang: 'zh-CN',
             title: '大洋支付',
+            description: '商户接口文档',
         },
     },
 
     bundler: viteBundler(),
     theme: defaultTheme({
+        logo: 'https://vuejs.press/images/hero.png',
         editLink: false,
         contributors: false,
 
+        colorMode: 'dark',
+
         locales: {
             '/' : {
-                navbar: navbar,
+                navbar: navbarZh,
 
-                sidebar: sidebar,
+                sidebar: sidebarZh,
                 //sidebarDepth: 1,
             },
         },

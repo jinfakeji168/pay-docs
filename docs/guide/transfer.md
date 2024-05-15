@@ -22,6 +22,10 @@ POST `/api/v1/transfers`
 | extra           | string | 特殊的 | 是    | 业务参数。<br>必填时必须是 `JSON` 字符串。 |                   
 | signature       | string | 是   | 否    | 签名值。                        |                   
 
+::: warning NOTE
+`extra` 参数说明：您可以理解为 `required_if`，也就是说特定的场景为必填，且需提交的参数可能不一样，请参考不同国家代付下单接口的业务参数。例：越南银行代付，`extra.bank_code` 必填。
+:::
+
 #### 请求示例
 
 ```shell{8,13}

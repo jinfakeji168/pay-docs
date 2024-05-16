@@ -82,12 +82,12 @@ curl -X GET \
 
 | 参数           | 必填 | 说明                            |  
 |--------------|----|-------------------------------|
-| account_type | 是  | 账户类型。一共有5种。                   |
+| account_type | 是  | 账户类型。一共有5种：`EMAIL` `PHONE` `CPF` `CNPJ` `EVP`。|
 | id_number    | 是  | 证件号码。个人提交 `CPF`，公司提交 `CNPJ`。  |    
 
 `extra.account_type`
 
-| 类型    | 说明                |
+| 类型    | 说明             |
 |-------|-------------------|
 | EMAIL | 邮箱格式              |
 | PHONE | 11位数(可加前缀 `+55` ) |
@@ -111,7 +111,7 @@ curl -X POST \
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
     "extra": "{\"account_type\":\"CPF\", \"id_number\":\"1234567890\"}",
-    "signature": ""
+    "signature": "SIGNED_STRING"
   }'
 ```
 
@@ -121,7 +121,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5001",
+  "channel_id": "5003",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -142,7 +142,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5001",
+  "channel_id": "5003",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",

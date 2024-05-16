@@ -96,7 +96,7 @@ curl -X POST \
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
     "extra": "{\"bank_code\":\"BANK\"}",
-    "signature": ""
+    "signature": "SIGNED_STRING"
   }'
 ```
 
@@ -106,7 +106,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5001",
+  "channel_id": "5011",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -127,7 +127,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5001",
+  "channel_id": "5011",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",

@@ -88,7 +88,7 @@ curl -X POST \
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
-    "signature": ""
+    "signature": "SIGNED_STRING"
   }'
 ```
 

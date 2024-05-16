@@ -49,7 +49,7 @@ curl -X POST \
 
 代付失败：
 
-```shell{11,14}
+```shell{11,13,14}
 curl -X POST \
   https://your-domain.com/webhook \
   -H "Accept: application/json" \
@@ -62,7 +62,7 @@ curl -X POST \
     "transfer_no": "100000012023072123389872",
     "out_transfer_no": "20230101000000",
     "created_at": "2023-01-01T01:01:01.000000Z",
-    "message": "Insufficient balance",
+    "message": "Failed.",
     "status": 3
   }'
 ```

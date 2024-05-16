@@ -19,6 +19,7 @@ export default defineUserConfig({
         logo: 'https://vuejs.press/images/hero.png',
         editLink: false,
         contributors: false,
+        lastUpdated: false,
 
         colorMode: 'dark',
 

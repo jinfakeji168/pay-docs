@@ -10,17 +10,17 @@ POST `/api/v1/transfers`
 
 #### 包体参数 <Badge type="tip" text="Body" vertical="top" />
 
-| 参数              | 类型     | 必填  | 参与签名 | 说明                          | 
-|-----------------|--------|-----|------|-----------------------------|
-| client_key      | string | 是   | 是    | 商户标识。由大洋支付颁发。               | 
-| amount          | string | 是   | 是    | 代付金额。单位：`元`。                |                   
-| channel_id      | string | 是   | 是    | 代付通道ID。                     | 
-| out_transfer_no | string | 是   | 是    | 商户代付订单号。<br>最大长度 64，必须是唯一的。 |                   
-| notify_url      | string | 是   | 是    | 商户接收通知的网址。                  |                   
-| payee_account   | string | 是   | 是    | 收款人账号。                      |                   
-| payee_name      | string | 是   | 是    | 收款人姓名。                      |                   
-| extra           | string | 特殊的 | 是    | 业务参数。<br>必填时必须是 `JSON` 字符串。 |                   
-| signature       | string | 是   | 否    | 签名值。                        |                   
+| 参数              | 类型     | 必填  | 参与签名 | 说明                                                          | 
+|-----------------|--------|-----|------|-------------------------------------------------------------|
+| client_key      | string | 是   | 是    | 商户标识。由大洋支付颁发。                                               | 
+| amount          | string | 是   | 是    | 代付金额。单位：`元`。                                                |                   
+| channel_id      | string | 是   | 是    | 代付通道ID。                                                     | 
+| out_transfer_no | string | 是   | 是    | 商户代付订单号。<br><span style="color: red">最大长度 64，必须是唯一的</span>。 |                   
+| notify_url      | string | 是   | 是    | 商户接收通知的网址。                                                  |                   
+| payee_account   | string | 是   | 是    | 收款人账号。                                                      |                   
+| payee_name      | string | 是   | 是    | 收款人姓名。                                                      |                   
+| extra           | string | 特殊的 | 是    | 业务参数。<br>必填时必须是 `JSON` 字符串。                                 |                   
+| signature       | string | 是   | 否    | 签名值。                                                        |                   
 
 ::: warning NOTE
 `extra` 参数说明：您可以理解为 `required_if`，也就是说特定的场景为必填，且需提交的参数可能不一样，请参考不同国家代付下单接口的业务参数。例：越南银行代付，`extra.bank_code` 必填。

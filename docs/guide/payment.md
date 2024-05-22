@@ -10,14 +10,14 @@ POST `/api/v1/trades`
 
 ### 包体参数 <Badge type="tip" text="Body" vertical="top" />
 
-| 参数           | 类型     | 必填  | 参与签名 | 说明                          |                   
-|--------------|--------|-----|------|-----------------------------|
-| client_key   | string | 是   | 是    | 商户标识。由大洋支付颁发。               |                   
-| amount       | string | 是   | 是    | 代收金额。单位：`元`。                |                   
-| channel_id   | string | 是   | 是    | 代收通道ID。                     |
-| out_trade_no | string | 是   | 是    | 商户代收订单号。<br>最大长度 64，必须是唯一的。 |                   
-| notify_url   | string | 是   | 是    | 商户接收通知的网址。                  |                   |              
-| signature    | string | 是   | 否    | 签名值。                        |                   
+| 参数           | 类型     | 必填  | 参与签名 | 说明                                                          |                   
+|--------------|--------|-----|------|-------------------------------------------------------------|
+| client_key   | string | 是   | 是    | 商户标识。由大洋支付颁发。                                               |                   
+| amount       | string | 是   | 是    | 代收金额。单位：`元`。                                                |                   
+| channel_id   | string | 是   | 是    | 代收通道ID。                                                     |
+| out_trade_no | string | 是   | 是    | 商户代收订单号。<br><span style="color: red">最大长度 64，必须是唯一的。</span> |                   
+| notify_url   | string | 是   | 是    | 商户接收通知的网址。                                                  |                   |              
+| signature    | string | 是   | 否    | 签名值。                                                        |                   
 
 ### 请求示例
 

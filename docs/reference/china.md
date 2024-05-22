@@ -9,7 +9,7 @@
 ### 代付通道
 
 | ID   | 说明 |
-|------|-----|
+|------|----|
 | 5031 | 银行 |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />

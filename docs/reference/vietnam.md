@@ -4,9 +4,9 @@
 
 ### 代收通道
 
-| ID   | 说明 |
-|------|-----|
-| 1001 | 银行 |
+| ID   | 说明   |
+|------|------|
+| 1001 | 银行   |
 | 1002 | MoMo |
 | 1024 | Zalo |
 
@@ -78,9 +78,9 @@ curl -X GET \
 
 `extra`
 
-| 参数        | 必填 | 说明   |
-|-----------|----|------|
-| bank_code | 是  | 银行编码 |
+| 参数        | 必填 | 说明            |
+|-----------|----|---------------|
+| bank_code | 是  | [银行编码](#银行编码) |
 
 ::: warning NOTE
 只有 `银行` 需要提交 `extra`，`MoMo` 或 `Zalo` 不需求提交。
@@ -186,37 +186,37 @@ curl -X GET \
 
 `extra.bank_code`
 
-| 银行编码  | 银行名称                                |
-|-------|-------------------------------------|
-| TCB   | Techcombank                         |
-| VPB   | VPBank                              |
-| VIB   | VIB                                 |
-| BIDV  | BIDV                                |
-| MBB   | MB                                  |
-| TPB   | TPBank                              |
-| STB   | Sacombank                           |
-| VCB   | Vietcombank                         |
-| ACB   | ACB                                 |
-| AGR   | Agribank                            |
-| CTG   | Vietinbank                          |
-| SEAB  | SeAbank                             |
-| HDB   | HDBank                              |
-| MSB   | MSB                                 |
-| OCB   | OCB                                 |
-| PVC   | PVcomBank                           |
-| KLB   | Kien Long Bank                      |
-| SHB   | SHB                                 |
-| ABB   | An Binh Commercial Joint Stock Bank |
-| DAB   | DongA Bank                          |
-| BAB   | BacAbank                            |
-| LPB   | LPBank                              |
-| BVB   | BaoVietBank                         |
-| VBB   | Vietbank                            |
-| VCCB  | BVBank                              |
-| SGB   | Saigonbank                          |
-| PGB   | PG Bank                             |
-| SCB   | Sai Gon Joint Stock Commercial Bank |
-| EIB   | Eximbank                            |
-| SHBVN | Shinhan Bank Vietnam                |
-| Oceanbank | Oceanbank                |
-| NAB | NAM A bank                |
+| 银行编码      | 银行名称                                |
+|-----------|-------------------------------------|
+| TCB       | Techcombank                         |
+| VPB       | VPBank                              |
+| VIB       | VIB                                 |
+| BIDV      | BIDV                                |
+| MBB       | MB                                  |
+| TPB       | TPBank                              |
+| STB       | Sacombank                           |
+| VCB       | Vietcombank                         |
+| ACB       | ACB                                 |
+| AGR       | Agribank                            |
+| CTG       | Vietinbank                          |
+| SEAB      | SeAbank                             |
+| HDB       | HDBank                              |
+| MSB       | MSB                                 |
+| OCB       | OCB                                 |
+| PVC       | PVcomBank                           |
+| KLB       | Kien Long Bank                      |
+| SHB       | SHB                                 |
+| ABB       | An Binh Commercial Joint Stock Bank |
+| DAB       | DongA Bank                          |
+| BAB       | BacAbank                            |
+| LPB       | LPBank                              |
+| BVB       | BaoVietBank                         |
+| VBB       | Vietbank                            |
+| VCCB      | BVBank                              |
+| SGB       | Saigonbank                          |
+| PGB       | PG Bank                             |
+| SCB       | Sai Gon Joint Stock Commercial Bank |
+| EIB       | Eximbank                            |
+| SHBVN     | Shinhan Bank Vietnam                |
+| Oceanbank | Oceanbank                           |
+| NAB       | NAM A bank                          |

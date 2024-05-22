@@ -4,9 +4,9 @@ POST `/api/v1/trades`
 
 ### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |       
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| 参数     | 说明                      |       
+|--------|-------------------------|
+| Accept | 请设置为 `application/json` | 
 
 ### 包体参数 <Badge type="tip" text="Body" vertical="top" />
 
@@ -37,14 +37,14 @@ curl -X POST \
 ```
 
 ### 响应参数
-| 参数           | 类型     | 说明             | 
-|--------------|--------|----------------|
-| client_key   | string | 商户标识。由大洋支付颁发。  |
-| amount       | string | 代收金额。          |
-| trade_no     | string | 代收订单号。         |
-| out_trade_no | string | 商户代收订单号。       |
-| payment_url  | string | 支付网址。          |
-| created_at   | string | 下单时间。UTC 时间。 |
+| 参数           | 类型     | 说明            | 
+|--------------|--------|---------------|
+| client_key   | string | 商户标识。由大洋支付颁发。 |
+| amount       | string | 代收金额。         |
+| trade_no     | string | 代收订单号。        |
+| out_trade_no | string | 商户代收订单号。      |
+| payment_url  | string | 支付网址。         |
+| created_at   | string | 下单时间。UTC 时间。  |
 
 ### 响应示例
 

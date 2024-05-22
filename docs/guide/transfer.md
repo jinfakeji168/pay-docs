@@ -47,16 +47,16 @@ curl -X POST \
 ```
 
 ### 响应参数
-| 参数              | 类型     | 说明             | 
-|-----------------|--------|----------------|
-| client_key      | string | 商户标识。由大洋支付颁发。  |
-| amount          | string | 代付金额。          |
-| transfer_no     | string | 代付订单号。         |
-| out_transfer_no | string | 商户代付订单号。       |
-| channel_id      | string | 代付通道ID。        |
-| payee_account   | string | 收款人账号。         |
-| payee_name      | string | 收款人姓名。         |
-| created_at      | string | 下单时间。UTC+0 时间。 |
+| 参数              | 类型     | 说明            | 
+|-----------------|--------|---------------|
+| client_key      | string | 商户标识。由大洋支付颁发。 |
+| amount          | string | 代付金额。         |
+| transfer_no     | string | 代付订单号。        |
+| out_transfer_no | string | 商户代付订单号。      |
+| channel_id      | string | 代付通道ID。       |
+| payee_account   | string | 收款人账号。        |
+| payee_name      | string | 收款人姓名。        |
+| created_at      | string | 下单时间。UTC 时间。  |
 
 #### 响应示例
 

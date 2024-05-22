@@ -39,8 +39,8 @@ curl -X GET \
 | channel_id      | string  | 代付通道ID。                                |
 | payee_account   | string  | 收款人账号。                                 |
 | payee_name      | string  | 收款人姓名。                                 |
-| created_at      | string  | 下单时间。UTC+0 时间。                         |
-| paid_at         | string  | 付款时间。UTC+0 时间。未付款订单响应 `null` 。         |
+| created_at      | string  | 下单时间。UTC 时间。                           |
+| paid_at         | string  | 付款时间。UTC 时间。未付款订单响应 `null` 。           |
 | status          | integer | 订单状态。`0: 待处理, 1: 代付成功, 2: 处理中, 3:代付失败` |
 
 ### 响应示例

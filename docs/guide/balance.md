@@ -4,9 +4,9 @@ GET `/api/v1/user/balances`
 
 ### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |       
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| 参数     | 说明                      |       
+|--------|-------------------------|
+| Accept | 请设置为 `application/json` | 
 
 ### 查询参数 <Badge type="tip" text="Query" vertical="top" />
 

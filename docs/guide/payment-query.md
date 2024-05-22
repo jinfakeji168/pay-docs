@@ -37,8 +37,8 @@ curl -X GET \
 | trade_no     | string  | 代收订单号。                         |
 | out_trade_no | string  | 商户代收订单号。                       |
 | payment_url  | string  | 支付网址。                          |
-| created_at   | string  | 下单时间。UTC+0 时间。                 |
-| paid_at      | string  | 付款时间。UTC+0 时间。未付款订单响应 `null` 。 |
+| created_at   | string  | 下单时间。UTC 时间。                   |
+| paid_at      | string  | 付款时间。UTC 时间。未付款订单响应 `null` 。   |
 | status       | integer | 订单状态。 `0: 待支付, 1: 已支付, 2: 已关闭` |
 
 

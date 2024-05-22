@@ -18,4 +18,4 @@ npm run docs:dev
 npm run docs:build
 ```
 
-output path: `/path/to/docs/.vuepress/dist`
+output path: `pay-docs/docs/.vuepress/dist`

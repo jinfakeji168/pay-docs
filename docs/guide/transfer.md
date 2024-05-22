@@ -50,7 +50,7 @@ curl -X POST \
 | 参数              | 类型     | 说明            | 
 |-----------------|--------|---------------|
 | client_key      | string | 商户标识。由大洋支付颁发。 |
-| amount          | string | 代付金额。         |
+| amount          | string | 代付金额。单位：`元`。  |
 | transfer_no     | string | 代付订单号。        |
 | out_transfer_no | string | 商户代付订单号。      |
 | channel_id      | string | 代付通道ID。       |

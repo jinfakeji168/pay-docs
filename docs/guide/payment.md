@@ -40,7 +40,7 @@ curl -X POST \
 | 参数           | 类型     | 说明            | 
 |--------------|--------|---------------|
 | client_key   | string | 商户标识。由大洋支付颁发。 |
-| amount       | string | 代收金额。         |
+| amount       | string | 代收金额。单位：`元`。  |
 | trade_no     | string | 代收订单号。        |
 | out_trade_no | string | 商户代收订单号。      |
 | payment_url  | string | 支付网址。         |

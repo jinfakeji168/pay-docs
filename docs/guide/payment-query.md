@@ -4,14 +4,14 @@ GET `/api/v1/trades/:trade`
 
 ### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |        
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| 参数     | 说明                      |        
+|--------|-------------------------|
+| Accept | 请设置为 `application/json` | 
 
 ### 路径参数 <Badge type="tip" text="Path" vertical="top" />
 
-| 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
-|------------|--------|----|------|---------------|
+| 参数    | 类型     | 必填 | 参与签名 | 说明              |                  
+|-------|--------|----|------|-----------------|
 | trade | string | 是  | 否    | 大洋支付订单号 或 商户订单号 |
 
 ### 查询参数 <Badge type="tip" text="Query" vertical="top" />

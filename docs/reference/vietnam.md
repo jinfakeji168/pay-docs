@@ -38,6 +38,34 @@ curl -X POST \
 }
 ```
 
+#### 指定银行
+
+如果您想指定银行代收
+
+`extra.bank_code`
+
+| 银行编码 | 银行名称        |
+|------|-------------|
+| BIDV | BIDV        |
+| VCB  | Vietcombank |
+| TCB  | Techcombank |
+
+```shell{8,11}
+curl -X POST \
+  https://example.com/api/v1/trades \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_key": "YOUR_CLIENT_KEY",
+    "amount": "10000",
+    "channel_id": "1001",
+    "out_trade_no": "20230101000000",
+    "notify_url": "https://your-domain.com/webhook",
+    "extra": "{\"bank_code\":\"VCB\"}",
+    "signature": "SIGNED_STRING"
+  }'
+```
+
 ### 代收查单
 
 ```shell
@@ -68,9 +96,9 @@ curl -X GET \
 
 ### 代付通道
 
-| ID   | 说明 |
-|------|-----|
-| 5001 | 银行 |
+| ID   | 说明   |
+|------|------|
+| 5001 | 银行   |
 | 5002 | MoMo |
 | 5029 | Zalo |
 

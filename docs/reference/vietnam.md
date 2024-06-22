@@ -53,6 +53,8 @@ curl -X POST \
 
 `extra.type`
 
+If you want to show full information on the cashier page. please **DO NOT** include the `extra.type` field in your request.
+
 | Type | Description        |
 |------|-------------|
 | 1 | Bank information |

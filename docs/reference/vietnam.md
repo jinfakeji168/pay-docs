@@ -38,7 +38,7 @@ curl -X POST \
 }
 ```
 
-#### 指定银行
+#### 指定银行 (Optional)
 
 如果您想指定银行代收
 
@@ -49,6 +49,13 @@ curl -X POST \
 | BIDV | BIDV        |
 | VCB  | Vietcombank |
 | TCB  | Techcombank |
+
+`extra.type`
+
+| Type | Description        |
+|------|-------------|
+| 1 | Bank information |
+| 2  | QR-Code |
 
 ```shell{8,11}
 curl -X POST \
@@ -61,7 +68,7 @@ curl -X POST \
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "extra": "{\"bank_code\":\"VCB\"}",
+    "extra": "{\"bank_code\":\"VCB\", \"type\":\"1\"}",
     "signature": "SIGNED_STRING"
   }'
 ```

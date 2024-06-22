@@ -49,6 +49,7 @@ curl -X POST \
 | BIDV | BIDV        |
 | VCB  | Vietcombank |
 | TCB  | Techcombank |
+| MBB  | MB          |
 
 `extra.type`
 

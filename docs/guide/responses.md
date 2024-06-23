@@ -1,8 +1,8 @@
-# 响应
+# Responses
 
-## 状态说明
+## HTTP Status Codes
 
-| HTTP Status Cod            | 说明                  |
+| Status Code                | Description         |
 |----------------------------|---------------------|
 | 200 OK	                    | 查询成功                |
 | 201 Created	               | 下单成功		              |
@@ -12,7 +12,7 @@
 | 429 Too Many Requests	     | 限流（通常不会响应这个错误）      |
 | 500 Internal Server Error  | 服务器错误               |
 
-## 成功示例
+## Successful example
 
 ### 200 OK
 

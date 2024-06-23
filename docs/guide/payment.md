@@ -1,4 +1,4 @@
-# 代收下单
+# Receive money
 
 POST `/api/v1/trades`
 

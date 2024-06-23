@@ -1,4 +1,4 @@
-# 余额查询
+# DaYangPay Balance
 
 GET `/api/v1/user/balances`
 

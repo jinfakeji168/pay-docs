@@ -38,7 +38,7 @@ curl -X POST \
 }
 ```
 
-#### 指定银行 (Optional)
+### 指定银行 (Optional)
 
 如果您想指定银行代收
 
@@ -103,6 +103,9 @@ curl -X GET \
 
 
 ## 代付
+
+If you send money to a bank in Vietnam, The `extra.bank_code` field is required.
+If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in your request.
 
 ### 代付通道
 

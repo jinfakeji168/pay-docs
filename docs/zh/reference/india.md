@@ -1,12 +1,12 @@
-# Thailand
+# 印度
 
 ## 代收
 
 ### 代收通道
 
-| ID   | 说明 |
-|------|----|
-| 1009 | 银行 |
+| ID   | 说明  |
+|------|-----|
+| 1000 | UPI |
 
 ### 代收下单
 
@@ -18,7 +18,7 @@ curl -X POST \
   -d '{
     "client_key": "YOUR_CLIENT_KEY",
     "amount": "100.00",
-    "channel_id": "1009",
+    "channel_id": "1000",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "SIGNED_STRING"
@@ -63,22 +63,22 @@ curl -X GET \
 
 
 
-
 ## 代付
 
 ### 代付通道
 
-| ID   | 说明 |
-|------|----|
-| 5014 | 银行 |
+| ID   | 说明  |
+|------|-----|
+| 5000 | UPI |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数        | 必填 | 说明            |
-|-----------|----|---------------|
-| bank_code | 是  | [银行编码](#银行编码) | 
+| 参数        | 必填 | 说明                 | 
+|-----------|----|--------------------|
+| ifsc      | 是  | IFSC               |
+| bank_code | 是  | 银行编码。请填固定值 `ICIC`。 |
 
 ### 代付下单
 
@@ -90,12 +90,12 @@ curl -X POST \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
     "amount": "100.00",
-    "channel_id": "5014",
+    "channel_id": "5000",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
-    "extra": "{\"bank_code\":\"KBANK\"}",
+    "extra": "{\"ifsc\":\"IFSC0123456\", \"bank_code\":\"ICIC\"}",
     "signature": "SIGNED_STRING"
   }'
 ```
@@ -106,7 +106,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5014",
+  "channel_id": "5000",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -127,7 +127,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5014",
+  "channel_id": "5000",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",
@@ -135,28 +135,3 @@ curl -X GET \
   "status": 1
 }
 ```
-
-### 银行编码
-
-`extra.bank_code`
-
-| 银行编码   | 银行名称                                                |
-|--------|-----------------------------------------------------|
-| KBANK  | 	Kasikorn Bank Plc.                                 |	
-| BBL    | 	Bangkok Bank Plc.	                                 |
-| KTB    | 	Krung Thai Bank	                                   |
-| ABN    | 	ABN Amro Bank N.V.                                 |	
-| TTB    | 	TMBThanachart	                                     |
-| SCB    | 	Siam Commercial Bank                               |	
-| UOB    | 	UOB Bank Plc.	                                     |
-| BAY    | 	Bank of Ayudhya / Krungsri                         |	
-| CIMB   | 	CIMB Thai Bank Public Company Limited              |	
-| LHBANK | 	Land and Houses Bank Public Company Limited        |	
-| GSB    | 	Government Savings Bank                            |	
-| KKP    | 	Kiatnakin Phatra Bank Public Company Limited       |	
-| CITI   | 	Citibank N.A.                                      |	
-| GHB    | 	Government Housing Bank                            |	
-| BAAC   | 	Bank for Agriculture and Agricultural Cooperatives |	
-| MHCB   | 	Mizuho Corporate Bank Limited                      |	
-| IBANK  | 	Islamic Bank of Thailand                           |	
-| TISCO  | 	TISCO Bank Plc.                                    |	

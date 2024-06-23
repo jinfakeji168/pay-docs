@@ -3,10 +3,10 @@ home: true
 title: Home
 heroImage: https://vuejs.press/images/hero.png
 actions:
-  - text: Introduction
+  - text: 接入指引
     link: /guide/introduction.html
     type: primary
-  - text: Reference
+  - text: 参考
     link: /reference/README.md
     type: secondary
 footer: Copyright © 2018-present DaYangPay

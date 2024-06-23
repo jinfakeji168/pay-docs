@@ -1,12 +1,12 @@
-# Thailand
+# 巴西
 
 ## 代收
 
 ### 代收通道
 
-| ID   | 说明 |
-|------|----|
-| 1009 | 银行 |
+| ID   | 说明  |
+|------|-----|
+| 1003 | PIX |
 
 ### 代收下单
 
@@ -18,21 +18,22 @@ curl -X POST \
   -d '{
     "client_key": "YOUR_CLIENT_KEY",
     "amount": "100.00",
-    "channel_id": "1009",
+    "channel_id": "1003",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "SIGNED_STRING"
   }'
 ```
 
-```json{4,6}
+```json{4,6,8}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
   "amount": "100.00",
   "trade_no": "100000012023072123389872",
   "out_trade_no": "20230101000000",
   "payment_url": "https://example.com/cashier",
-  "created_at": "2023-01-01T01:01:01.000000Z"
+  "created_at": "2023-01-01T01:01:01.000000Z",
+  "qr_code_text": ""
 }
 ```
 
@@ -64,21 +65,35 @@ curl -X GET \
 
 
 
+
+
+
 ## 代付
 
 ### 代付通道
 
-| ID   | 说明 |
-|------|----|
-| 5014 | 银行 |
+| ID   | 说明  |
+|------|-----|
+| 5003 | PIX |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数        | 必填 | 说明            |
-|-----------|----|---------------|
-| bank_code | 是  | [银行编码](#银行编码) | 
+| 参数           | 必填 | 说明                                             |  
+|--------------|----|------------------------------------------------|
+| account_type | 是  | 账户类型。一共有5种：`EMAIL` `PHONE` `CPF` `CNPJ` `EVP`。 |
+| id_number    | 是  | 证件号码。个人提交 `CPF`，公司提交 `CNPJ`。                   |    
+
+`extra.account_type`
+
+| 类型    | 说明                |
+|-------|-------------------|
+| EMAIL | 邮箱格式              |
+| PHONE | 11位数(可加前缀 `+55` ) |
+| CPF   | 11位数              |
+| CNPJ  | 14位数              |
+| EVP   | UUID              |
 
 ### 代付下单
 
@@ -90,12 +105,12 @@ curl -X POST \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
     "amount": "100.00",
-    "channel_id": "5014",
+    "channel_id": "5003",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
-    "extra": "{\"bank_code\":\"KBANK\"}",
+    "extra": "{\"account_type\":\"CPF\", \"id_number\":\"1234567890\"}",
     "signature": "SIGNED_STRING"
   }'
 ```
@@ -106,7 +121,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5014",
+  "channel_id": "5003",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -127,7 +142,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5014",
+  "channel_id": "5003",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",
@@ -135,28 +150,3 @@ curl -X GET \
   "status": 1
 }
 ```
-
-### 银行编码
-
-`extra.bank_code`
-
-| 银行编码   | 银行名称                                                |
-|--------|-----------------------------------------------------|
-| KBANK  | 	Kasikorn Bank Plc.                                 |	
-| BBL    | 	Bangkok Bank Plc.	                                 |
-| KTB    | 	Krung Thai Bank	                                   |
-| ABN    | 	ABN Amro Bank N.V.                                 |	
-| TTB    | 	TMBThanachart	                                     |
-| SCB    | 	Siam Commercial Bank                               |	
-| UOB    | 	UOB Bank Plc.	                                     |
-| BAY    | 	Bank of Ayudhya / Krungsri                         |	
-| CIMB   | 	CIMB Thai Bank Public Company Limited              |	
-| LHBANK | 	Land and Houses Bank Public Company Limited        |	
-| GSB    | 	Government Savings Bank                            |	
-| KKP    | 	Kiatnakin Phatra Bank Public Company Limited       |	
-| CITI   | 	Citibank N.A.                                      |	
-| GHB    | 	Government Housing Bank                            |	
-| BAAC   | 	Bank for Agriculture and Agricultural Cooperatives |	
-| MHCB   | 	Mizuho Corporate Bank Limited                      |	
-| IBANK  | 	Islamic Bank of Thailand                           |	
-| TISCO  | 	TISCO Bank Plc.                                    |	

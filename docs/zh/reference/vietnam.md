@@ -1,16 +1,16 @@
-# Vietnam
+# 越南
 
-## Receive money
+## 代收
 
-### Channels for receive money
+### 代收通道
 
-| ID   | Description      |
-|------|------------------|
-| 1001 | Banks in Vietnam |
-| 1002 | MoMo             |
-| 1024 | Zalo             |
+| ID   | 说明   |
+|------|------|
+| 1001 | 银行   |
+| 1002 | MoMo |
+| 1024 | Zalo |
 
-### Receive money request example
+### 代收下单
 
 ```shell{8}
 curl -X POST \
@@ -38,45 +38,27 @@ curl -X POST \
 }
 ```
 
-### Specific a bank (Optional)
+### 指定银行 (Optional)
 
-If you want specific a bank to receive money. You may include the `extra.bank_code` field in your request.
+如果您想指定银行代收
 
 `extra.bank_code`
 
-| Code | Name        |
+| 银行编码 | 银行名称        |
 |------|-------------|
 | BIDV | BIDV        |
 | VCB  | Vietcombank |
 | TCB  | Techcombank |
 | MBB  | MB          |
 
-```shell{8,11}
-curl -X POST \
-  https://example.com/api/v1/trades \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "YOUR_CLIENT_KEY",
-    "amount": "10000",
-    "channel_id": "1001",
-    "out_trade_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "extra": "{\"bank_code\":\"VCB\"}",
-    "signature": "SIGNED_STRING"
-  }'
-```
-
-### Different cashier page (Optional)
-
-If you wish to display a different cashier page to your customers, you may include the field `extra.type` in your request.
-
 `extra.type`
 
-| Type | Description      |
-|------|------------------|
-| 1    | Bank information |
-| 2    | QR-Code          |
+If you want to show full information on the cashier page. please **DO NOT** include the `extra.type` field in your request.
+
+| Type | Description        |
+|------|-------------|
+| 1 | Bank information |
+| 2  | QR-Code |
 
 ```shell{8,11}
 curl -X POST \
@@ -89,12 +71,12 @@ curl -X POST \
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "extra": "{\"type\":\"1\"}",
+    "extra": "{\"bank_code\":\"VCB\", \"type\":\"1\"}",
     "signature": "SIGNED_STRING"
   }'
 ```
 
-### Get a receive money transaction
+### 代收查单
 
 ```shell
 curl -X GET \
@@ -114,44 +96,40 @@ curl -X GET \
 }
 ```
 
-Status
-
-| Code | Description     |
-|------|-----------------|
-| 0    | Pending payment |
-| 1    | Paid            |
-| 2    | Closed          |
 
 
 
 
 
-## Send money
 
-### Channels for Send money
+## 代付
 
-| ID   | Description      |
-|------|------------------|
-| 5001 | Banks in Vietnam |
-| 5002 | MoMo             |
-| 5029 | Zalo             |
-
-### Extra parameter <Badge type="warning" text="extra" vertical="top" />
-
-If you send money to a bank in Vietnam, The `extra.bank_code` field is **required**.
+If you send money to a bank in Vietnam, The `extra.bank_code` field is required.
 If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in your request.
 
-| Field     | Required | Description               |
-|-----------|----------|---------------------------|
-| bank_code | Yes      | [Bank codes](#bank-codes) |
+### 代付通道
+
+| ID   | 说明   |
+|------|------|
+| 5001 | 银行   |
+| 5002 | MoMo |
+| 5029 | Zalo |
+
+### 业务参数 <Badge type="warning" text="extra" vertical="top" />
+
+`extra`
+
+| 参数        | 必填 | 说明            |
+|-----------|----|---------------|
+| bank_code | 是  | [银行编码](#银行编码) |
 
 ::: warning NOTE
-The `extra` parameter MUST be a JSON String.
+只有 `银行` 需要提交 `extra`，`MoMo` 或 `Zalo` 不需求提交。
 :::
 
-### Send money request examples
+### 代付下单
 
-Send money to a bank in Vietnam:
+银行
 
 ```shell{8,13}
 curl -X POST \
@@ -171,7 +149,7 @@ curl -X POST \
   }'
 ```
 
-Send money to MoMo:
+MoMo
 
 ```shell{8}
 curl -X POST \
@@ -190,7 +168,7 @@ curl -X POST \
   }'
 ```
 
-Send money to Zalo:
+Zalo
 
 ```shell{8}
 curl -X POST \
@@ -222,7 +200,7 @@ curl -X POST \
 }
 ```
 
-### Get a send money transaction
+### 代付查单
 
 ```shell
 curl -X GET \
@@ -245,20 +223,11 @@ curl -X GET \
 }
 ```
 
-Status
-
-| Code | Description |
-|------|-------------|
-| 0    | Pending     |
-| 1    | Successful  |
-| 2    | Processing  |
-| 3    | Failed      |
-
-### Bank codes
+### 银行编码
 
 `extra.bank_code`
 
-| Code      | Name                                |
+| 银行编码      | 银行名称                                |
 |-----------|-------------------------------------|
 | TCB       | Techcombank                         |
 | VPB       | VPBank                              |

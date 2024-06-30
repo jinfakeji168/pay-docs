@@ -1,6 +1,6 @@
 # Mexico
 
-## 代收
+## Receive money
 
 ### 代收通道
 
@@ -64,7 +64,7 @@ curl -X GET \
 
 
 
-## 代付
+## Send money
 
 ### 代付通道
 

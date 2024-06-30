@@ -1,12 +1,12 @@
 # Thailand
 
-## 代收
+## Receive money
 
-### 代收通道
+### Channels for receive money
 
-| ID   | 说明 |
-|------|----|
-| 1009 | 银行 |
+| ID   | Description       |
+|------|-------------------|
+| 1009 | Banks in Thailand |
 
 ### 代收下单
 
@@ -64,21 +64,21 @@ curl -X GET \
 
 
 
-## 代付
+## Send money
 
-### 代付通道
+### Channels for Send money
 
-| ID   | 说明 |
-|------|----|
-| 5014 | 银行 |
+| ID   | Description       |
+|------|-------------------|
+| 5014 | Banks in Thailand |
 
-### 业务参数 <Badge type="warning" text="extra" vertical="top" />
+### Extra parameter <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数        | 必填 | 说明            |
-|-----------|----|---------------|
-| bank_code | 是  | [银行编码](#银行编码) | 
+| Field     | Required | Description               |
+|-----------|----------|---------------------------|
+| bank_code | Yes      | [Bank codes](#bank-codes) | 
 
 ### 代付下单
 
@@ -136,27 +136,27 @@ curl -X GET \
 }
 ```
 
-### 银行编码
+### Bank codes
 
 `extra.bank_code`
 
-| 银行编码   | 银行名称                                                |
-|--------|-----------------------------------------------------|
-| KBANK  | 	Kasikorn Bank Plc.                                 |	
-| BBL    | 	Bangkok Bank Plc.	                                 |
-| KTB    | 	Krung Thai Bank	                                   |
-| ABN    | 	ABN Amro Bank N.V.                                 |	
-| TTB    | 	TMBThanachart	                                     |
-| SCB    | 	Siam Commercial Bank                               |	
-| UOB    | 	UOB Bank Plc.	                                     |
-| BAY    | 	Bank of Ayudhya / Krungsri                         |	
-| CIMB   | 	CIMB Thai Bank Public Company Limited              |	
-| LHBANK | 	Land and Houses Bank Public Company Limited        |	
-| GSB    | 	Government Savings Bank                            |	
-| KKP    | 	Kiatnakin Phatra Bank Public Company Limited       |	
-| CITI   | 	Citibank N.A.                                      |	
-| GHB    | 	Government Housing Bank                            |	
-| BAAC   | 	Bank for Agriculture and Agricultural Cooperatives |	
-| MHCB   | 	Mizuho Corporate Bank Limited                      |	
-| IBANK  | 	Islamic Bank of Thailand                           |	
-| TISCO  | 	TISCO Bank Plc.                                    |	
+| Bank code | Bank name                                           |
+|-----------|-----------------------------------------------------|
+| KBANK     | 	Kasikorn Bank Plc.                                 |	
+| BBL       | 	Bangkok Bank Plc.	                                 |
+| KTB       | 	Krung Thai Bank	                                   |
+| ABN       | 	ABN Amro Bank N.V.                                 |	
+| TTB       | 	TMBThanachart	                                     |
+| SCB       | 	Siam Commercial Bank                               |	
+| UOB       | 	UOB Bank Plc.	                                     |
+| BAY       | 	Bank of Ayudhya / Krungsri                         |	
+| CIMB      | 	CIMB Thai Bank Public Company Limited              |	
+| LHBANK    | 	Land and Houses Bank Public Company Limited        |	
+| GSB       | 	Government Savings Bank                            |	
+| KKP       | 	Kiatnakin Phatra Bank Public Company Limited       |	
+| CITI      | 	Citibank N.A.                                      |	
+| GHB       | 	Government Housing Bank                            |	
+| BAAC      | 	Bank for Agriculture and Agricultural Cooperatives |	
+| MHCB      | 	Mizuho Corporate Bank Limited                      |	
+| IBANK     | 	Islamic Bank of Thailand                           |	
+| TISCO     | 	TISCO Bank Plc.                                    |	

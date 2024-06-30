@@ -1,10 +1,10 @@
 # China
 
-## 代收
+## Receive money
 
-暂不支持。
+Not currently supported.
 
-## 代付
+## Send money
 
 ### 代付通道
 

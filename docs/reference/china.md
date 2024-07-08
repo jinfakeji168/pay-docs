@@ -8,7 +8,7 @@ Not currently supported.
 
 ### 代付通道
 
-| ID   | 说明 |
+| ID   | Description |
 |------|----|
 | 5031 | 银行 |
 
@@ -16,7 +16,7 @@ Not currently supported.
 
 `extra`
 
-| 参数           | 必填 | 说明   | 
+| 参数           | 必填 | Description   | 
 |--------------|----|------|
 | bank_name    | 是  | 银行名称 |
 | bank_branch  | 否  | 支行   |

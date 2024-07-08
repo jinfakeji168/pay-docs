@@ -1,8 +1,6 @@
 # Signature
 
-### 拼接字符串
-
-将请求参数按字典排序拼接为字符串。
+### Create string to sign
 
 ```json
 {
@@ -16,7 +14,7 @@
 
 `amount=50000.00&channel_id=1001&client_key=CLIENT_KEY&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
 
-### HmacSHA256 示例
+### HmacSHA256 example
 
 :::: code-group
 
@@ -75,7 +73,7 @@ public class Main {
 
 `ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082`
 
-### 带签名的请求示例
+### Signed request example
 
 ```shell
 curl -X POST \

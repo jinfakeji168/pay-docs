@@ -2,31 +2,27 @@
 
 POST `/api/v1/transfers`
 
-#### HTTP headers <Badge type="tip" text="Header" vertical="top" />
+### HTTP headers <Badge type="tip" text="Header" vertical="top" />
 
-| Key     | Value                   |      
-|----------|-------------------------|
-| Accept   | `application/json` | 
+| Key    | Value              |      
+|--------|--------------------|
+| Accept | `application/json` | 
 
-#### Body parameters <Badge type="tip" text="Body" vertical="top" />
+### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| Key              | Type     | Required  | Sign | Description                                                          | 
-|-----------------|--------|-----|------|-------------------------------------------------------------|
-| client_key      | string | 是   | 是    | The API access key.                                               | 
-| amount          | string | 是   | 是    | 代付金额。单位：`元`。                                                |                   
-| channel_id      | string | 是   | 是    | 代付通道ID。                                                     | 
-| out_transfer_no | string | 是   | 是    | 商户代付订单号。<br><span style="color: red">最大长度 64，必须是唯一的</span>。 |                   
-| notify_url      | string | 是   | 是    | 商户接收通知的网址。                                                  |                   
-| payee_account   | string | 是   | 是    | 收款人账号。                                                      |                   
-| payee_name      | string | 是   | 是    | 收款人姓名。                                                      |                   
-| extra           | string | 特殊的 | 是    | 业务参数。<br>必填时必须是 `JSON` 字符串。                                 |                   
-| signature       | string | 是   | 否    | 签名值。                                                        |                   
+| Key             | Type   | Required     | Sign | Description                                                 | 
+|-----------------|--------|--------------|------|-------------------------------------------------------------|
+| client_key      | string | Yes          | Yes  | The API access key.                                         | 
+| amount          | string | Yes          | Yes  | The amount for send money.                                  |                   
+| channel_id      | string | Yes          | Yes  | The payment method.                                         | 
+| out_transfer_no | string | Yes          | Yes  | Merchant's transaction ID. **Must be a unique identifier**. |                   
+| notify_url      | string | Yes          | Yes  | Webhook URL.                                                |                   
+| payee_account   | string | Yes          | Yes  | Send money to the account.                                  |                   
+| payee_name      | string | Yes          | Yes  | Full name for the account.                                  |                   
+| extra           | string | Required If  | Yes  | Extra parameters. **MUST be a valid JSON string**.          |                   
+| signature       | string | Yes          | No   | Signed value.                                               |
 
-::: warning NOTE
-`extra` 参数说明：您可以理解为 `required_if`，也就是说特定的场景为必填，且需提交的参数可能不一样，请参考不同国家代付下单接口的业务参数。例：越南银行代付，`extra.bank_code` 必填。
-:::
-
-#### Request example
+### Request example
 
 ```shell{8,13}
 curl -X POST \
@@ -48,18 +44,18 @@ curl -X POST \
 
 ### Response parameters
 
-| Key              | Type     | Description            | 
-|-----------------|--------|---------------|
-| client_key      | string | The API access key. |
-| amount          | string | 代付金额。单位：`元`。  |
-| transfer_no     | string | 代付订单号。        |
-| out_transfer_no | string | 商户代付订单号。      |
-| channel_id      | string | 代付通道ID。       |
-| payee_account   | string | 收款人账号。        |
-| payee_name      | string | 收款人姓名。        |
-| created_at      | string | 下单时间。UTC 时间。  |
+| Key             | Type   | Description                 | 
+|-----------------|--------|-----------------------------|
+| client_key      | string | The API access key.         |
+| amount          | string | The amount for send money.  |
+| transfer_no     | string | DaYangPay's transaction ID. |
+| out_transfer_no | string | Merchant's transaction ID.  |
+| channel_id      | string | The amount for send money.  |
+| payee_account   | string | The amount for send money.  |
+| payee_name      | string | Full name for the account.  |
+| created_at      | string | Created time. `UTC+00:00`   |
 
-#### Response example
+### Response example
 
 ```json{4}
 {

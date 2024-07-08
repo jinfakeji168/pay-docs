@@ -12,17 +12,17 @@ Content-Type: `application/json`
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| Key           | Type      | Sign | Description            |
-|--------------|---------|------|---------------|
-| client_key   | string  | 是    | The API access key. |
-| signature    | string  | 否    | 签名值。          |
-| amount       | string  | 是    | 代收金额。单位：`元`。  |
-| channel_id   | string  | 是    | 代收通道ID。       |
-| trade_no     | string  | 是    | 代收订单号。        |
-| out_trade_no | string  | 是    | 商户代收订单号。      |
-| created_at   | string  | 是    | 下单时间。UTC 时间。  |
-| paid_at      | string  | 是    | 支付时间。UTC 时间。  |
-| status       | integer | 是    | 订单状态。`1: 已支付` |
+| Key          | Type    | Sign | Description                   |
+|--------------|---------|------|-------------------------------|
+| client_key   | string  | Yes  | The API access key.           |
+| signature    | string  | No   | Signed value.                 |
+| amount       | string  | Yes  | The amount for receive money. |
+| channel_id   | string  | Yes  | The payment method.           |
+| trade_no     | string  | Yes  | DaYangPay's transaction ID.   |
+| out_trade_no | string  | Yes  | Merchant's transaction ID.    |
+| created_at   | string  | Yes  | Created time. `UTC+00:00`     |
+| paid_at      | string  | Yes  | Paid time. `UTC+00:00`        |
+| status       | integer | Yes  | `1: Successful`               |
 
 ### Request examples
 

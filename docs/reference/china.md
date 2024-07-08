@@ -6,22 +6,22 @@ Not currently supported.
 
 ## Send money
 
-### 代付通道
+### Channels for Send money
 
 | ID   | Description |
-|------|----|
-| 5031 | 银行 |
+|------|-------------|
+| 5031 | Banks       |
 
-### 业务参数 <Badge type="warning" text="extra" vertical="top" />
+### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数           | 必填 | Description   | 
-|--------------|----|------|
-| bank_name    | 是  | 银行名称 |
-| bank_branch  | 否  | 支行   |
+| Key         | Required | Description       | 
+|-------------|----------|-------------------|
+| bank_name   | Yes      | Bank name.        |
+| bank_branch | No       | Bank branch name. |
 
-### 代付下单
+### Send money request example
 
 ```shell{8,13}
 curl -X POST \
@@ -54,7 +54,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### Get a send money transaction
 
 ```shell
 curl -X GET \

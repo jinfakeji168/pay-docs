@@ -8,7 +8,7 @@
 |------|-------------------|
 | 1009 | Banks in Thailand |
 
-### 代收下单
+### Receive money request example
 
 ```shell{8}
 curl -X POST \
@@ -36,7 +36,7 @@ curl -X POST \
 }
 ```
 
-### 代收查单
+### Get a receive money transaction
 
 ```shell
 curl -X GET \
@@ -80,7 +80,7 @@ curl -X GET \
 |-----------|----------|---------------------------|
 | bank_code | Yes      | [Bank codes](#bank-codes) | 
 
-### 代付下单
+### Request example of send money
 
 ```shell{8,13}
 curl -X POST \
@@ -113,7 +113,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

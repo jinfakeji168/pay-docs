@@ -2,13 +2,13 @@
 
 ## Receive money
 
-### 代收通道
+### Channels for receive money
 
-| ID   | Description  |
-|------|-----|
-| 1000 | UPI |
+| ID   | Description |
+|------|-------------|
+| 1000 | UPI         |
 
-### 代收下单
+### Receive money request example
 
 ```shell{8}
 curl -X POST \
@@ -36,7 +36,7 @@ curl -X POST \
 }
 ```
 
-### 代收查单
+### Get a receive money transaction
 
 ```shell
 curl -X GET \
@@ -65,22 +65,22 @@ curl -X GET \
 
 ## Send money
 
-### 代付通道
+### Channels for Send money
 
-| ID   | 说明  |
-|------|-----|
-| 5000 | UPI |
+| ID   | Description |
+|------|-------------|
+| 5000 | UPI         |
 
-### 业务参数 <Badge type="warning" text="extra" vertical="top" />
+### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数        | 必填 | 说明                 | 
-|-----------|----|--------------------|
-| ifsc      | 是  | IFSC               |
-| bank_code | 是  | 银行编码。请填固定值 `ICIC`。 |
+| Key       | Required | Description                                 | 
+|-----------|----------|---------------------------------------------|
+| ifsc      | Yes      | IFSC                                        |
+| bank_code | Yes      | Bank code. Please fill the value as `ICIC`. |
 
-### 代付下单
+### Send money request example
 
 ```shell{8,13}
 curl -X POST \
@@ -113,7 +113,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### Get a send money transaction
 
 ```shell
 curl -X GET \

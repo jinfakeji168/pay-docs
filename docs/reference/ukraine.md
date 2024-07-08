@@ -2,13 +2,13 @@
 
 ## Receive money
 
-### 代收通道
+### Channels for receive money
 
 | ID   | Description |
 |------|-------------|
 | 1038 |             |
 
-### 代收下单
+### Receive money request example
 
 ```shell{8}
 curl -X POST \
@@ -36,7 +36,7 @@ curl -X POST \
 }
 ```
 
-### 代收查单
+### Get a receive money transaction
 
 ```shell
 curl -X GET \
@@ -57,23 +57,15 @@ curl -X GET \
 ```
 
 
-
-
-
-
-
-
-
-
 ## Send money
 
-### 代付通道
+### Channels for Send money
 
 | ID   | Description |
 |------|-------------|
 | 5047 |             |
 
-### 代付下单
+### Request example send money
 
 ```shell{8}
 curl -X POST \
@@ -105,7 +97,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

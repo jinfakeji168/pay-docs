@@ -2,13 +2,13 @@
 
 ## Receive money
 
-### 代收通道
+### Channels for receive money
 
 | ID   | Description |
 |------|-------------|
 | 1003 | PIX         |
 
-### 代收下单
+### Receive money request example
 
 ```shell{8}
 curl -X POST \
@@ -37,7 +37,7 @@ curl -X POST \
 }
 ```
 
-### 代收查单
+### Get a receive money transaction
 
 ```shell
 curl -X GET \
@@ -58,44 +58,34 @@ curl -X GET \
 ```
 
 
-
-
-
-
-
-
-
-
-
-
 ## Send money
 
-### 代付通道
+### Channels for Send money
 
-| ID   | 说明  |
-|------|-----|
-| 5003 | PIX |
+| ID   | Description |
+|------|-------------|
+| 5003 | PIX         |
 
-### 业务参数 <Badge type="warning" text="extra" vertical="top" />
+### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数           | 必填 | 说明                                             |  
-|--------------|----|------------------------------------------------|
-| account_type | 是  | 账户类型。一共有5种：`EMAIL` `PHONE` `CPF` `CNPJ` `EVP`。 |
-| id_number    | 是  | 证件号码。个人提交 `CPF`，公司提交 `CNPJ`。                   |    
+| Key          | Required | Description                                             |  
+|--------------|----------|------------------------------------------------|
+| account_type | Yes      | 账户类型。一共有5种：`EMAIL` `PHONE` `CPF` `CNPJ` `EVP`。 |
+| id_number    | Yes      | 证件号码。个人提交 `CPF`，公司提交 `CNPJ`。                   |    
 
 `extra.account_type`
 
-| 类型    | 说明                |
+| 类型    | Description       |
 |-------|-------------------|
-| EMAIL | 邮箱格式              |
+| EMAIL | E-mail address.   |
 | PHONE | 11位数(可加前缀 `+55` ) |
 | CPF   | 11位数              |
 | CNPJ  | 14位数              |
 | EVP   | UUID              |
 
-### 代付下单
+### Send money request example
 
 ```shell{8,13}
 curl -X POST \
@@ -128,7 +118,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### Get a send money transaction
 
 ```shell
 curl -X GET \

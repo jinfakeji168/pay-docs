@@ -2,14 +2,14 @@
 
 ## Receive money
 
-### 代收通道
+### Channels for receive money
 
-| ID   | Description    |
-|------|-------|
-| 1028 | GCash |
-| 1029 | Maya  |
+| ID   | Description |
+|------|-------------|
+| 1028 | GCash       |
+| 1029 | Maya        |
 
-### 代收下单
+### Receive money request example
 
 ```shell{8}
 curl -X POST \
@@ -37,7 +37,7 @@ curl -X POST \
 }
 ```
 
-### 代收查单
+### Get a receive money transaction
 
 ```shell
 curl -X GET \
@@ -68,14 +68,14 @@ curl -X GET \
 
 ## Send money
 
-### 代付通道
+### Channels for Send money
 
-| ID   | 说明    |
-|------|-------|
-| 5032 | GCash |
-| 5033 | Maya  |
+| ID   | Description |
+|------|-------------|
+| 5032 | GCash       |
+| 5033 | Maya        |
 
-### 代付下单
+### Send money request example
 
 ```shell{8}
 curl -X POST \
@@ -107,7 +107,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### Get a send money transaction
 
 ```shell
 curl -X GET \

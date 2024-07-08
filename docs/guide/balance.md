@@ -2,20 +2,20 @@
 
 GET `/api/v1/user/balances`
 
-### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
+### HTTP headers <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明                      |       
-|--------|-------------------------|
-| Accept | 请设置为 `application/json` | 
+| Key    | Value              |       
+|--------|--------------------|
+| Accept | `application/json` | 
 
-### 查询参数 <Badge type="tip" text="Query" vertical="top" />
+### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
-| 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
-|------------|--------|----|------|---------------|
-| client_key | string | 是  | 是    | 商户标识。由大洋支付颁发。 |
-| signature  | string | 是  | 否    | 签名值。          |
+| Key        | Type   | Required | Sign | Description         |                  
+|------------|--------|----------|------|---------------------|
+| client_key | string | 是        | 是    | The API access key. |
+| signature  | string | 是        | 否    |                     |
 
-### 请求示例
+### Request example
 
 ```shell
 curl -X GET \
@@ -23,15 +23,15 @@ curl -X GET \
   -H "Accept: application/json"
 ```
 
-### 响应参数
-| 参数              | 类型     | 说明             | 
+### Response parameters
+| Key              | Type     | Description             | 
 |-----------------|--------|----------------|
-| client_key      | string | 商户标识。由大洋支付颁发。  |
+| client_key      | string | The API access key.  |
 | available_funds | string | 可用资金。单位：`元`。   |
 | locked_funds    | string | 锁定资金。单位：`元`。   |
 | currency        | string | 币种。            |
 
-### 响应示例
+### Response example
 
 ```json{3}
 {

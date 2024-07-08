@@ -2,25 +2,25 @@
 
 POST `/api/v1/trades`
 
-### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
+### HTTP headers <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明                      |       
-|--------|-------------------------|
-| Accept | 请设置为 `application/json` | 
+| Key    | Value              |       
+|--------|--------------------|
+| Accept | `application/json` | 
 
-### 包体参数 <Badge type="tip" text="Body" vertical="top" />
+### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| 参数           | 类型     | 必填 | 参与签名 | 说明                                                          |                   
-|--------------|--------|----|------|-------------------------------------------------------------|
-| client_key   | string | 是  | 是    | 商户标识。由大洋支付颁发。                                               |                   
-| amount       | string | 是  | 是    | 代收金额。单位：`元`。                                                |                   
-| channel_id   | string | 是  | 是    | 代收通道ID。                                                     |
-| out_trade_no | string | 是  | 是    | 商户代收订单号。<br><span style="color: red">最大长度 64，必须是唯一的。</span> |                   
-| notify_url   | string | 是  | 是    | 商户接收通知的网址。                                                  |                   |              
-| extra        | string | 否  | 是    | 业务参数。 必须是 `JSON` 字符串。                                       |                   
-| signature    | string | 是  | 否    | 签名值。                                                        |
+| Key          | Type   | Required | Sign | Description                                                 |                   
+|--------------|--------|----------|------|-------------------------------------------------------------|
+| client_key   | string | Yes      | Yes  | The API access key.                                         |                   
+| amount       | string | Yes      | Yes  | The amount for receive money.                               |                   
+| channel_id   | string | Yes      | Yes  | The payment method.                                         |
+| out_trade_no | string | Yes      | Yes  | Merchant's transaction ID. **Must be a unique identifier**. |                   
+| notify_url   | string | Yes      | Yes  | Webhook URL.                                                |                   |              
+| extra        | string | No       | Yes  | Extra parameters. **MUST be a valid JSON string**.          |                   
+| signature    | string | Yes      | No   | Signed value.                                               |
 
-### 请求示例
+### Request example
 
 ```shell{8}
 curl -X POST \
@@ -37,17 +37,18 @@ curl -X POST \
   }'
 ```
 
-### 响应参数
-| 参数           | 类型     | 说明            | 
-|--------------|--------|---------------|
-| client_key   | string | 商户标识。由大洋支付颁发。 |
-| amount       | string | 代收金额。单位：`元`。  |
-| trade_no     | string | 代收订单号。        |
-| out_trade_no | string | 商户代收订单号。      |
-| payment_url  | string | 支付网址。         |
-| created_at   | string | 下单时间。UTC 时间。  |
+### Response parameters
 
-### 响应示例
+| Key          | Type   | Description                   | 
+|--------------|--------|-------------------------------|
+| client_key   | string | The API access key.           |
+| amount       | string | The amount for receive money. |
+| trade_no     | string | DaYangPay's transaction ID.   |
+| out_trade_no | string | Merchant's transaction ID.    |
+| payment_url  | string | Payment URL.                  |
+| created_at   | string | Created time. UTC+00:00       |
+
+### Response example
 
 ```json{4,6}
 {

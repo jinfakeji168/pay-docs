@@ -4,19 +4,19 @@ GET `/api/v1/transfers/:transfer`
 
 ### HTTP Headers <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |       
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| Key    | Value              |       
+|--------|--------------------|
+| Accept | `application/json` | 
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
-|------------|--------|----|------|---------------|
-| transfer | string | 是  | 否    | 大洋支付订单号 或 商户订单号 |
+| Key         | Type     | Required | Sign | Description            |                  
+|------------|--------|----------|------|---------------|
+| transfer | string | Yes      | No   | 大洋支付订单号 或 商户订单号 |
 
 ### Qeury parameters <Badge type="tip" text="Query" vertical="top" />
 
-| 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
+| Key        | Type     | Required | Sign | Description            |                  
 |------------|--------|----|------|---------------|
 | client_key | string | 是  | 是    | 商户标识。由大洋支付颁发。 |
 | signature  | string | 是  | 否    | 签名值。          |
@@ -30,9 +30,9 @@ curl -X GET \
 ```
 
 ### Response parameters
-| 参数              | 类型      | 说明                                     | 
+| Key              | Type      | Description                                     | 
 |-----------------|---------|----------------------------------------|
-| client_key      | string  | 商户标识。由大洋支付颁发。                          |
+| client_key      | string  | The API access key.                          |
 | amount          | string  | 代付金额。单位：`元`。                           |
 | transfer_no     | string  | 代付订单号。                                 |
 | out_transfer_no | string  | 商户代付订单号。                               |

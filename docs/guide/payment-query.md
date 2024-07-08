@@ -4,19 +4,19 @@ GET `/api/v1/trades/:trade`
 
 ### HTTP Headers <Badge type="tip" text="Header" vertical="top" />
 
-| Parameter | Description        |        
+| Key | Value              |        
 |-----------|--------------------|
 | Accept    | `application/json` | 
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| Parameter | Type   | Required | 参与签名 | Description              |                  
+| Key | Type   | Required | Sign | Description              |                  
 |-----------|--------|----------|------|-----------------|
 | trade     | string | Yes      | No   | 大洋支付订单号 或 商户订单号 |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
-| Parameter         | Type     | Required | 参与签名 | Description            |                  
+| Key         | Type     | Required | Sign | Description            |                  
 |------------|--------|----|------|---------------|
 | client_key | string | Yes  | Yes  | 商户标识。由大洋支付颁发。 |
 | signature  | string | Yes  | No   | 签名值。          |
@@ -30,9 +30,9 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Parameter           | Type      | Description                             | 
+| Key           | Type      | Description                             | 
 |--------------|---------|--------------------------------|
-| client_key   | string  | 商户标识。由大洋支付颁发。                  |
+| client_key   | string  | The API access key.                  |
 | amount       | string  | 代收金额。单位：`元`。                   |
 | trade_no     | string  | 代收订单号。                         |
 | out_trade_no | string  | 商户代收订单号。                       |

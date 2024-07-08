@@ -1,6 +1,6 @@
-# Receive money webhook
+# Webhook for Receive money 
 
-请求方式： `POST`
+Request method: `POST`
 
 Content-Type: `application/json`
 
@@ -10,11 +10,11 @@ Content-Type: `application/json`
 
 如果首次通知商户出现异常，会尝试再通知4次，共5次。频率为：0s/10s/10s/30s/30s。时间可能有1~2秒的差异，以实际为准。
 
-### 包体参数 <Badge type="tip" text="Body" vertical="top" />
+### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| 参数           | 类型      | 参与签名 | 说明            |
+| Key           | Type      | Sign | Description            |
 |--------------|---------|------|---------------|
-| client_key   | string  | 是    | 商户标识。由大洋支付颁发。 |
+| client_key   | string  | 是    | The API access key. |
 | signature    | string  | 否    | 签名值。          |
 | amount       | string  | 是    | 代收金额。单位：`元`。  |
 | channel_id   | string  | 是    | 代收通道ID。       |
@@ -24,7 +24,7 @@ Content-Type: `application/json`
 | paid_at      | string  | 是    | 支付时间。UTC 时间。  |
 | status       | integer | 是    | 订单状态。`1: 已支付` |
 
-### 通知示例
+### Request examples
 
 ```shell{11,14}
 curl -X POST \
@@ -44,13 +44,17 @@ curl -X POST \
   }'
 ```
 
-### 商户应答
+### Merchant response parameters
 
-| 参数   | 说明                                                                                        |
-|------|-------------------------------------------------------------------------------------------|
-| code | 状态码。值为 `SUCCESS` 表示成功，**区分大小写**。<br>其他代码表示失败。<span style="color: red">请响应 JSON 数据</span>。 |
+| Key  | Value    |
+|------|----------|
+| code | SUCCESS  |
 
-示例：
+状态码。值为 `SUCCESS` 表示成功，**区分大小写**。其他代码表示失败。<span style="color: red">请响应 JSON 数据</span>。
+
+Example:
+
+HTTP Status code: `200`
 
 ```json
 {

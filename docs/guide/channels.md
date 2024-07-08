@@ -1,4 +1,4 @@
-# Channels
+# All Channels
 
 ## Channels for Receive money
 

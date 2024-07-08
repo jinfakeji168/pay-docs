@@ -2,17 +2,17 @@
 
 POST `/api/v1/transfers`
 
-#### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
+#### HTTP headers <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |      
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| Key     | Value                   |      
+|----------|-------------------------|
+| Accept   | `application/json` | 
 
-#### 包体参数 <Badge type="tip" text="Body" vertical="top" />
+#### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| 参数              | 类型     | 必填  | 参与签名 | 说明                                                          | 
+| Key              | Type     | Required  | Sign | Description                                                          | 
 |-----------------|--------|-----|------|-------------------------------------------------------------|
-| client_key      | string | 是   | 是    | 商户标识。由大洋支付颁发。                                               | 
+| client_key      | string | 是   | 是    | The API access key.                                               | 
 | amount          | string | 是   | 是    | 代付金额。单位：`元`。                                                |                   
 | channel_id      | string | 是   | 是    | 代付通道ID。                                                     | 
 | out_transfer_no | string | 是   | 是    | 商户代付订单号。<br><span style="color: red">最大长度 64，必须是唯一的</span>。 |                   
@@ -26,7 +26,7 @@ POST `/api/v1/transfers`
 `extra` 参数说明：您可以理解为 `required_if`，也就是说特定的场景为必填，且需提交的参数可能不一样，请参考不同国家代付下单接口的业务参数。例：越南银行代付，`extra.bank_code` 必填。
 :::
 
-#### 请求示例
+#### Request example
 
 ```shell{8,13}
 curl -X POST \
@@ -46,10 +46,11 @@ curl -X POST \
   }'
 ```
 
-### 响应参数
-| 参数              | 类型     | 说明            | 
+### Response parameters
+
+| Key              | Type     | Description            | 
 |-----------------|--------|---------------|
-| client_key      | string | 商户标识。由大洋支付颁发。 |
+| client_key      | string | The API access key. |
 | amount          | string | 代付金额。单位：`元`。  |
 | transfer_no     | string | 代付订单号。        |
 | out_transfer_no | string | 商户代付订单号。      |
@@ -58,7 +59,7 @@ curl -X POST \
 | payee_name      | string | 收款人姓名。        |
 | created_at      | string | 下单时间。UTC 时间。  |
 
-#### 响应示例
+#### Response example
 
 ```json{4}
 {

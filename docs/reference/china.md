@@ -36,7 +36,7 @@ curl -X POST \
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "张三",
-    "extra": "{\"bank_name\":\"中国建设银行\", \"bank_branch\":\"支行名称\"}",
+    "extra": "{\"bank_name\":\"中国建设银行\", \"bank_branch\":\"上海支行\"}",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```

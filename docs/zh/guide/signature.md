@@ -16,7 +16,7 @@
 
 `amount=50000.00&channel_id=1001&client_key=CLIENT_KEY&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
 
-### HmacSHA256
+### HmacSHA256 示例
 
 :::: code-group
 
@@ -73,7 +73,7 @@ public class Main {
 
 ::::
 
-### 带签名的请求
+### 带签名的请求示例
 
 ```shell
 curl -X POST \

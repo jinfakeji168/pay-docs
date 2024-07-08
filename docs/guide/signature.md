@@ -1,5 +1,22 @@
 # Signature
 
+### 拼接字符串
+
+将请求参数按字典排序拼接为字符串。
+
+```json
+{
+    "amount": "50000.00",
+    "channel_id": "1001",
+    "client_key": "CLIENT_KEY",
+    "notify_url": "https://your-domain.com/webhook",
+    "out_trade_no": "20230101000000",
+    "signature": "SIGNED_STRING"
+}
+```
+
+`amount=50000.00&channel_id=1001&client_key=CLIENT_KEY&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
+
 ### HmacSHA256
 
 :::: code-group
@@ -17,7 +34,6 @@ echo $signature;
 :::
 
 ::: code-group-item Java
-```java
 ```java
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -52,7 +68,6 @@ public class Main {
         return hmacSha256;
     }
 }
-```
 ```
 :::
 

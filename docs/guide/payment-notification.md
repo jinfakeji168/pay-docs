@@ -5,10 +5,8 @@ Request method: `POST`
 Content-Type: `application/json`
 
 :::warning NOTE
-代收订单状态为 `已支付` ，才会通知商户，其他订单状态不会通知商户。
+We will send POST request to the webhook URL you provided when the transaction status is `successful`.
 :::
-
-如果首次通知商户出现异常，会尝试再通知4次，共5次。频率为：0s/10s/10s/30s/30s。时间可能有1~2秒的差异，以实际为准。
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
@@ -20,8 +18,8 @@ Content-Type: `application/json`
 | channel_id   | string  | Yes  | The payment method.           |
 | trade_no     | string  | Yes  | DaYangPay's transaction ID.   |
 | out_trade_no | string  | Yes  | Merchant's transaction ID.    |
-| created_at   | string  | Yes  | Created time. `UTC+00:00`     |
-| paid_at      | string  | Yes  | Paid time. `UTC+00:00`        |
+| created_at   | string  | Yes  | Created time. `UTC±00:00`     |
+| paid_at      | string  | Yes  | Paid time. `UTC±00:00`        |
 | status       | integer | Yes  | `1: Successful`               |
 
 ### Request examples
@@ -50,9 +48,9 @@ curl -X POST \
 |------|----------|
 | code | SUCCESS  |
 
-状态码。值为 `SUCCESS` 表示成功，**区分大小写**。其他代码表示失败。<span style="color: red">请响应 JSON 数据</span>。
+The `code` value is `SUCCESS` means the request is  accepted. other code value means that is failed.
 
-Example:
+#### Example:
 
 HTTP Status code: `200`
 

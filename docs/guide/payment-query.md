@@ -37,8 +37,8 @@ curl -X GET \
 | trade_no     | string  | DaYangPay's transaction ID.            |
 | out_trade_no | string  | Merchant's transaction ID.             |
 | payment_url  | string  | Cashier page URL.                      |
-| created_at   | string  | created time. `UTC+00:00`              |
-| paid_at      | string  | paid time. `UTC+00:00`                 |
+| created_at   | string  | created time. `UTC±00:00`              |
+| paid_at      | string  | paid time. `UTC±00:00`                 |
 | status       | integer | `0: Pending, 1: Successful, 3: Failed` |
 
 

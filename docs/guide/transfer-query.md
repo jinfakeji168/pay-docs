@@ -10,16 +10,16 @@ GET `/api/v1/transfers/:transfer`
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| Key         | Type     | Required | Sign | Description            |                  
-|------------|--------|----------|------|---------------|
-| transfer | string | Yes      | No   | 大洋支付订单号 或 商户订单号 |
+| Key      | Type   | Required | Sign | Description                                              |                  
+|----------|--------|----------|------|----------------------------------------------------------|
+| transfer | string | Yes      | No   | DaYangPay's transaction ID or Merchant's transaction ID. |
 
-### Qeury parameters <Badge type="tip" text="Query" vertical="top" />
+### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
-| Key        | Type     | Required | Sign | Description            |                  
-|------------|--------|----|------|---------------|
-| client_key | string | 是  | 是    | 商户标识。由大洋支付颁发。 |
-| signature  | string | 是  | 否    | 签名值。          |
+| Key        | Type   | Required | Sign | Description         |                  
+|------------|--------|----------|------|---------------------|
+| client_key | string | Yes      | Yes  | The API access key. |
+| signature  | string | Yes      | No   | Signed value.       |
 
 ### Request example
 
@@ -30,18 +30,18 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Key              | Type      | Description                                     | 
-|-----------------|---------|----------------------------------------|
-| client_key      | string  | The API access key.                          |
-| amount          | string  | 代付金额。单位：`元`。                           |
-| transfer_no     | string  | 代付订单号。                                 |
-| out_transfer_no | string  | 商户代付订单号。                               |
-| channel_id      | string  | 代付通道ID。                                |
-| payee_account   | string  | 收款人账号。                                 |
-| payee_name      | string  | 收款人姓名。                                 |
-| created_at      | string  | 下单时间。UTC 时间。                           |
-| paid_at         | string  | 付款时间。UTC 时间。未付款订单响应 `null` 。           |
-| status          | integer | 订单状态。`0: 待处理, 1: 代付成功, 2: 处理中, 3:代付失败` |
+| Key             | Type    | Description                                           | 
+|-----------------|---------|-------------------------------------------------------|
+| client_key      | string  | The API access key.                                   |
+| amount          | string  | The amount for send money.                            |
+| transfer_no     | string  | DaYangPay's transaction ID.                           |
+| out_transfer_no | string  | Merchant's transaction ID.                            |
+| channel_id      | string  | The payment method.                                   |
+| payee_account   | string  | Send money to the account.                            |
+| payee_name      | string  | Full name for the account.                            |
+| created_at      | string  | Created time. `UTC±00:00`                             |
+| paid_at         | string  | Paid time. `UTC±00:00`                                |
+| status          | integer | `0: Pending, 1: Successful, 2: Processing, 3: Failed` |
 
 ### Response example
 

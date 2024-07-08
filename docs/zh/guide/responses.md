@@ -1,5 +1,7 @@
 # 响应
 
+[HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
 ## 状态说明
 
 | HTTP Status Cod            | 说明                  |

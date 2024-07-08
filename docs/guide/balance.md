@@ -12,8 +12,8 @@ GET `/api/v1/user/balances`
 
 | Key        | Type   | Required | Sign | Description         |                  
 |------------|--------|----------|------|---------------------|
-| client_key | string | 是        | 是    | The API access key. |
-| signature  | string | 是        | 否    |                     |
+| client_key | string | Yes      | Yes  | The API access key. |
+| signature  | string | Yes      | No   | Signed value.       |
 
 ### Request example
 
@@ -24,12 +24,12 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Key              | Type     | Description             | 
-|-----------------|--------|----------------|
-| client_key      | string | The API access key.  |
-| available_funds | string | 可用资金。单位：`元`。   |
-| locked_funds    | string | 锁定资金。单位：`元`。   |
-| currency        | string | 币种。            |
+| Key             | Type   | Description                      | 
+|-----------------|--------|----------------------------------|
+| client_key      | string | The API access key.              |
+| available_funds | string | Available funds of your account. |
+| locked_funds    | string | Locked funds of your account.    |
+| currency        | string | The currency code.               |
 
 ### Response example
 

@@ -46,7 +46,7 @@ curl -X POST \
 | trade_no     | string | DaYangPay's transaction ID.   |
 | out_trade_no | string | Merchant's transaction ID.    |
 | payment_url  | string | Cashier page URL.             |
-| created_at   | string | Created time. `UTC+00:00`     |
+| created_at   | string | Created time. `UTC±00:00`     |
 
 ### Response example
 

@@ -53,7 +53,7 @@ curl -X POST \
 | channel_id      | string | The amount for send money.  |
 | payee_account   | string | The amount for send money.  |
 | payee_name      | string | Full name for the account.  |
-| created_at      | string | Created time. `UTC+00:00`   |
+| created_at      | string | Created time. `UTC±00:00`   |
 
 ### Response example
 

@@ -1,29 +1,27 @@
 # Webhook for Send money 
 
-请求方式： `POST`
+Request method: `POST`
 
 Content-Type: `application/json`
 
 :::warning NOTE
-代付订单状态为 `代付成功` 或 `代付失败` ，才会通知商户，其他订单状态不会通知商户。
+We will send POST request to the webhook URL you provided when the transaction status is `successful` or `failed`.
 :::
-
-如果首次通知商户出现异常，会尝试再通知4次，共5次。频率为：0s/10s/10s/30s/30s。时间可能有1~2秒的差异，以实际为准。
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| Key             | Type      | Sign | Description                                                               |
-|-----------------|---------|------|------------------------------------------------------------------|
-| client_key      | string  | 是    | The API access key.                                                    |
-| signature       | string  | 否    | 签名值。                                                             |
-| amount          | string  | 是    | 代付金额。单位：`元`。                                                     |
-| channel_id      | string  | 是    | 代付通道ID。                                                          |
-| transfer_no     | string  | 是    | 代付订单号。                                                           |
-| out_transfer_no | string  | 是    | 商户代付订单号。                                                         |
-| created_at      | string  | 是    | 下单时间。UTC 时间。                                                     |
-| paid_at         | string  | 是    | 付款时间。UTC 时间。<span style="color: red">代付订单状态为代付成功，才会传递此参数。</span> |
-| message         | string  | 是    | 代付失败的原因。<span style="color: red">代付订单状态为代付失败，才会传递此参数。</span>     |
-| status          | integer | 是    | 订单状态。 `1: 代付成功, 3: 代付失败`                                         |
+| Key             | Type    | Sign | Description                                               |
+|-----------------|---------|------|-----------------------------------------------------------|
+| client_key      | string  | Yes  | The API access key.                                       |
+| signature       | string  | No   | Signed value.                                             |
+| amount          | string  | Yes  | The amount for send money.                                |
+| channel_id      | string  | Yes  | The payment method.                                       |
+| transfer_no     | string  | Yes  | DaYangPay's transaction ID                                |
+| out_transfer_no | string  | Yes  | Merchant's transaction ID.                                |
+| created_at      | string  | Yes  | Created time. `UTC±00:00`                                 |
+| paid_at         | string  | Yes  | Paid time when the transaction is Successful. `UTC±00:00` |
+| message         | string  | Yes  | Failed message when the transaction is failed.            |
+| status          | integer | Yes  | `1: Successful, 3: Failed`                                |
 
 ### Request example
 
@@ -73,9 +71,9 @@ curl -X POST \
 |------|----------|
 | code | SUCCESS  |
 
-状态码。值为 `SUCCESS` 表示成功，**区分大小写**。其他代码表示失败。<span style="color: red">请响应 JSON 数据</span>。
+The `code` value is `SUCCESS` means the request is  accepted. other code value means that is failed.
 
-Example:
+#### Example:
 
 HTTP Status code: `200`
 

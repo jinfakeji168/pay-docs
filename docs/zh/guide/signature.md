@@ -20,19 +20,6 @@
 
 :::: code-group
 
-::: code-group-item PHP
-```php
-<?php
-
-$secretKey = "CLIENT_SECRET";
-$stringToSign = "amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
-
-$signature = hash_hmac('sha256', $stringToSign, $secretKey);
-
-echo $signature;
-```
-:::
-
 ::: code-group-item Java
 ```java
 import javax.crypto.Mac;
@@ -68,6 +55,19 @@ public class Main {
         return hmacSha256;
     }
 }
+```
+:::
+
+::: code-group-item PHP
+```php
+<?php
+
+$secretKey = "CLIENT_SECRET";
+$stringToSign = "amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
+
+$signature = hash_hmac('sha256', $stringToSign, $secretKey);
+
+echo $signature;
 ```
 :::
 

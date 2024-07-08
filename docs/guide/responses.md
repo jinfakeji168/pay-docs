@@ -4,15 +4,15 @@
 
 ## HTTP Status Codes
 
-| Status Code                | Description         |
-|----------------------------|---------------------|
-| 200 OK	                    | 查询成功                |
-| 201 Created	               | 下单成功		              |
-| 403 Forbidden		            | 签名错误                |
-| 404 Not Found	             | 订单未找到               |
-| 422 Unprocessable Content	 | 表单验证不通过（提交的参数未通过验证） |
-| 429 Too Many Requests	     | 限流（通常不会响应这个错误）      |
-| 500 Internal Server Error  | 服务器错误               |
+| Status Code                | Description                       |
+|----------------------------|-----------------------------------|
+| 200 OK	                    | When `GET` request successful.    |
+| 201 Created	               | When `POST` request successful.		 |
+| 403 Forbidden		            | Invalid signature .               |
+| 404 Not Found	             | Transaction not found.            |
+| 422 Unprocessable Content	 | Validation Exception.             |
+| 429 Too Many Requests	     | 60/s                              |
+| 500 Internal Server Error  |                                   |
 
 ## Successful examples
 

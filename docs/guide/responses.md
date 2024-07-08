@@ -12,7 +12,7 @@
 | 429 Too Many Requests	     | 限流（通常不会响应这个错误）      |
 | 500 Internal Server Error  | 服务器错误               |
 
-## Successful example
+## Successful examples
 
 ### 200 OK
 
@@ -41,7 +41,7 @@
 }
 ```
 
-## 失败示例
+## Failed examples
 
 ### 403 Forbidden
 

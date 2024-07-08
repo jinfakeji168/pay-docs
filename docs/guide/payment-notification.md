@@ -1,4 +1,4 @@
-# 代收通知
+# Receive money webhook
 
 请求方式： `POST`
 

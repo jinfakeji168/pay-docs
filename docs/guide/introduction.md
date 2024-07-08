@@ -2,22 +2,22 @@
 
 ## APIs
 
-代收下单
+
+### Receive money
 `POST` `/api/v1/trades`
 
-代收查单
+### Query a receive money transaction
 `GET` `/api/v1/trades/:trade`
 
-代付下单
+### Send money
 `POST` `/api/v1/transfers`
 
-代付查单
+### Query a send money transaction
 `GET` `/api/v1/transfers/:transfer`
 
-余额查询
-`GET` `/api/v1/user/balances`
+### DaYangPay Balance
 
-接口域名请咨询客服。
+`GET` `/api/v1/user/balances`
 
 ## Server Time
 

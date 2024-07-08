@@ -1,27 +1,27 @@
-# 代付查询
+# Query a send money transaction
 
 GET `/api/v1/transfers/:transfer`
 
-### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
+### HTTP Headers <Badge type="tip" text="Header" vertical="top" />
 
 | 参数     | 说明     |       
 |----------|--------|
 | Accept   | 请设置为 `application/json` | 
 
-### 路径参数 <Badge type="tip" text="Path" vertical="top" />
+### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
 | 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
 |------------|--------|----|------|---------------|
 | transfer | string | 是  | 否    | 大洋支付订单号 或 商户订单号 |
 
-### 查询参数 <Badge type="tip" text="Query" vertical="top" />
+### Qeury parameters <Badge type="tip" text="Query" vertical="top" />
 
 | 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
 |------------|--------|----|------|---------------|
 | client_key | string | 是  | 是    | 商户标识。由大洋支付颁发。 |
 | signature  | string | 是  | 否    | 签名值。          |
 
-### 请求示例
+### Request example
 
 ```shell
 curl -X GET \
@@ -29,7 +29,7 @@ curl -X GET \
   -H "Accept: application/json"
 ```
 
-### 响应参数
+### Response parameters
 | 参数              | 类型      | 说明                                     | 
 |-----------------|---------|----------------------------------------|
 | client_key      | string  | 商户标识。由大洋支付颁发。                          |
@@ -43,7 +43,7 @@ curl -X GET \
 | paid_at         | string  | 付款时间。UTC 时间。未付款订单响应 `null` 。           |
 | status          | integer | 订单状态。`0: 待处理, 1: 代付成功, 2: 处理中, 3:代付失败` |
 
-### 响应示例
+### Response example
 
 ```json{11}
 {

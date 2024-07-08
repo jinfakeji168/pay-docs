@@ -1,27 +1,27 @@
-# 代收查询
+# Query a receive money transaction
 
 GET `/api/v1/trades/:trade`
 
-### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
+### HTTP Headers <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明                      |        
-|--------|-------------------------|
-| Accept | 请设置为 `application/json` | 
+| Parameter | Description        |        
+|-----------|--------------------|
+| Accept    | `application/json` | 
 
-### 路径参数 <Badge type="tip" text="Path" vertical="top" />
+### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| 参数    | 类型     | 必填 | 参与签名 | 说明              |                  
-|-------|--------|----|------|-----------------|
-| trade | string | 是  | 否    | 大洋支付订单号 或 商户订单号 |
+| Parameter | Type   | Required | 参与签名 | Description              |                  
+|-----------|--------|----------|------|-----------------|
+| trade     | string | Yes      | No   | 大洋支付订单号 或 商户订单号 |
 
-### 查询参数 <Badge type="tip" text="Query" vertical="top" />
+### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
-| 参数         | 类型     | 必填 | 参与签名 | 说明            |                  
+| Parameter         | Type     | Required | 参与签名 | Description            |                  
 |------------|--------|----|------|---------------|
-| client_key | string | 是  | 是    | 商户标识。由大洋支付颁发。 |
-| signature  | string | 是  | 否    | 签名值。          |
+| client_key | string | Yes  | Yes  | 商户标识。由大洋支付颁发。 |
+| signature  | string | Yes  | No   | 签名值。          |
 
-### 请求示例
+### Request parameters
 
 ```shell
 curl -X GET \
@@ -29,8 +29,8 @@ curl -X GET \
   -H "Accept: application/json"
 ```
 
-### 响应参数
-| 参数           | 类型      | 说明                             | 
+### Response parameters
+| Parameter           | Type      | Description                             | 
 |--------------|---------|--------------------------------|
 | client_key   | string  | 商户标识。由大洋支付颁发。                  |
 | amount       | string  | 代收金额。单位：`元`。                   |
@@ -42,7 +42,7 @@ curl -X GET \
 | status       | integer | 订单状态。 `0: 待支付, 1: 已支付, 2: 已关闭` |
 
 
-### 响应示例
+### Response example
 
 ```json{8}
 {

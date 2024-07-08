@@ -8,7 +8,7 @@
 |------|----|
 | 1006 |    |
 
-### Receive money request example
+### Request example for receive money
 
 ```shell{8}
 curl -X POST \
@@ -36,7 +36,7 @@ curl -X POST \
 }
 ```
 
-### Get a receive money transaction
+### Get a transaction for receive money
 
 ```shell
 curl -X GET \
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## Send money
 
-### Channels for Send money
+### Channels for send money
 
 | ID   | Description |
 |------|-------------|
@@ -80,7 +80,7 @@ curl -X GET \
 |-----------|----------|--------------------------------------------------------|
 | bank_code | Yes      | Bank codes. Bank code. Please fill the value as `BANK` |
 
-### Send money request example
+### Request example for send money 
 
 ```shell{8,13}
 curl -X POST \
@@ -113,7 +113,7 @@ curl -X POST \
 }
 ```
 
-### Get a send money transaction
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

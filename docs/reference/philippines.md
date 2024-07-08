@@ -9,7 +9,7 @@
 | 1028 | GCash       |
 | 1029 | Maya        |
 
-### Receive money request example
+### Request example for receive money
 
 ```shell{8}
 curl -X POST \
@@ -37,7 +37,7 @@ curl -X POST \
 }
 ```
 
-### Get a receive money transaction
+### Get a transaction for receive money
 
 ```shell
 curl -X GET \
@@ -68,14 +68,14 @@ curl -X GET \
 
 ## Send money
 
-### Channels for Send money
+### Channels for send money
 
 | ID   | Description |
 |------|-------------|
 | 5032 | GCash       |
 | 5033 | Maya        |
 
-### Send money request example
+### Request example for send money 
 
 ```shell{8}
 curl -X POST \
@@ -107,7 +107,7 @@ curl -X POST \
 }
 ```
 
-### Get a send money transaction
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

@@ -1,6 +1,6 @@
 # All Channels
 
-## Channels for Receive money
+## Channels for receive money
 
 | ID   | Name                | Currency | Extra |
 |------|---------------------|----------|-------|
@@ -16,7 +16,7 @@
 | 1029 | Philippines (Maya)  | PHP      | No    |
 | 1038 | Ukraine             | UAH      | No    |
 
-## Channels for Send money
+## Channels for send money
 
 | ID   | Name                | Currency | Extra                                           |
 |------|---------------------|----------|-------------------------------------------------|

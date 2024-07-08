@@ -1,4 +1,4 @@
-# Query a transaction for send money
+# Get a transaction for send money
 
 GET `/api/v1/transfers/:transfer`
 

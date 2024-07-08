@@ -2,11 +2,11 @@
 
 ## Receive money
 
-Not currently supported.
+Not supported.
 
 ## Send money
 
-### Channels for Send money
+### Channels for send money
 
 | ID   | Description |
 |------|-------------|
@@ -21,7 +21,7 @@ Not currently supported.
 | bank_name   | Yes      | Bank name.        |
 | bank_branch | No       | Bank branch name. |
 
-### Send money request example
+### Request example for send money 
 
 ```shell{8,13}
 curl -X POST \
@@ -54,7 +54,7 @@ curl -X POST \
 }
 ```
 
-### Get a send money transaction
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

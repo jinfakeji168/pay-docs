@@ -10,7 +10,7 @@
 | 1002 | MoMo             |
 | 1024 | Zalo             |
 
-### Receive money request example
+### Request example for receive money
 
 ```shell{8}
 curl -X POST \
@@ -94,7 +94,7 @@ curl -X POST \
   }'
 ```
 
-### Get a receive money transaction
+### Get a transaction for receive money
 
 ```shell
 curl -X GET \
@@ -128,7 +128,7 @@ Status
 
 ## Send money
 
-### Channels for Send money
+### Channels for send money
 
 | ID   | Description      |
 |------|------------------|
@@ -149,7 +149,7 @@ If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in yo
 The `extra` parameter MUST be a JSON String.
 :::
 
-### Send money request examples
+### Request example for send money s
 
 Send money to a bank in Vietnam:
 
@@ -222,7 +222,7 @@ curl -X POST \
 }
 ```
 
-### Get a send money transaction
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

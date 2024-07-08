@@ -1,4 +1,4 @@
-# Query a transaction for receive money
+# Get a transaction for receive money
 
 GET `/api/v1/trades/:trade`
 

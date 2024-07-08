@@ -6,13 +6,13 @@
 ### Receive money
 `POST` `/api/v1/trades`
 
-### Query a receive money transaction
+### Get a transaction for receive money
 `GET` `/api/v1/trades/:trade`
 
 ### Send money
 `POST` `/api/v1/transfers`
 
-### Query a send money transaction
+### Get a transaction for send money
 `GET` `/api/v1/transfers/:transfer`
 
 ### DaYangPay Balance

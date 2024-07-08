@@ -8,7 +8,7 @@
 |------|-------------|
 | 1003 | PIX         |
 
-### Receive money request example
+### Request example for receive money
 
 ```shell{8}
 curl -X POST \
@@ -37,7 +37,7 @@ curl -X POST \
 }
 ```
 
-### Get a receive money transaction
+### Get a transaction for receive money
 
 ```shell
 curl -X GET \
@@ -60,7 +60,7 @@ curl -X GET \
 
 ## Send money
 
-### Channels for Send money
+### Channels for send money
 
 | ID   | Description |
 |------|-------------|
@@ -70,10 +70,10 @@ curl -X GET \
 
 `extra`
 
-| Key          | Required | Description                                             |  
-|--------------|----------|------------------------------------------------|
-| account_type | Yes      | 账户类型。一共有5种：`EMAIL` `PHONE` `CPF` `CNPJ` `EVP`。 |
-| id_number    | Yes      | 证件号码。个人提交 `CPF`，公司提交 `CNPJ`。                   |    
+| Key          | Required | Description                        |  
+|--------------|----------|------------------------------------|
+| account_type | Yes      | `EMAIL` `PHONE` `CPF` `CNPJ` `EVP` |
+| id_number    | Yes      | `CPF` or `CNPJ`                    |    
 
 `extra.account_type`
 
@@ -85,7 +85,7 @@ curl -X GET \
 | CNPJ  | 14位数              |
 | EVP   | UUID              |
 
-### Send money request example
+### Request example for send money 
 
 ```shell{8,13}
 curl -X POST \
@@ -118,7 +118,7 @@ curl -X POST \
 }
 ```
 
-### Get a send money transaction
+### Get a transaction for send money
 
 ```shell
 curl -X GET \

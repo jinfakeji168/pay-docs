@@ -8,7 +8,7 @@
 |------|-------------------|
 | 1009 | Banks in Thailand |
 
-### Receive money request example
+### Request example for receive money
 
 ```shell{8}
 curl -X POST \
@@ -36,7 +36,7 @@ curl -X POST \
 }
 ```
 
-### Get a receive money transaction
+### Get a transaction for receive money
 
 ```shell
 curl -X GET \
@@ -66,7 +66,7 @@ curl -X GET \
 
 ## Send money
 
-### Channels for Send money
+### Channels for send money
 
 | ID   | Description       |
 |------|-------------------|

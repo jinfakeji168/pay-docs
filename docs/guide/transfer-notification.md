@@ -1,4 +1,4 @@
-# Webhook for Send money 
+# Webhook for send money 
 
 Request method: `POST`
 

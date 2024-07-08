@@ -6,12 +6,11 @@
 
 ```json
 {
-    "amount": "50000.00",
-    "channel_id": "1001",
-    "client_key": "CLIENT_KEY",
-    "notify_url": "https://your-domain.com/webhook",
-    "out_trade_no": "20230101000000",
-    "signature": "SIGNED_STRING"
+  "client_key": "CLIENT_KEY",
+  "amount": "50000.00",
+  "channel_id": "1001",
+  "out_trade_no": "20230101000000",
+  "notify_url": "https://your-domain.com/webhook"
 }
 ```
 
@@ -74,3 +73,19 @@ public class Main {
 
 ::::
 
+### 带签名的请求
+
+```shell
+curl -X POST \
+  https://example.com/api/v1/trades \
+  -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "client_key": "CLIENT_KEY",
+    "amount": "50000.00",
+    "channel_id": "1001",
+    "out_trade_no": "20230101000000",
+    "notify_url": "https://your-domain.com/webhook",
+    "signature": "SIGNED_STRING"
+  }'
+```

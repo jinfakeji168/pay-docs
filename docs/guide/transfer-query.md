@@ -25,23 +25,32 @@ GET `/api/v1/transfers/:transfer`
 
 ```shell
 curl -X GET \
-  https://example.com/api/v1/transfers/20230101000000?client_key=YOUR_CLIENT_KEY&signature=SIGNED_STRING \
+  https://example.com/api/v1/transfers/20230101000000?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
   -H "Accept: application/json"
 ```
 
 ### Response parameters
-| Key             | Type    | Description                                           | 
-|-----------------|---------|-------------------------------------------------------|
-| client_key      | string  | The API access key.                                   |
-| amount          | string  | The amount for send money.                            |
-| transfer_no     | string  | DaYangPay's transaction ID.                           |
-| out_transfer_no | string  | Merchant's transaction ID.                            |
-| channel_id      | string  | The payment method.                                   |
-| payee_account   | string  | Send money to the account.                            |
-| payee_name      | string  | Full name for the account.                            |
-| created_at      | string  | Created time. `UTC±00:00`                             |
-| paid_at         | string  | Paid time. `UTC±00:00`                                |
-| status          | integer | `0: Pending, 1: Successful, 2: Processing, 3: Failed` |
+| Key             | Type    | Description                 | 
+|-----------------|---------|-----------------------------|
+| client_key      | string  | The API access key.         |
+| amount          | string  | The amount for send money.  |
+| transfer_no     | string  | DaYangPay's transaction ID. |
+| out_transfer_no | string  | Merchant's transaction ID.  |
+| channel_id      | string  | The payment method.         |
+| payee_account   | string  | Send money to the account.  |
+| payee_name      | string  | Full name for the account.  |
+| created_at      | string  | Created time. `UTC±00:00`   |
+| paid_at         | string  | Paid time. `UTC±00:00`      |
+| status          | integer | The transaction status.     |
+
+#### Status code
+
+| Code | Description |
+|------|-------------|
+| 0    | Pending     | 
+| 1    | Successful  | 
+| 2    | Processing  | 
+| 3    | Failed      | 
 
 ### Response example
 

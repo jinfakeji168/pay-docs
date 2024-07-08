@@ -28,12 +28,12 @@ curl -X POST \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
-    "client_key": "YOUR_CLIENT_KEY",
+    "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "100.00",
     "channel_id": "1003",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "signature": "SIGNED_STRING"
+    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
 

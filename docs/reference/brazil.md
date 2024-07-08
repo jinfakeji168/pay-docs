@@ -16,12 +16,12 @@ curl -X POST \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
-    "client_key": "YOUR_CLIENT_KEY",
+    "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "100.00",
     "channel_id": "1003",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "signature": "SIGNED_STRING"
+    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
 
@@ -41,7 +41,7 @@ curl -X POST \
 
 ```shell
 curl -X GET \
-  https://example.com/api/v1/trades/20230101000000?client_key=YOUR_CLIENT_KEY&signature=SIGNED_STRING \
+  https://example.com/api/v1/trades/20230101000000?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
   -H "Accept: application/json"
 ```
 
@@ -56,7 +56,6 @@ curl -X GET \
   "status": 1
 }
 ```
-
 
 ## Send money
 
@@ -77,13 +76,13 @@ curl -X GET \
 
 `extra.account_type`
 
-| 类型    | Description       |
-|-------|-------------------|
-| EMAIL | E-mail address.   |
-| PHONE | 11位数(可加前缀 `+55` ) |
-| CPF   | 11位数              |
-| CNPJ  | 14位数              |
-| EVP   | UUID              |
+| Type  | Description                                      |
+|-------|--------------------------------------------------|
+| EMAIL | E-mail address.                                  |
+| PHONE | 11 chars (Include the prefix `+55` is allowed. ) |
+| CPF   | 11 chars                                         |
+| CNPJ  | 14 chars                                         |
+| EVP   | UUID                                             |
 
 ### Request example for send money 
 
@@ -101,7 +100,7 @@ curl -X POST \
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
     "extra": "{\"account_type\":\"CPF\", \"id_number\":\"1234567890\"}",
-    "signature": "SIGNED_STRING"
+    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
 
@@ -122,7 +121,7 @@ curl -X POST \
 
 ```shell
 curl -X GET \
-  https://example.com/api/v1/transfers/20230101000000?client_key=YOUR_CLIENT_KEY&signature=SIGNED_STRING \
+  https://example.com/api/v1/transfers/20230101000000?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
   -H "Accept: application/json"
 ```
 

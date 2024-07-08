@@ -25,22 +25,29 @@ GET `/api/v1/trades/:trade`
 
 ```shell
 curl -X GET \
-  https://example.com/api/v1/trades/20230101000000?client_key=YOUR_CLIENT_KEY&signature=SIGNED_STRING \
+  https://example.com/api/v1/trades/20230101000000?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
   -H "Accept: application/json"
 ```
 
 ### Response parameters
-| Key          | Type    | Description                            | 
-|--------------|---------|----------------------------------------|
-| client_key   | string  | The API access key.                    |
-| amount       | string  | The amount for receive money.          |
-| trade_no     | string  | DaYangPay's transaction ID.            |
-| out_trade_no | string  | Merchant's transaction ID.             |
-| payment_url  | string  | Cashier page URL.                      |
-| created_at   | string  | created time. `UTC±00:00`              |
-| paid_at      | string  | paid time. `UTC±00:00`                 |
-| status       | integer | `0: Pending, 1: Successful, 3: Failed` |
+| Key          | Type    | Description                   | 
+|--------------|---------|-------------------------------|
+| client_key   | string  | The API access key.           |
+| amount       | string  | The amount for receive money. |
+| trade_no     | string  | DaYangPay's transaction ID.   |
+| out_trade_no | string  | Merchant's transaction ID.    |
+| payment_url  | string  | Cashier page URL.             |
+| created_at   | string  | created time. `UTC±00:00`     |
+| paid_at      | string  | Paid time. `UTC±00:00`        |
+| status       | integer | The transaction status.       |
 
+#### Status code
+
+| Code | Description |
+|------|-------------|
+| 0    | Pending     | 
+| 1    | Successful  | 
+| 3    | Failed      | 
 
 ### Response example
 

@@ -19,7 +19,7 @@ GET `/api/v1/user/balances`
 
 ```shell
 curl -X GET \
-  https://example.com/api/v1/user/balances?client_key=YOUR_CLIENT_KEY&signature=SIGNED_STRING \
+  https://example.com/api/v1/user/balances?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
   -H "Accept: application/json"
 ```
 

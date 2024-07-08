@@ -5,7 +5,7 @@ Request method: `POST`
 Content-Type: `application/json`
 
 :::warning NOTE
-We will send POST request to the webhook URL you provided when the transaction status is `successful`.
+DaYangPay will send POST request to the webhook URL you provided when the transaction status is `successful`.
 :::
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
@@ -20,7 +20,13 @@ We will send POST request to the webhook URL you provided when the transaction s
 | out_trade_no | string  | Yes  | Merchant's transaction ID.    |
 | created_at   | string  | Yes  | Created time. `UTC±00:00`     |
 | paid_at      | string  | Yes  | Paid time. `UTC±00:00`        |
-| status       | integer | Yes  | `1: Successful`               |
+| status       | integer | Yes  | The transaction status.       |
+
+#### Status code
+
+| Code | Description |
+|------|-------------|
+| 1    | Successful  |
 
 ### Request examples
 

@@ -6,7 +6,7 @@
 
 ```json
 {
-  "client_key": "CLIENT_KEY",
+  "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
   "amount": "50000.00",
   "channel_id": "1001",
   "out_trade_no": "20230101000000",
@@ -25,7 +25,7 @@
 <?php
 
 $secretKey = "CLIENT_SECRET";
-$stringToSign = "amount=50000.00&channel_id=1001&client_key=CLIENT_KEY&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
+$stringToSign = "amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
 
 $signature = hash_hmac('sha256', $stringToSign, $secretKey);
 
@@ -43,7 +43,7 @@ import java.nio.charset.StandardCharsets;
 public class Main {
     public static void main(String[] args) {
         String secretKey = "CLIENT_SECRET";
-        String stringToSign = "amount=50000.00&channel_id=1001&client_key=CLIENT_KEY&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
+        String stringToSign = "amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
 
         byte[] hmacSha256 = calcHmacSha256(
             secretKey.getBytes(StandardCharsets.UTF_8),
@@ -73,6 +73,8 @@ public class Main {
 
 ::::
 
+`ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082`
+
 ### 带签名的请求示例
 
 ```shell
@@ -81,11 +83,11 @@ curl -X POST \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{
-    "client_key": "CLIENT_KEY",
+    "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "50000.00",
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "signature": "SIGNED_STRING"
+    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```

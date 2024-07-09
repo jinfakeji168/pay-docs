@@ -55,10 +55,10 @@ curl -X POST \
 
 If you want to show full information on the cashier page. please **DO NOT** include the `extra.type` field in your request.
 
-| Type | Description        |
-|------|-------------|
-| 1 | Bank information |
-| 2  | QR-Code |
+| Type | Description      |
+|------|------------------|
+| 1    | Bank information |
+| 2    | QR-Code          |
 
 ```shell{8,11}
 curl -X POST \

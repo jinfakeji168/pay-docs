@@ -146,7 +146,7 @@ If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in yo
 | bank_code | Yes      | [Bank codes](#bank-codes) |
 
 ::: warning NOTE
-The `extra` parameter MUST be a JSON String.
+The `extra` parameter MUST be a valid JSON string.
 :::
 
 ### Request example for send money s

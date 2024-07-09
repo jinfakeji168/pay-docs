@@ -28,7 +28,7 @@ DaYangPay will request the webhook URL you provided when the transaction status 
 |------|-------------|
 | 1    | Successful  |
 
-### Request examples
+### Request example
 
 ```shell{11,14}
 curl -X POST \

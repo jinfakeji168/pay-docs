@@ -49,7 +49,7 @@ If you want specific a bank to receive money. You may include the `extra.bank_co
 | BIDV | BIDV        |
 | VCB  | Vietcombank |
 | TCB  | Techcombank |
-| MBB  | MB          |
+| MBB  | MB Bank     |
 
 ```shell{8,11}
 curl -X POST \

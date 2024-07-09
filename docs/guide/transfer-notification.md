@@ -5,7 +5,7 @@ Request method: `POST`
 Content-Type: `application/json`
 
 :::warning NOTE
-DaYangPay will send POST request to the webhook URL you provided when the transaction status is `successful` or `failed`.
+DaYangPay will request the webhook URL you provided when the transaction status is `successful` or `failed`.
 :::
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />

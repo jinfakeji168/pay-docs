@@ -48,13 +48,13 @@ curl -X POST \
   }'
 ```
 
-### Merchant response parameters
+### Response parameters
 
 | Key  | Value    |
 |------|----------|
 | code | SUCCESS  |
 
-The `code` value is `SUCCESS` means the request is  accepted. other code means that is failed.
+The `code` is `SUCCESS` means the request is accepted. other code means that is failed.
 
 #### Example:
 

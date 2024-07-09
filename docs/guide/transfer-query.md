@@ -30,18 +30,18 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Key             | Type    | Description                 | 
-|-----------------|---------|-----------------------------|
-| client_key      | string  | The API access key.         |
-| amount          | string  | The amount for send money.  |
-| transfer_no     | string  | DaYangPay's transaction ID. |
-| out_transfer_no | string  | Merchant's transaction ID.  |
-| channel_id      | string  | The payment method.         |
-| payee_account   | string  | Send money to the account.  |
-| payee_name      | string  | Full name for the account.  |
-| created_at      | string  | Created time. `UTC±00:00`   |
-| paid_at         | string  | Paid time. `UTC±00:00`      |
-| status          | integer | The transaction status.     |
+| Key             | Type    | Description                      | 
+|-----------------|---------|----------------------------------|
+| client_key      | string  | The API access key.              |
+| amount          | string  | The amount for send money.       |
+| transfer_no     | string  | DaYangPay's transaction ID.      |
+| out_transfer_no | string  | The transaction ID you provided. |
+| channel_id      | string  | The payment method.              |
+| payee_account   | string  | Send money to the account.       |
+| payee_name      | string  | Full name for the account.       |
+| created_at      | string  | Created time. `UTC±00:00`        |
+| paid_at         | string  | Paid time. `UTC±00:00`           |
+| status          | integer | The transaction status.          |
 
 #### Status code
 

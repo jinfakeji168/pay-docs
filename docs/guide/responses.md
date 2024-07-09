@@ -8,7 +8,7 @@
 |----------------------------|-----------------------------------|
 | 200 OK	                    | When `GET` request successful.    |
 | 201 Created	               | When `POST` request successful.		 |
-| 403 Forbidden		            | Invalid signature .               |
+| 403 Forbidden		            | Invalid signature.                |
 | 404 Not Found	             | Transaction not found.            |
 | 422 Unprocessable Content	 | Validation Exception.             |
 | 429 Too Many Requests	     | 60/s                              |
@@ -57,7 +57,7 @@
 
 ```json
 {
-  "message": "The trade not found."
+  "message": "The payment not found."
 }
 ```
 
@@ -79,13 +79,5 @@
 ```json
 {
   "message": "Too Many Attempts."
-}
-```
-
-### 500 Internal Server Error
-
-```json
-{
-  "message": "Server error. Please contact support."
 }
 ```

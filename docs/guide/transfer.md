@@ -10,17 +10,17 @@ POST `/api/v1/transfers`
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| Key             | Type   | Required     | Sign | Description                                                 | 
-|-----------------|--------|--------------|------|-------------------------------------------------------------|
-| client_key      | string | Yes          | Yes  | The API access key.                                         | 
-| amount          | string | Yes          | Yes  | The amount for send money.                                  |                   
-| channel_id      | string | Yes          | Yes  | The payment method.                                         | 
-| out_transfer_no | string | Yes          | Yes  | Merchant's transaction ID. **Must be a unique identifier**. |                   
-| notify_url      | string | Yes          | Yes  | Webhook URL.                                                |                   
-| payee_account   | string | Yes          | Yes  | Send money to the account.                                  |                   
-| payee_name      | string | Yes          | Yes  | Full name for the account.                                  |                   
-| extra           | string | Required If  | Yes  | Extra parameters. **MUST be a valid JSON string**.          |                   
-| signature       | string | Yes          | No   | Signed value.                                               |
+| Key             | Type   | Required     | Sign | Description                                                       | 
+|-----------------|--------|--------------|------|-------------------------------------------------------------------|
+| client_key      | string | Yes          | Yes  | The API access key.                                               | 
+| amount          | string | Yes          | Yes  | The amount for send money.                                        |                   
+| channel_id      | string | Yes          | Yes  | The payment method.                                               | 
+| out_transfer_no | string | Yes          | Yes  | The transaction ID you provided. **Must be a unique identifier**. |                   
+| notify_url      | string | Yes          | Yes  | The webhook URL you provided.                                     |                   
+| payee_account   | string | Yes          | Yes  | Send money to the account.                                        |                   
+| payee_name      | string | Yes          | Yes  | Full name for the account.                                        |                   
+| extra           | string | Required If  | Yes  | Extra parameters. **MUST be a valid JSON string**.                |                   
+| signature       | string | Yes          | No   | Signed value.                                                     |
 
 ### Request example
 
@@ -44,16 +44,16 @@ curl -X POST \
 
 ### Response parameters
 
-| Key             | Type   | Description                 | 
-|-----------------|--------|-----------------------------|
-| client_key      | string | The API access key.         |
-| amount          | string | The amount for send money.  |
-| transfer_no     | string | DaYangPay's transaction ID. |
-| out_transfer_no | string | Merchant's transaction ID.  |
-| channel_id      | string | The amount for send money.  |
-| payee_account   | string | The amount for send money.  |
-| payee_name      | string | Full name for the account.  |
-| created_at      | string | Created time. `UTC±00:00`   |
+| Key             | Type   | Description                      | 
+|-----------------|--------|----------------------------------|
+| client_key      | string | The API access key.              |
+| amount          | string | The amount for send money.       |
+| transfer_no     | string | DaYangPay's transaction ID.      |
+| out_transfer_no | string | The transaction ID you provided. |
+| channel_id      | string | The amount for send money.       |
+| payee_account   | string | The amount for send money.       |
+| payee_name      | string | Full name for the account.       |
+| created_at      | string | Created time. `UTC±00:00`        |
 
 ### Response example
 

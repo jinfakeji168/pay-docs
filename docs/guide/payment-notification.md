@@ -10,17 +10,17 @@ DaYangPay will send POST request to the webhook URL you provided when the transa
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| Key          | Type    | Sign | Description                   |
-|--------------|---------|------|-------------------------------|
-| client_key   | string  | Yes  | The API access key.           |
-| signature    | string  | No   | Signed value.                 |
-| amount       | string  | Yes  | The amount for receive money. |
-| channel_id   | string  | Yes  | The payment method.           |
-| trade_no     | string  | Yes  | DaYangPay's transaction ID.   |
-| out_trade_no | string  | Yes  | Merchant's transaction ID.    |
-| created_at   | string  | Yes  | Created time. `UTC±00:00`     |
-| paid_at      | string  | Yes  | Paid time. `UTC±00:00`        |
-| status       | integer | Yes  | The transaction status.       |
+| Key          | Type    | Sign | Description                      |
+|--------------|---------|------|----------------------------------|
+| client_key   | string  | Yes  | The API access key.              |
+| signature    | string  | No   | Signed value.                    |
+| amount       | string  | Yes  | The amount for receive money.    |
+| channel_id   | string  | Yes  | The payment method.              |
+| trade_no     | string  | Yes  | DaYangPay's transaction ID.      |
+| out_trade_no | string  | Yes  | The transaction ID you provided. |
+| created_at   | string  | Yes  | Created time. `UTC±00:00`        |
+| paid_at      | string  | Yes  | Paid time. `UTC±00:00`           |
+| status       | integer | Yes  | The transaction status.          |
 
 #### Status code
 
@@ -54,7 +54,7 @@ curl -X POST \
 |------|----------|
 | code | SUCCESS  |
 
-The `code` value is `SUCCESS` means the request is  accepted. other code value means that is failed.
+The `code` value is `SUCCESS` means the request is  accepted. other code means that is failed.
 
 #### Example:
 

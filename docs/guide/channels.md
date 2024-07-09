@@ -2,23 +2,23 @@
 
 ## Channels for receive money
 
-| ID   | Name                | Currency | Extra |
-|------|---------------------|----------|-------|
-| 1000 | India (UPI)         | INR      | No    |
-| 1001 | Vietnam (Banks)     | VND      | No    |
-| 1002 | Vietnam (MoMo)      | VND      | No    |
-| 1024 | Vietnam (Zalo)      | VND      | No    |
-| 1003 | Brazil (PIX)        | BRL      | No    |
-| 1006 | Mexico              | MXN      | No    |
-| 1009 | Thailand            | THB      | No    |
-| 1013 | Indonesia           | IDR      | No    |
-| 1028 | Philippines (GCash) | PHP      | No    |
-| 1029 | Philippines (Maya)  | PHP      | No    |
-| 1038 | Ukraine             | UAH      | No    |
+| ID   | Name                | Currency | Extra Parameters |
+|------|---------------------|----------|------------------|
+| 1000 | India (UPI)         | INR      | No               |
+| 1001 | Vietnam (Banks)     | VND      | No               |
+| 1002 | Vietnam (MoMo)      | VND      | No               |
+| 1024 | Vietnam (Zalo)      | VND      | No               |
+| 1003 | Brazil (PIX)        | BRL      | No               |
+| 1006 | Mexico              | MXN      | No               |
+| 1009 | Thailand            | THB      | No               |
+| 1013 | Indonesia           | IDR      | No               |
+| 1028 | Philippines (GCash) | PHP      | No               |
+| 1029 | Philippines (Maya)  | PHP      | No               |
+| 1038 | Ukraine             | UAH      | No               |
 
 ## Channels for send money
 
-| ID   | Name                | Currency | Extra                                           |
+| ID   | Name                | Currency | Extra Parameters                                |
 |------|---------------------|----------|-------------------------------------------------|
 | 5000 | India               | INR      | [View](/reference/india.md#extra-parameter)     |
 | 5001 | Vietnam (Banks)     | VND      | [View](/reference/vietnam.md#extra-parameter)   |

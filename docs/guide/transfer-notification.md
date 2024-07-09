@@ -78,7 +78,7 @@ curl -X POST \
 |------|----------|
 | code | SUCCESS  |
 
-The `code` value is `SUCCESS` means the request is  accepted. other code value means that is failed.
+The `code` value is `SUCCESS` means the request is  accepted. other code means that is failed.
 
 #### Example:
 

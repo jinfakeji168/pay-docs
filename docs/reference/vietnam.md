@@ -149,7 +149,7 @@ If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in yo
 The `extra` parameter MUST be a valid JSON string.
 :::
 
-### Request example for send money s
+### Request examples for send money
 
 Send money to a bank in Vietnam:
 

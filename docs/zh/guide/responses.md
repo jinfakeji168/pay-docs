@@ -1,10 +1,8 @@
 # 响应
 
-[HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-
 ## 状态说明
 
-| HTTP Status Cod            | 说明                  |
+| HTTP Status Code           | 说明                  |
 |----------------------------|---------------------|
 | 200 OK	                    | 查询成功                |
 | 201 Created	               | 下单成功		              |
@@ -13,6 +11,8 @@
 | 422 Unprocessable Content	 | 表单验证不通过（提交的参数未通过验证） |
 | 429 Too Many Requests	     | 限流（通常不会响应这个错误）      |
 | 500 Internal Server Error  | 服务器错误               |
+
+更多HTTP 状态码知识，请参考 [HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) 。
 
 ## 成功示例
 

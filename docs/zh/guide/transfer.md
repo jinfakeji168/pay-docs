@@ -4,9 +4,9 @@ POST `/api/v1/transfers`
 
 #### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |      
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| 参数     | 说明                      |      
+|--------|-------------------------|
+| Accept | 请设置为 `application/json` | 
 
 #### 包体参数 <Badge type="tip" text="Body" vertical="top" />
 
@@ -27,6 +27,8 @@ POST `/api/v1/transfers`
 :::
 
 #### 请求示例
+
+**注意：以下示例仅适用于巴西的业务。**
 
 ```shell{8,13}
 curl -X POST \

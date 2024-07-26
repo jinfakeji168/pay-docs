@@ -50,8 +50,8 @@ curl -X POST \
 | amount          | string | The amount for send money.       |
 | transfer_no     | string | DaYangPay's transaction ID.      |
 | out_transfer_no | string | The transaction ID you provided. |
-| channel_id      | string | The amount for send money.       |
-| payee_account   | string | The amount for send money.       |
+| channel_id      | string | The payment method.              |
+| payee_account   | string | Send money to the account.       |
 | payee_name      | string | Full name for the account.       |
 | created_at      | string | Created time. `UTC±00:00`        |
 

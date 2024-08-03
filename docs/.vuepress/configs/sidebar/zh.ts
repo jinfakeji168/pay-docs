@@ -32,6 +32,7 @@ export const sidebarZh: SidebarConfig = {
           '/zh/reference/indonesia.md',
           '/zh/reference/mexico.md',
           '/zh/reference/philippines.md',
+          '/zh/reference/south-africa.md',
           '/zh/reference/thailand.md',
           '/zh/reference/ukraine.md',
           '/zh/reference/vietnam.md',

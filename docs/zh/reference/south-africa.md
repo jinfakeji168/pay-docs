@@ -87,7 +87,7 @@ curl -X POST \
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
-    "extra": "{\"bank_code\":\"KBANK\"}",
+    "extra": "{\"bank_code\":\"10010\"}",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```

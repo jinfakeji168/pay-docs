@@ -4,7 +4,7 @@
 
 Request parameters example:
 
-```json{8-9}
+```json{8-10}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
   "amount": "50000.00",
@@ -13,7 +13,8 @@ Request parameters example:
   "notify_url": "https://your-domain.com/webhook",
   "extra": "{\"bank_code\":\"VCB\"}",
   "empty_string": "",
-  "null_value": null
+  "null_value": null,
+  "should_not_contain": "example"
 }
 ```
 

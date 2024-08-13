@@ -2,17 +2,52 @@
 
 ### Create string to sign
 
+Request parameters example:
+
+```json{8-9}
+{
+  "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
+  "amount": "50000.00",
+  "channel_id": "1001",
+  "out_trade_no": "20230101000000",
+  "notify_url": "https://your-domain.com/webhook",
+  "extra": "{\"bank_code\":\"VCB\"}",
+  "empty_string": "",
+  "null_value": null
+}
+```
+
+Remove parameters with `empty string` and `null` values, or the parameters that the `stringToSign` should not contain.
+
 ```json
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
   "amount": "50000.00",
   "channel_id": "1001",
   "out_trade_no": "20230101000000",
-  "notify_url": "https://your-domain.com/webhook"
+  "notify_url": "https://your-domain.com/webhook",
+  "extra": "{\"bank_code\":\"VCB\"}"
 }
 ```
 
-`amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
+Sort the keys.
+
+```json
+{
+  "amount": "50000.00",
+  "channel_id": "1001",
+  "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
+  "extra": "{\"bank_code\":\"VCB\"}",
+  "notify_url": "https://your-domain.com/webhook",
+  "out_trade_no": "20230101000000"
+}
+```
+
+Use `&` to concatenate the request parameter, and use `=` to concatenate key and value.
+
+`
+amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000
+`
 
 ### HmacSHA256 example
 

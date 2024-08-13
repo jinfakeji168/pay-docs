@@ -1,8 +1,23 @@
 # 接口签名
 
-### 拼接字符串
+### 签名字符串
 
-将请求参数按字典排序拼接为字符串。
+请求参数示例:
+
+```json{8-9}
+{
+  "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
+  "amount": "50000.00",
+  "channel_id": "1001",
+  "out_trade_no": "20230101000000",
+  "notify_url": "https://your-domain.com/webhook",
+  "extra": "{\"bank_code\":\"VCB\"}",
+  "empty_string": "",
+  "null_value": null
+}
+```
+
+删除值为 `empty string` 或 `null` 的参数，或不参与签名的参数。
 
 ```json
 {
@@ -10,11 +25,29 @@
   "amount": "50000.00",
   "channel_id": "1001",
   "out_trade_no": "20230101000000",
-  "notify_url": "https://your-domain.com/webhook"
+  "notify_url": "https://your-domain.com/webhook",
+  "extra": "{\"bank_code\":\"VCB\"}"
 }
 ```
 
-`amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
+对请求参数的键进行排序。
+
+```json
+{
+  "amount": "50000.00",
+  "channel_id": "1001",
+  "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
+  "extra": "{\"bank_code\":\"VCB\"}",
+  "notify_url": "https://your-domain.com/webhook",
+  "out_trade_no": "20230101000000"
+}
+```
+
+使用 `&` 连接请求参数，使用 `=` 连接参数的键和参数的值。
+
+`
+amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000
+`
 
 ### HmacSHA256 示例
 

@@ -11,7 +11,7 @@
 | 403 Forbidden		            | Invalid signature.                |
 | 404 Not Found	             | Transaction not found.            |
 | 422 Unprocessable Content	 | Validation Exception.             |
-| 429 Too Many Requests	     | 60/s                              |
+| 429 Too Many Requests	     |                                   |
 | 500 Internal Server Error  |                                   |
 
 ## Successful examples

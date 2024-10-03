@@ -69,7 +69,7 @@ curl -X POST \
 
 ### Different cashier page (Optional)
 
-If you wish to display a different cashier page to your customers, you may include the field `extra.type` in your request.
+If you wish to display a different cashier page to your customers, you may include the field `extra.type` in your request. By the default: display full information.
 
 `extra.type`
 

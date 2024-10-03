@@ -6,7 +6,7 @@
 - [Indonesia](indonesia.md)
 - [Mexico](mexico.md)
 - [Philippines](philippines.md)
+- [South Africa](south-africa.md)
 - [Thailand](thailand.md)
 - [Ukraine](ukraine.md)
 - [Vietnam](vietnam.md)
-- [South Africa](south-africa.md)

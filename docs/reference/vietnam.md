@@ -73,10 +73,10 @@ If you wish to display a different cashier page to your customers, you may inclu
 
 `extra.type`
 
-| Type | Description      |
-|------|------------------|
-| 1    | Bank information |
-| 2    | QR-Code          |
+| Type | Description                    |
+|------|--------------------------------|
+| 1    | Display Bank information only. |
+| 2    | Display QR-Code only.          |
 
 ```shell{8,11}
 curl -X POST \

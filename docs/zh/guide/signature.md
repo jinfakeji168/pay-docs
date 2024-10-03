@@ -14,7 +14,7 @@
   "extra": "{\"bank_code\":\"VCB\"}",
   "empty_string": "",
   "null_value": null,
-  "should_not_contain": "example"
+  "should_not_include": "example"
 }
 ```
 

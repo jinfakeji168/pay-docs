@@ -10,7 +10,7 @@
 | 1002 | MoMo |
 | 1024 | Zalo |
 
-### 代收下单
+### 代收下单示例
 
 ```shell{8}
 curl -X POST \
@@ -38,9 +38,9 @@ curl -X POST \
 }
 ```
 
-### 指定银行 (Optional)
+### 指定银行 (可选)
 
-如果您想指定银行代收
+如果您想指定银行代收，您可以在请求中包含字段`extra.bank_code`，不推荐。
 
 `extra.bank_code`
 
@@ -51,14 +51,16 @@ curl -X POST \
 | TCB  | Techcombank |
 | MBB  | MB Bank     |
 
+### 指定收银台页面 (可选)
+
+默认显示所有信息，如果您希望向客户显示不同的收银台页面，您可以在请求中包含字段`extra.type`，不推荐。
+
 `extra.type`
 
-If you want to show full information on the cashier page. please **DO NOT** include the `extra.type` field in your request.
-
-| Type | Description      |
-|------|------------------|
-| 1    | Bank information |
-| 2    | QR-Code          |
+| 类型 | 描述      |
+|----|---------|
+| 1  | 只显示银行信息 |
+| 2  | 只显示二维码  |
 
 ```shell{8,11}
 curl -X POST \
@@ -76,7 +78,7 @@ curl -X POST \
   }'
 ```
 
-### 代收查单
+### 代收查单示例
 
 ```shell
 curl -X GET \
@@ -96,6 +98,12 @@ curl -X GET \
 }
 ```
 
+订单状态码
+
+| status | 描述     |
+|--------|--------|
+| 0      | 待支付    |
+| 1      | 已支付    |
 
 
 
@@ -103,9 +111,6 @@ curl -X GET \
 
 
 ## 代付
-
-If you send money to a bank in Vietnam, The `extra.bank_code` field is required.
-If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in your request.
 
 ### 代付通道
 
@@ -117,17 +122,18 @@ If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in yo
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 
-`extra`
+如果您需要代付至越南的银行， `extra.bank_code` 字段为必填。
+如果您需要代付至 Zalo 或 MoMo，请不要在您的请求中包含 `extra` 字段。
 
 | 参数        | 必填 | 说明            |
 |-----------|----|---------------|
 | bank_code | 是  | [银行编码](#银行编码) |
 
 ::: warning NOTE
-只有 `银行` 需要提交 `extra`，`MoMo` 或 `Zalo` 不需求提交。
+`extra` 必须是有效的 JSON 字符串。
 :::
 
-### 代付下单
+### 代付下单示例
 
 银行
 
@@ -200,7 +206,7 @@ curl -X POST \
 }
 ```
 
-### 代付查单
+### 代付查单示例
 
 ```shell
 curl -X GET \
@@ -222,6 +228,14 @@ curl -X GET \
   "status": 1
 }
 ```
+订单状态码
+
+| status | 描述   |
+|--------|------|
+| 0      | 待处理  |
+| 1      | 代付成功 |
+| 2      | 处理中  |
+| 3      | 代付失败 |
 
 ### 银行编码
 

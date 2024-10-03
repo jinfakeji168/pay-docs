@@ -14,11 +14,11 @@ Request parameters example:
   "extra": "{\"bank_code\":\"VCB\"}",
   "empty_string": "",
   "null_value": null,
-  "should_not_contain": "example"
+  "should_not_include": "example"
 }
 ```
 
-Remove parameters with `empty string` and `null` values, or the parameters that the `stringToSign` should not contain.
+Remove empty strings, null values, or parameters that should not be included in `stringToSign`.
 
 ```json
 {

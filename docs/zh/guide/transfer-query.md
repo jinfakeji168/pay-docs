@@ -4,9 +4,9 @@ GET `/api/v1/transfers/:transfer`
 
 ### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明     |       
-|----------|--------|
-| Accept   | 请设置为 `application/json` | 
+| 参数     | 说明                 |       
+|--------|--------------------|
+| Accept | `application/json` | 
 
 ### 路径参数 <Badge type="tip" text="Path" vertical="top" />
 

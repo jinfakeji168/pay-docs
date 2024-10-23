@@ -4,11 +4,12 @@
 
 ### Channels for receive money
 
-| ID   | Description      |
-|------|------------------|
-| 1001 | Banks in Vietnam |
-| 1002 | MoMo             |
-| 1024 | Zalo             |
+| ID   | Description                                        |
+|------|----------------------------------------------------|
+| 1001 | Banks in Vietnam                                   |
+| 1047 | Banks in Vietnam (New Version of The Cashier Page) |
+| 1002 | MoMo                                               |
+| 1024 | Zalo                                               |
 
 ### Request example for receive money
 

@@ -57,7 +57,7 @@
 
 ```json
 {
-  "message": "The trade not found."
+  "message": "The transaction not found."
 }
 ```
 

@@ -4,9 +4,9 @@ POST `/api/v1/trades`
 
 ### HTTP头参数 <Badge type="tip" text="Header" vertical="top" />
 
-| 参数     | 说明                      |       
-|--------|-------------------------|
-| Accept | 请设置为 `application/json` | 
+| 参数     | 说明                 |       
+|--------|--------------------|
+| Accept | `application/json` | 
 
 ### 包体参数 <Badge type="tip" text="Body" vertical="top" />
 

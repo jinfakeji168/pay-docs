@@ -52,8 +52,9 @@ amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"ba
 
 ### HmacSHA256 example
 
-:::: code-group
-::: code-group-item Java
+::: code-tabs
+
+@tab Java
 ```java
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -89,9 +90,9 @@ public class Main {
     }
 }
 ```
-:::
 
-::: code-group-item PHP
+
+@tab PHP
 ```php
 <?php
 
@@ -103,8 +104,6 @@ $signature = hash_hmac('sha256', $stringToSign, $secretKey);
 echo $signature;
 ```
 :::
-
-::::
 
 `ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082`
 

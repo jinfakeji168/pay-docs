@@ -10,9 +10,9 @@ GET `/api/v1/trades/:trade`
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| Key   | Type   | Required | Sign | Description                                              |                  
-|-------|--------|----------|------|----------------------------------------------------------|
-| trade | string | Yes      | No   | DaYangPay's transaction ID or Merchant's transaction ID. |
+| Key   | Type   | Required | Sign | Description                                            |                  
+|-------|--------|----------|------|--------------------------------------------------------|
+| trade | string | Yes      | No   | The transaction ID you provided or DaYangPay provided. |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
@@ -21,7 +21,7 @@ GET `/api/v1/trades/:trade`
 | client_key | string | Yes      | Yes  | The API access key. |
 | signature  | string | Yes      | No   | Signed value.       |
 
-### Request parameters
+### Request example
 
 ```shell
 curl -X GET \
@@ -30,16 +30,16 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Key          | Type    | Description                      | 
-|--------------|---------|----------------------------------|
-| client_key   | string  | The API access key.              |
-| amount       | string  | The amount for receive money.    |
-| trade_no     | string  | DaYangPay's transaction ID.      |
-| out_trade_no | string  | The transaction ID you provided. |
-| payment_url  | string  | Cashier page URL.                |
-| created_at   | string  | created time. `UTC±00:00`        |
-| paid_at      | string  | Paid time. `UTC±00:00`           |
-| status       | integer | The transaction status.          |
+| Key          | Type    | Description                            | 
+|--------------|---------|----------------------------------------|
+| client_key   | string  | The API access key.                    |
+| amount       | string  | The amount for receive money.          |
+| trade_no     | string  | The transaction ID DaYangPay provided. |
+| out_trade_no | string  | The transaction ID you provided.       |
+| payment_url  | string  | Cashier page URL.                      |
+| created_at   | string  | created time. `UTC±00:00`              |
+| paid_at      | string  | Paid time. `UTC±00:00`                 |
+| status       | integer | The transaction status.                |
 
 #### Status code
 

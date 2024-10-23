@@ -5,7 +5,8 @@
 | ID   | 名称           | 货币  | 业务参数 `extra` |
 |------|--------------|-----|--------------|
 | 1000 | 印度代收(UPI)    | INR | 无            |
-| 1001 | 越南代收(银行)     | VND | 无            |
+| 1001 | 越南代收(银行)     | VND | 可选           |
+| 1047 | 越南代收(银行)     | VND | 可选           |
 | 1002 | 越南代收(MoMo)   | VND | 无            |
 | 1024 | 越南代收(Zalo)   | VND | 无            |
 | 1003 | 巴西代收(PIX)    | BRL | 无            |
@@ -19,19 +20,19 @@
 
 ## 代付通道
 
-| ID   | 名称           | 货币  | 业务参数 `extra`                             |
-|------|--------------|-----|------------------------------------------|
-| 5000 | 印度代付         | INR | [查看](/zh/reference/india.md#业务参数)        |
-| 5001 | 越南代付(银行)     | VND | [查看](/zh/reference/vietnam.md#业务参数)      |
-| 5002 | 越南代付(MoMo)   | VND | 无                                        | 
-| 5029 | 越南代付(Zalo)   | VND | 无                                        | 
-| 5003 | 巴西代付(PIX)    | BRL | [查看](/zh/reference/brazil.md#业务参数)       |
-| 5011 | 墨西哥代付        | MXN | [查看](/zh/reference/mexico.md#业务参数)       | 
-| 5014 | 泰国代付         | THB | [查看](/zh/reference/thailand.md#业务参数)     |
-| 5018 | 印度尼西亚代付      | IDR | [查看](/zh/reference/indonesia.md#业务参数)    | 
-| 5031 | 中国代付(银行)     | CNY | [查看](/zh/reference/china.md#业务参数)        |
-| 5032 | 菲律宾代付(GCash) | PHP | 无                                        |
-| 5033 | 菲律宾代付(Maya)  | PHP | 无                                        |
-| 5047 | 乌克兰代付        | UAH | 无                                        |
-| 5052 | 南非代付         | ZAR | [查看](/zh/reference/south-africa.md#业务参数) |
+| ID   | 名称           | 货币  | 业务参数 `extra`                                 |
+|------|--------------|-----|----------------------------------------------|
+| 5000 | 印度代付         | INR | 必填。 [查看](/zh/reference/india.md#业务参数)        |
+| 5001 | 越南代付(银行)     | VND | 必填。 [查看](/zh/reference/vietnam.md#业务参数)      |
+| 5002 | 越南代付(MoMo)   | VND | 无                                            | 
+| 5029 | 越南代付(Zalo)   | VND | 无                                            | 
+| 5003 | 巴西代付(PIX)    | BRL | 必填。 [查看](/zh/reference/brazil.md#业务参数)       |
+| 5011 | 墨西哥代付        | MXN | 必填。 [查看](/zh/reference/mexico.md#业务参数)       | 
+| 5014 | 泰国代付         | THB | 必填。 [查看](/zh/reference/thailand.md#业务参数)     |
+| 5018 | 印度尼西亚代付      | IDR | 必填。 [查看](/zh/reference/indonesia.md#业务参数)    | 
+| 5031 | 中国代付(银行)     | CNY | 必填。 [查看](/zh/reference/china.md#业务参数)        |
+| 5032 | 菲律宾代付(GCash) | PHP | 无                                            |
+| 5033 | 菲律宾代付(Maya)  | PHP | 无                                            |
+| 5047 | 乌克兰代付        | UAH | 无                                            |
+| 5052 | 南非代付         | ZAR | 必填。 [查看](/zh/reference/south-africa.md#业务参数) |
 

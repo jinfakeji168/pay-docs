@@ -57,7 +57,7 @@
 
 ```json
 {
-  "message": "The payment not found."
+  "message": "The transaction not found."
 }
 ```
 

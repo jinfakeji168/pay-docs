@@ -39,14 +39,14 @@ curl -X POST \
 
 ### Response parameters
 
-| Key          | Type   | Description                      | 
-|--------------|--------|----------------------------------|
-| client_key   | string | The API access key.              |
-| amount       | string | The amount for receive money.    |
-| trade_no     | string | DaYangPay's transaction ID.      |
-| out_trade_no | string | The transaction ID you provided. |
-| payment_url  | string | Cashier page URL.                |
-| created_at   | string | Created time. `UTC±00:00`        |
+| Key          | Type   | Description                            | 
+|--------------|--------|----------------------------------------|
+| client_key   | string | The API access key.                    |
+| amount       | string | The amount for receive money.          |
+| trade_no     | string | The transaction ID DaYangPay provided. |
+| out_trade_no | string | The transaction ID you provided.       |
+| payment_url  | string | The Cashier page URL.                  |
+| created_at   | string | Created time. `UTC±00:00`              |
 
 ### Response example
 

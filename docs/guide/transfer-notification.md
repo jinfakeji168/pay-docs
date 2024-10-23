@@ -16,7 +16,7 @@ DaYangPay will request the webhook URL you provided when the transaction status 
 | signature       | string  | No   | Signed value.                                               |
 | amount          | string  | Yes  | The amount for send money.                                  |
 | channel_id      | string  | Yes  | The payment method.                                         |
-| transfer_no     | string  | Yes  | DaYangPay's transaction ID                                  |
+| transfer_no     | string  | Yes  | The transaction ID DaYangPay provided.                      |
 | out_transfer_no | string  | Yes  | The transaction ID you provided.                            |
 | created_at      | string  | Yes  | Created time. `UTC±00:00`                                   |
 | paid_at         | string  | Yes  | Paid time when the transaction is `successful`. `UTC±00:00` |

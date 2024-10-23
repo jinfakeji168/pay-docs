@@ -1,6 +1,16 @@
+# VuePress files
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/
+
+# IDE
 .idea
-.vscode
+
+# Node modules
 node_modules
-.temp
-.cache
-dist
+
+# MacOS Desktop Services Store
+.DS_Store
+
+# Log files
+*.log

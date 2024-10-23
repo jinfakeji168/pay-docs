@@ -4,20 +4,57 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:build-webpack": "DOCS_BUNDLER=webpack pnpm docs:build",
+    "docs:clean": "rimraf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist",
+    "docs:dev": "vuepress dev docs --clean-cache --clean-temp",
+    "docs:dev-webpack": "DOCS_BUNDLER=webpack pnpm docs:dev",
+    "docs:serve": "http-server docs/.vuepress/dist",
+    "format": "prettier --write .",
+    "lint": "eslint . && prettier --check .",
+    "prepare": "husky",
+    "release": "bumpp"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.!(cjs|js|ts|vue)": "prettier --write --ignore-unknown",
+    "*.(cjs|js|ts|vue)": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "package.json": "sort-package-json"
+  },
+  "prettier": "prettier-config-vuepress",
   "dependencies": {
     "@vuepress/bundler-vite": "^2.0.0-rc.18",
     "@vuepress/theme-default": "^2.0.0-rc.56",
+    "http-server": "^14.1.1",
     "sass-embedded": "^1.80.3",
     "sass-loader": "^16.0.2",
     "vue": "^3.5.12",
     "vuepress": "2.0.0-rc.18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "bumpp": "^9.7.1",
+    "eslint": "^9.13.0",
+    "eslint-config-vuepress": "^5.2.2",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "prettier-config-vuepress": "^5.0.0",
+    "rimraf": "^6.0.1",
+    "sort-package-json": "^2.10.1",
+    "taze": "^0.17.2",
+    "tsconfig-vuepress": "^5.2.1",
     "typescript": "^5.6.3"
   },
+  "packageManager": "pnpm@9.12.2",
   "engines": {
     "node": ">=18.19.0"
   }

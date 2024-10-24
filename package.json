@@ -4,12 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress build docs --clean-cache --clean-temp",
-    "docs:build-webpack": "DOCS_BUNDLER=webpack pnpm docs:build",
-    "docs:clean": "rimraf docs/.vuepress/.temp docs/.vuepress/.cache docs/.vuepress/dist",
-    "docs:dev": "vuepress dev docs --clean-cache --clean-temp",
-    "docs:dev-webpack": "DOCS_BUNDLER=webpack pnpm docs:dev",
-    "docs:serve": "http-server docs/.vuepress/dist"
+    "docs:build": "vuepress build docs",
+    "docs:dev": "vuepress dev docs"
   },
   "prettier": "prettier-config-vuepress",
   "dependencies": {
@@ -24,7 +20,6 @@
     "tsconfig-vuepress": "^5.2.1",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.12.2",
   "engines": {
     "node": ">=18.19.0"
   }

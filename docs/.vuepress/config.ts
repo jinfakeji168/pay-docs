@@ -1,7 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defaultTheme } from '@vuepress/theme-default'
 import { defineUserConfig } from 'vuepress'
-import { navbar, sidebar, navbarZh, sidebarZh  } from './configs/index';
+import { navbar, navbarZh, sidebar, sidebarZh  } from './configs';
 
 export default defineUserConfig({
     base: '/',
@@ -30,17 +30,13 @@ export default defineUserConfig({
 
         locales: {
             '/' : {
-                navbar: navbar,
-
-                sidebar: sidebar,
-                //sidebarDepth: 1,
+                navbar,
+                sidebar,
             },
 
             '/zh/' : {
                 navbar: navbarZh,
-
                 sidebar: sidebarZh,
-                //sidebarDepth: 1,
 
                 selectLanguageName: '简体中文',
                 selectLanguageText: '选择语言',

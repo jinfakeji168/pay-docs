@@ -1,6 +1,6 @@
-import type { NavbarConfig } from '@vuepress/theme-default'
+import type { NavbarOptions  } from '@vuepress/theme-default'
 
-export const navbarZh: NavbarConfig = [
+export const navbarZh: NavbarOptions  = [
   {
     text: '接入指引',
     children: [

@@ -1,4 +1,4 @@
-# Webhook for send money 
+# Webhook for send money
 
 Request method: `POST`
 
@@ -11,7 +11,7 @@ DaYangPay will request the webhook URL you provided when the transaction status 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
 | Key             | Type    | Sign | Description                                                 |
-|-----------------|---------|------|-------------------------------------------------------------|
+| --------------- | ------- | ---- | ----------------------------------------------------------- |
 | client_key      | string  | Yes  | The API access key.                                         |
 | signature       | string  | No   | Signed value.                                               |
 | amount          | string  | Yes  | The amount for send money.                                  |
@@ -26,9 +26,9 @@ DaYangPay will request the webhook URL you provided when the transaction status 
 #### Status code
 
 | Code | Description |
-|------|-------------|
-| 1    | Successful  | 
-| 3    | Failed      | 
+| ---- | ----------- |
+| 1    | Successful  |
+| 3    | Failed      |
 
 ### Request examples
 
@@ -74,9 +74,9 @@ curl -X POST \
 
 ### Response parameters
 
-| Key  | Value    |
-|------|----------|
-| code | SUCCESS  |
+| Key  | Value   |
+| ---- | ------- |
+| code | SUCCESS |
 
 The `code` is `SUCCESS` means the request is accepted. other code means that is failed.
 

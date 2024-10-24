@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-|------|-------------|
+| ---- | ----------- |
 | 1013 |             |
 
 ### Request example for receive money
@@ -56,20 +56,12 @@ curl -X GET \
 }
 ```
 
-
-
-
-
-
-
-
-
 ## Send money
 
 ### Channels for send money
 
 | ID   | Description |
-|------|-------------|
+| ---- | ----------- |
 | 5018 |             |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
@@ -77,10 +69,10 @@ curl -X GET \
 `extra`
 
 | Key       | Required | Description               |
-|-----------|----------|---------------------------|
+| --------- | -------- | ------------------------- |
 | bank_code | Yes      | [Bank codes](#bank-codes) |
 
-### Request example for send money 
+### Request example for send money
 
 ```shell{8,13}
 curl -X POST \
@@ -141,7 +133,7 @@ curl -X GET \
 `extra.bank_code`
 
 | Code                    | Name                                           |
-|-------------------------|------------------------------------------------|
+| ----------------------- | ---------------------------------------------- |
 | ACEH                    | Bank Aceh Syariah                              |
 | ACEH_UUS                | Bank Agris UUS                                 |
 | ACEH_SYR                | BPD ISTIMEWA ACEH SYARIAH                      |
@@ -308,7 +300,7 @@ curl -X GET \
 | VICTORIA_SYR            | Bank Victoria Syariah                          |
 | WOORI                   | Bank Woori Saudara                             |
 | YUDHA_BHAKTI            | Neo Commerce/Bank Yudha Bhakti                 |
-| DAERAH_ISTIMEWA_UUS     | BPD_Daerah_Istimewa_Yogyakarta_(DIY)           |
+| DAERAH_ISTIMEWA_UUS     | BPD*Daerah_Istimewa_Yogyakarta*(DIY)           |
 | CCB                     | CCB Indonesia                                  |
 | RBS                     | Royal Bank of Scotland (RBS)                   |
 | OVO                     | OVO                                            |

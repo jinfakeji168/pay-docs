@@ -9,19 +9,19 @@ Not supported.
 ### Channels for send money
 
 | ID   | Description |
-|------|-------------|
+| ---- | ----------- |
 | 5031 | Banks       |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| Key         | Required | Description       | 
-|-------------|----------|-------------------|
+| Key         | Required | Description       |
+| ----------- | -------- | ----------------- |
 | bank_name   | Yes      | Bank name.        |
 | bank_branch | No       | Bank branch name. |
 
-### Request example for send money 
+### Request example for send money
 
 ```shell{8,13}
 curl -X POST \

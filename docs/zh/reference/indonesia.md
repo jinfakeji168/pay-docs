@@ -5,8 +5,8 @@
 ### 代收通道
 
 | ID   | 说明 |
-|------|----|
-| 1013 |    |
+| ---- | ---- |
+| 1013 |      |
 
 ### 代收下单
 
@@ -56,29 +56,21 @@ curl -X GET \
 }
 ```
 
-
-
-
-
-
-
-
-
 ## 代付
 
 ### 代付通道
 
 | ID   | 说明 |
-|------|----|
-| 5018 |    |
+| ---- | ---- |
+| 5018 |      |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数        | 必填 | 说明            |
-|-----------|----|---------------|
-| bank_code | 是  | [银行编码](#银行编码) |
+| 参数      | 必填 | 说明                  |
+| --------- | ---- | --------------------- |
+| bank_code | 是   | [银行编码](#银行编码) |
 
 ### 代付下单
 
@@ -140,8 +132,8 @@ curl -X GET \
 
 `extra.bank_code`
 
-| 银行编码                    | 银行名称                                           |
-|-------------------------|------------------------------------------------|
+| 银行编码                | 银行名称                                       |
+| ----------------------- | ---------------------------------------------- |
 | ACEH                    | Bank Aceh Syariah                              |
 | ACEH_UUS                | Bank Agris UUS                                 |
 | ACEH_SYR                | BPD ISTIMEWA ACEH SYARIAH                      |
@@ -308,7 +300,7 @@ curl -X GET \
 | VICTORIA_SYR            | Bank Victoria Syariah                          |
 | WOORI                   | Bank Woori Saudara                             |
 | YUDHA_BHAKTI            | Neo Commerce/Bank Yudha Bhakti                 |
-| DAERAH_ISTIMEWA_UUS     | BPD_Daerah_Istimewa_Yogyakarta_(DIY)           |
+| DAERAH_ISTIMEWA_UUS     | BPD*Daerah_Istimewa_Yogyakarta*(DIY)           |
 | CCB                     | CCB Indonesia                                  |
 | RBS                     | Royal Bank of Scotland (RBS)                   |
 | OVO                     | OVO                                            |

@@ -4,20 +4,20 @@ GET `/api/v1/transfers/:transfer`
 
 ### HTTP Headers <Badge type="tip" text="Header" vertical="top" />
 
-| Key    | Value              |       
-|--------|--------------------|
-| Accept | `application/json` | 
+| Key    | Value              |
+| ------ | ------------------ |
+| Accept | `application/json` |
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| Key      | Type   | Required | Sign | Description                                            |                  
-|----------|--------|----------|------|--------------------------------------------------------|
+| Key      | Type   | Required | Sign | Description                                            |
+| -------- | ------ | -------- | ---- | ------------------------------------------------------ |
 | transfer | string | Yes      | No   | The transaction ID you provided or DaYangPay provided. |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
-| Key        | Type   | Required | Sign | Description         |                  
-|------------|--------|----------|------|---------------------|
+| Key        | Type   | Required | Sign | Description         |
+| ---------- | ------ | -------- | ---- | ------------------- |
 | client_key | string | Yes      | Yes  | The API access key. |
 | signature  | string | Yes      | No   | Signed value.       |
 
@@ -30,8 +30,9 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Key             | Type    | Description                            | 
-|-----------------|---------|----------------------------------------|
+
+| Key             | Type    | Description                            |
+| --------------- | ------- | -------------------------------------- |
 | client_key      | string  | The API access key.                    |
 | amount          | string  | The amount for send money.             |
 | transfer_no     | string  | The transaction ID DaYangPay provided. |
@@ -46,11 +47,11 @@ curl -X GET \
 #### Status code
 
 | Code | Description |
-|------|-------------|
-| 0    | Pending     | 
-| 1    | Successful  | 
-| 2    | Processing  | 
-| 3    | Failed      | 
+| ---- | ----------- |
+| 0    | Pending     |
+| 1    | Successful  |
+| 2    | Processing  |
+| 3    | Failed      |
 
 ### Response example
 

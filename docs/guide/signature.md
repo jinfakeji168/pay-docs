@@ -46,15 +46,14 @@ Sort the keys.
 
 Use `&` to concatenate the request parameter, and use `=` to concatenate key and value.
 
-`
-amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000
-`
+`amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
 
 ### HmacSHA256 example
 
 ::: code-tabs
 
 @tab Java
+
 ```java
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -91,8 +90,8 @@ public class Main {
 }
 ```
 
-
 @tab PHP
+
 ```php
 <?php
 
@@ -103,6 +102,7 @@ $signature = hash_hmac('sha256', $stringToSign, $secretKey);
 
 echo $signature;
 ```
+
 :::
 
 `ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082`

@@ -4,14 +4,14 @@ GET `/api/v1/user/balances`
 
 ### HTTP headers <Badge type="tip" text="Header" vertical="top" />
 
-| Key    | Value              |       
-|--------|--------------------|
-| Accept | `application/json` | 
+| Key    | Value              |
+| ------ | ------------------ |
+| Accept | `application/json` |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
-| Key        | Type   | Required | Sign | Description         |                  
-|------------|--------|----------|------|---------------------|
+| Key        | Type   | Required | Sign | Description         |
+| ---------- | ------ | -------- | ---- | ------------------- |
 | client_key | string | Yes      | Yes  | The API access key. |
 | signature  | string | Yes      | No   | Signed value.       |
 
@@ -24,8 +24,9 @@ curl -X GET \
 ```
 
 ### Response parameters
-| Key             | Type   | Description                      | 
-|-----------------|--------|----------------------------------|
+
+| Key             | Type   | Description                      |
+| --------------- | ------ | -------------------------------- |
 | client_key      | string | The API access key.              |
 | available_funds | string | Available funds of your account. |
 | locked_funds    | string | Locked funds of your account.    |

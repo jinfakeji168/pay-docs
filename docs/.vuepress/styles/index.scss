@@ -1,17 +1,17 @@
 table {
-    width: 100%;
-    display: table;
+  width: 100%;
+  display: table;
 }
 
-*[id^="_2"],
-*[id^="_4"],
-*[id^="_5"] {
-    font-size: 1rem;
+*[id^='_2'],
+*[id^='_4'],
+*[id^='_5'] {
+  font-size: 1rem;
 }
-*[id^="_2"] {
-    color: green;
+*[id^='_2'] {
+  color: green;
 }
-*[id^="_4"],
-*[id^="_5"] {
-    color: red;
+*[id^='_4'],
+*[id^='_5'] {
+  color: red;
 }

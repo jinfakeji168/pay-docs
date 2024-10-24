@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description           |
-|------|-----------------------|
+| ---- | --------------------- |
 | 1046 | Banks in South Africa |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description           |
-|------|-----------------------|
+| ---- | --------------------- |
 | 5052 | Banks in South Africa |
 
 ### Extra parameter <Badge type="warning" text="extra" vertical="top" />
@@ -69,8 +69,8 @@ curl -X GET \
 `extra`
 
 | Field     | Required | Description               |
-|-----------|----------|---------------------------|
-| bank_code | Yes      | [Bank codes](#bank-codes) | 
+| --------- | -------- | ------------------------- |
+| bank_code | Yes      | [Bank codes](#bank-codes) |
 
 ### Request example of send money
 
@@ -133,27 +133,27 @@ curl -X GET \
 `extra.bank_code`
 
 | Bank code | Bank name           |
-|-----------|---------------------|
-| 10010     | 	Absa               |
-| 10011	    | NedBank             |
-| 10012	    | Capitec             |
-| 10013	    | Standard            |
-| 10014	    | Fnb                 |
-| 10015	    | African Bank        |
-| 10016	    | Bidvest Bank        |
-| 10017	    | Discovery           |
-| 10018	    | FirstRand Bank      |
-| 10019	    | Grindrod Bank       |
-| 10020	    | Imperial Bank       |
-| 10021	    | Investec Bank       |
-| 10022	    | Sasfin Bank         |
-| 10023	    | Ubank               |
-| 10024	    | TymeBank            |
-| 10025	    | Mercantile Bank     |
-| 10026	    | Albaraka Bank       |
-| 10027	    | HBZ Bank            |
-| 10028	    | Habib Overseas Bank |
-| 10029	    | Wesbank             |
-| 10030	    | Rand Merchant Bank  |
-| 10031	    | Bank of Athens      |
-| 10032	    | Access Bank	        |
+| --------- | ------------------- |
+| 10010     | Absa                |
+| 10011     | NedBank             |
+| 10012     | Capitec             |
+| 10013     | Standard            |
+| 10014     | Fnb                 |
+| 10015     | African Bank        |
+| 10016     | Bidvest Bank        |
+| 10017     | Discovery           |
+| 10018     | FirstRand Bank      |
+| 10019     | Grindrod Bank       |
+| 10020     | Imperial Bank       |
+| 10021     | Investec Bank       |
+| 10022     | Sasfin Bank         |
+| 10023     | Ubank               |
+| 10024     | TymeBank            |
+| 10025     | Mercantile Bank     |
+| 10026     | Albaraka Bank       |
+| 10027     | HBZ Bank            |
+| 10028     | Habib Overseas Bank |
+| 10029     | Wesbank             |
+| 10030     | Rand Merchant Bank  |
+| 10031     | Bank of Athens      |
+| 10032     | Access Bank         |

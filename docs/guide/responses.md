@@ -4,15 +4,15 @@
 
 ## HTTP Status Codes
 
-| Status Code                | Description                       |
-|----------------------------|-----------------------------------|
-| 200 OK	                    | When `GET` request successful.    |
-| 201 Created	               | When `POST` request successful.		 |
-| 403 Forbidden		            | Invalid signature.                |
-| 404 Not Found	             | Transaction not found.            |
-| 422 Unprocessable Content	 | Validation Exception.             |
-| 429 Too Many Requests	     |                                   |
-| 500 Internal Server Error  |                                   |
+| Status Code               | Description                     |
+| ------------------------- | ------------------------------- |
+| 200 OK                    | When `GET` request successful.  |
+| 201 Created               | When `POST` request successful. |
+| 403 Forbidden             | Invalid signature.              |
+| 404 Not Found             | Transaction not found.          |
+| 422 Unprocessable Content | Validation Exception.           |
+| 429 Too Many Requests     |                                 |
+| 500 Internal Server Error |                                 |
 
 ## Successful examples
 
@@ -67,9 +67,7 @@
 {
   "message": "The out trade no has already been taken.",
   "errors": {
-    "out_trade_no": [
-      "The out trade no has already been taken."
-    ]
+    "out_trade_no": ["The out trade no has already been taken."]
   }
 }
 ```

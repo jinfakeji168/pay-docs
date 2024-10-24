@@ -94,11 +94,7 @@ curl -X POST \
     "payee_name": "PAYEE NAME",
     "signature": "99c************************************de"
 }' \
-  -w "\n\nDNS Lookup: %{time_namelookup}s\n
-Connection: %{time_connect}s\n
-Pretransfer: %{time_pretransfer}s\n
-Start Transfer: %{time_starttransfer}s\n
-Total Time: %{time_total}s\n"
+  -w "\n\nDNS Lookup: %{time_namelookup}s\nConnection: %{time_connect}s\nPretransfer: %{time_pretransfer}s\nStart Transfer: %{time_starttransfer}s\nTotal Time: %{time_total}s\n"
 ```
 
 Output:

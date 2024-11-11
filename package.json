@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:build": "vuepress build docs",
     "docs:dev": "vuepress dev docs --clean-cache --clean-temp",
     "format": "prettier --write .",
     "lint": "eslint . && prettier --check ."
@@ -36,7 +36,6 @@
     "prettier-config-vuepress": "^5.0.0",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.12.2",
   "engines": {
     "node": ">=18.19.0"
   }

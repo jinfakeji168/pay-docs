@@ -70,6 +70,64 @@ curl -X POST \
 }
 ```
 
+
+### How to Determine if the Order Was Successfully Placed?
+
+Check whether the HTTP response status code is `200` or `201`. Or verify if a specific field, such as `transfer_no` exists in the response.
+
+::: code-tabs
+
+@tab Java
+
+```java
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+public class HttpClientExample {
+    public static void main(String[] args) {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://example.com"))
+                .POST()
+                .build();
+
+        try {
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            // Check if the HTTP status code is 200 or 201
+            int statusCode = response.statusCode();
+
+            if (statusCode == 200 || statusCode == 201) {
+                System.out.println("Success: " + statusCode);
+            } else {
+                System.out.println("Failed: " + statusCode);
+            }
+
+            // Check if the key "transfer_no" exists
+            Gson gson = new Gson();
+            JsonObject jsonObject = gson.fromJson(response.body(), JsonObject.class);
+
+            if (jsonObject.has("transfer_no")) {
+                String tradeNo = jsonObject.get("transfer_no").getAsString();
+                System.out.println("transfer_no found: " + tradeNo);
+            } else {
+                System.out.println("transfer_no not found");
+            }
+
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+:::
+
+
 ### Important Information
 
 ::: warning Important

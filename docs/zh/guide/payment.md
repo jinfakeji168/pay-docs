@@ -60,3 +60,59 @@ curl -X POST \
   "created_at": "2023-01-01T01:01:01.000000Z"
 }
 ```
+
+### 如何判断是否下单成功？
+
+判断响应的HTTP 状态码是否是 `200` 或 `201`。或判断响应中是否存在某个字段，如：`payment_url`。
+
+::: code-tabs
+
+@tab Java
+
+```java
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+
+public class HttpClientExample {
+    public static void main(String[] args) {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://example.com"))
+                .POST()
+                .build();
+
+        try {
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+            // Check if the HTTP status code is 200 or 201
+            int statusCode = response.statusCode();
+
+            if (statusCode == 200 || statusCode == 201) {
+                System.out.println("Success: " + statusCode);
+            } else {
+                System.out.println("Failed: " + statusCode);
+            }
+
+            // Check if the key "payment_url" exists
+            Gson gson = new Gson();
+            JsonObject jsonObject = gson.fromJson(response.body(), JsonObject.class);
+
+            if (jsonObject.has("payment_url")) {
+                String tradeNo = jsonObject.get("payment_url").getAsString();
+                System.out.println("payment_url found: " + tradeNo);
+            } else {
+                System.out.println("payment_url not found");
+            }
+
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+:::

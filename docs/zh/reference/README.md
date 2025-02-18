@@ -5,6 +5,7 @@
 - [印度](india.md)
 - [印度尼西亚](indonesia.md)
 - [墨西哥](mexico.md)
+- [尼日利亚](nigeria.md)
 - [菲律宾](philippines.md)
 - [南非](south-africa.md)
 - [泰国](thailand.md)

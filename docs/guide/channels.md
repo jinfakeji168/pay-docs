@@ -2,21 +2,24 @@
 
 ## Channels for receive money
 
+### Vietnam
+
 | ID   | Name                | Currency code | Extra parameters |
 | ---- | ------------------- | ------------- | ---------------- |
-| 1000 | India (UPI)         | INR           | No               |
 | 1001 | Vietnam (Banks)     | VND           | Optional         |
 | 1047 | Vietnam (Banks)     | VND           | Optional         |
 | 1002 | Vietnam (MoMo)      | VND           | No               |
 | 1024 | Vietnam (Zalo)      | VND           | No               |
 | 1003 | Brazil (PIX)        | BRL           | No               |
 | 1006 | Mexico              | MXN           | No               |
+| 1000 | India (UPI)         | INR           | No               |
 | 1009 | Thailand            | THB           | No               |
 | 1013 | Indonesia           | IDR           | No               |
 | 1028 | Philippines (GCash) | PHP           | No               |
 | 1029 | Philippines (Maya)  | PHP           | No               |
 | 1038 | Ukraine             | UAH           | No               |
 | 1046 | South Africa        | ZAR           | No               |
+| 1057 | Nigeria             | NGN           | No               |
 
 ## Channels for send money
 
@@ -35,3 +38,4 @@
 | 5033 | Philippines (Maya)  | PHP           | No                                                           |
 | 5047 | Ukraine             | UAH           | No                                                           |
 | 5052 | South Africa        | ZAR           | Required. [View](/reference/south-africa.md#extra-parameter) |
+| 5060 | Nigeria             | NGN           |  |

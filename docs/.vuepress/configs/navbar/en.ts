@@ -27,6 +27,7 @@ export const navbar: NavbarOptions = [
       '/reference/india.md',
       '/reference/indonesia.md',
       '/reference/mexico.md',
+      '/reference/nigeria.md',
       '/reference/philippines.md',
       '/reference/south-africa.md',
       '/reference/thailand.md',

@@ -5,6 +5,7 @@
 - [India](india.md)
 - [Indonesia](indonesia.md)
 - [Mexico](mexico.md)
+- [Nigeria](nigeria.md)
 - [Philippines](philippines.md)
 - [South Africa](south-africa.md)
 - [Thailand](thailand.md)

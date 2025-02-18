@@ -31,6 +31,7 @@ export const sidebarZh: SidebarOptions = {
         '/zh/reference/india.md',
         '/zh/reference/indonesia.md',
         '/zh/reference/mexico.md',
+        '/zh/reference/nigeria.md',
         '/zh/reference/philippines.md',
         '/zh/reference/south-africa.md',
         '/zh/reference/thailand.md',

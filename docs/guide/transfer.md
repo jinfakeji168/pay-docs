@@ -80,7 +80,7 @@ Communication Test Example with the DaYangPay Server:
 
 ```bash
 curl -X POST \
-  https://pay.dayangpay.com/api/v1/transfers \
+  https://example.com/api/v1/transfers \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
   -d '{

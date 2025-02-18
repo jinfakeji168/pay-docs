@@ -64,6 +64,14 @@ curl -X GET \
 | ---- | --------------------- |
 | 5060 | Banks in Nigeria |
 
+### Extra parameter <Badge type="warning" text="extra" vertical="top" />
+
+`extra`
+
+| Field     | Required | Description               |
+| --------- | -------- | ------------------------- |
+| bank_code | Yes      | [Bank codes](#bank-codes) |
+
 ### Request example of send money
 
 ```shell{8,13}
@@ -79,6 +87,7 @@ curl -X POST \
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
+    "extra": "{\"bank_code\":\"40014\"}",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
@@ -118,3 +127,9 @@ curl -X GET \
   "status": 1
 }
 ```
+
+### Bank codes
+
+`extra.bank_code`
+
+Please contact our support team. 

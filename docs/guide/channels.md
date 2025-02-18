@@ -10,6 +10,7 @@
 | 1047 | Vietnam (Banks)     | VND           | Optional         |
 | 1002 | Vietnam (MoMo)      | VND           | No               |
 | 1024 | Vietnam (Zalo)      | VND           | No               |
+| 1056 | Vietnam (Business)  | VND           | No               |
 | 1003 | Brazil (PIX)        | BRL           | No               |
 | 1006 | Mexico              | MXN           | No               |
 | 1000 | India (UPI)         | INR           | No               |
@@ -29,6 +30,7 @@
 | 5001 | Vietnam (Banks)     | VND           | Required. [View](/reference/vietnam.md#extra-parameter)      |
 | 5002 | Vietnam (MoMo)      | VND           | No                                                           |
 | 5029 | Vietnam (Zalo)      | VND           | No                                                           |
+| 5058 | Vietnam (Business)  | VND           | Required. [View](/reference/india.md#extra-parameter)        |
 | 5003 | Brazil (PIX)        | BRL           | Required. [View](/reference/brazil.md#extra-parameter)       |
 | 5011 | Mexico              | MXN           | Required. [View](/reference/mexico.md#extra-parameter)       |
 | 5014 | Thailand            | THB           | Required. [View](/reference/thailand.md#extra-parameter)     |

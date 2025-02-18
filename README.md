@@ -3,19 +3,19 @@
 ### Dependencies
 
 ```shell
-npm i
+pnpm install
 ```
 
 ### Dev
 
 ```shell
-npm run docs:dev
+pnpm run docs:dev
 ```
 
 ### Build
 
 ```shell
-npm run docs:build
+pnpm run docs:build
 ```
 
 output path: `pay-docs/docs/.vuepress/dist`

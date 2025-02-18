@@ -38,4 +38,4 @@
 | 5033 | 菲律宾代付(Maya)  | PHP  | 无                                                    |
 | 5047 | 乌克兰代付        | UAH  | 无                                                    |
 | 5052 | 南非代付          | ZAR  | 必填。 [查看](/zh/reference/south-africa.md#业务参数) |
-| 5060 | 尼日利亚       | NGN           |  |
+| 5060 | 尼日利亚       | NGN           | 必填。 [查看](/zh/reference/nigeria.md#业务参数) |

@@ -40,4 +40,4 @@
 | 5033 | Philippines (Maya)  | PHP           | No                                                           |
 | 5047 | Ukraine             | UAH           | No                                                           |
 | 5052 | South Africa        | ZAR           | Required. [View](/reference/south-africa.md#extra-parameter) |
-| 5060 | Nigeria             | NGN           |  |
+| 5060 | Nigeria             | NGN           | Required. [View](/reference/nigeria.md#extra-parameter) |

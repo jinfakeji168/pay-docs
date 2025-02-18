@@ -103,8 +103,8 @@ public class HttpClientExample {
             JsonObject jsonObject = gson.fromJson(response.body(), JsonObject.class);
 
             if (jsonObject.has("payment_url")) {
-                String tradeNo = jsonObject.get("payment_url").getAsString();
-                System.out.println("payment_url found: " + tradeNo);
+                String paymentUrl = jsonObject.get("payment_url").getAsString();
+                System.out.println("payment_url found: " + paymentUrl);
             } else {
                 System.out.println("payment_url not found");
             }

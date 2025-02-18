@@ -118,8 +118,8 @@ public class HttpClientExample {
             JsonObject jsonObject = gson.fromJson(response.body(), JsonObject.class);
 
             if (jsonObject.has("transfer_no")) {
-                String tradeNo = jsonObject.get("transfer_no").getAsString();
-                System.out.println("transfer_no found: " + tradeNo);
+                String transferNo = jsonObject.get("transfer_no").getAsString();
+                System.out.println("transfer_no found: " + transferNo);
             } else {
                 System.out.println("transfer_no not found");
             }

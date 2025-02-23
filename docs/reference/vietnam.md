@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description                                        |
-| ---- | -------------------------------------------------- |
+|------|----------------------------------------------------|
 | 1001 | Banks in Vietnam                                   |
 | 1047 | Banks in Vietnam (New Version of The Cashier Page) |
 | 1002 | MoMo                                               |
@@ -46,7 +46,7 @@ If you want specific a bank to receive money. You may include the `extra.bank_co
 `extra.bank_code`
 
 | Code | Name        |
-| ---- | ----------- |
+|------|-------------|
 | BIDV | BIDV        |
 | VCB  | Vietcombank |
 | TCB  | Techcombank |
@@ -75,7 +75,7 @@ If you wish to display a different cashier page to your customers, you may inclu
 `extra.type`
 
 | Type | Description                    |
-| ---- | ------------------------------ |
+|------|--------------------------------|
 | 1    | Display Bank information only. |
 | 2    | Display QR-Code only.          |
 
@@ -118,7 +118,7 @@ curl -X GET \
 Status
 
 | Code | Description     |
-| ---- | --------------- |
+|------|-----------------|
 | 0    | Pending payment |
 | 1    | Paid            |
 | 2    | Closed          |
@@ -128,7 +128,7 @@ Status
 ### Channels for send money
 
 | ID   | Description      |
-| ---- | ---------------- |
+|------|------------------|
 | 5001 | Banks in Vietnam |
 | 5002 | MoMo             |
 | 5029 | Zalo             |
@@ -139,7 +139,7 @@ If you send money to a bank in Vietnam, The `extra.bank_code` field is **require
 If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in your request.
 
 | Field     | Required | Description               |
-| --------- | -------- | ------------------------- |
+|-----------|----------|---------------------------|
 | bank_code | Yes      | [Bank codes](#bank-codes) |
 
 ::: warning NOTE
@@ -245,7 +245,7 @@ curl -X GET \
 Status
 
 | Code | Description |
-| ---- | ----------- |
+|------|-------------|
 | 0    | Pending     |
 | 1    | Successful  |
 | 2    | Processing  |
@@ -256,7 +256,7 @@ Status
 `extra.bank_code`
 
 | Code      | Name                                |
-| --------- | ----------------------------------- |
+|-----------|-------------------------------------|
 | TCB       | Techcombank                         |
 | VPB       | VPBank                              |
 | VIB       | VIB                                 |

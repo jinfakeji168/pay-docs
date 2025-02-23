@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 1000 | UPI         |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5000 | UPI         |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
@@ -69,7 +69,7 @@ curl -X GET \
 `extra`
 
 | Key       | Required | Description                                 |
-| --------- | -------- | ------------------------------------------- |
+|-----------|----------|---------------------------------------------|
 | ifsc      | Yes      | IFSC                                        |
 | bank_code | Yes      | Bank code. Please fill the value as `ICIC`. |
 

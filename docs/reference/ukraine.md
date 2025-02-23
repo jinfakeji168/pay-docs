@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 1038 |             |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5047 |             |
 
 ### Request example send money

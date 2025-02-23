@@ -5,13 +5,13 @@ Request method: `POST`
 Content-Type: `application/json`
 
 :::warning NOTE
-DaYangPay will request the webhook URL you provided when the transaction status is `successful`.
+DaYangPay will request the webhook URL you provided when the transaction status is `Paid`.
 :::
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
 | Key          | Type    | Sign | Description                            |
-| ------------ | ------- | ---- | -------------------------------------- |
+|--------------|---------|------|----------------------------------------|
 | client_key   | string  | Yes  | The API access key.                    |
 | signature    | string  | No   | Signed value.                          |
 | amount       | string  | Yes  | The amount for receive money.          |
@@ -25,8 +25,8 @@ DaYangPay will request the webhook URL you provided when the transaction status 
 #### Status code
 
 | Code | Description |
-| ---- | ----------- |
-| 1    | Successful  |
+|------|-------------|
+| 1    | Paid        |
 
 ### Request example
 
@@ -51,7 +51,7 @@ curl -X POST \
 ### Response parameters
 
 | Key  | Value   |
-| ---- | ------- |
+|------|---------|
 | code | SUCCESS |
 
 The `code` is `SUCCESS` means the request is accepted. other code means that is failed.

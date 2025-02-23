@@ -5,7 +5,7 @@
 ## HTTP Status Codes
 
 | Status Code               | Description                     |
-| ------------------------- | ------------------------------- |
+|---------------------------|---------------------------------|
 | 200 OK                    | When `GET` request successful.  |
 | 201 Created               | When `POST` request successful. |
 | 403 Forbidden             | Invalid signature.              |

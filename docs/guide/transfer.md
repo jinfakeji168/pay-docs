@@ -4,14 +4,15 @@ POST `/api/v1/transfers`
 
 ### HTTP headers <Badge type="tip" text="Header" vertical="top" />
 
-| Key    | Value              |
-| ------ | ------------------ |
-| Accept | `application/json` |
+| Key          | Value              |
+|--------------|--------------------|
+| Accept       | `application/json` |
+| Content-Type | `application/json` |
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
 | Key             | Type   | Required    | Sign | Description                                                       |
-| --------------- | ------ | ----------- | ---- | ----------------------------------------------------------------- |
+|-----------------|--------|-------------|------|-------------------------------------------------------------------|
 | client_key      | string | Yes         | Yes  | The API access key.                                               |
 | amount          | string | Yes         | Yes  | The amount for send money.                                        |
 | channel_id      | string | Yes         | Yes  | The payment method.                                               |
@@ -80,8 +81,8 @@ Check whether the HTTP response status code is `200` or `201`. Or verify if a sp
 @tab Java
 
 ```java
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
+import com.google.gson.*;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -91,36 +92,60 @@ import java.net.http.HttpResponse;
 public class HttpClientExample {
     public static void main(String[] args) {
         HttpClient client = HttpClient.newHttpClient();
+
+        // Create the request body (example, if needed, otherwise, you can remove this)
+        String requestBody = "{\"key\":\"value\"}";  // You can replace with actual data for POST request
+
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://example.com"))
-                .POST()
+                .uri(URI.create("https://example.com/api/v1/trades"))
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .header("Accept", "application/json")
+                .header("Content-Type", "application/json")
                 .build();
 
         try {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            // Check if the HTTP status code is 200 or 201
+            // Check if the HTTP status code is 200 ~ 299
             int statusCode = response.statusCode();
 
-            if (statusCode == 200 || statusCode == 201) {
+            if (statusCode >= 200 && statusCode <= 299) {
                 System.out.println("Success: " + statusCode);
             } else {
                 System.out.println("Failed: " + statusCode);
             }
 
-            // Check if the key "transfer_no" exists
-            Gson gson = new Gson();
-            JsonObject jsonObject = gson.fromJson(response.body(), JsonObject.class);
+            // Check if a specific key exists in the JSON response, e.g., 'transfer_no'
+            String responseBody = response.body();
+            System.out.println("Response Body: " + responseBody);
 
-            if (jsonObject.has("transfer_no")) {
-                String transferNo = jsonObject.get("transfer_no").getAsString();
-                System.out.println("transfer_no found: " + transferNo);
+            if (isValidJson(responseBody)) {
+                Gson gson = new Gson();
+                JsonObject jsonObject = gson.fromJson(responseBody, JsonObject.class);
+
+                String key = "transfer_no";
+
+                if (jsonObject.has(key)) {
+                    String value = jsonObject.get(key).getAsString();
+                    System.out.println(key + " found: " + value);
+                } else {
+                    System.out.println(key + " not found");
+                }
             } else {
-                System.out.println("transfer_no not found");
+                System.out.println("Response body is not valid JSON.");
             }
-
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+            System.err.println("Error occurred: " + e.getMessage());
+        }
+    }
+
+    // Check if a string is valid JSON
+    private static boolean isValidJson(String json) {
+        try {
+            JsonElement jsonElement = JsonParser.parseString(json);
+            return jsonElement.isJsonObject() || jsonElement.isJsonArray();
+        } catch (JsonParseException e) {
+            return false;
         }
     }
 }

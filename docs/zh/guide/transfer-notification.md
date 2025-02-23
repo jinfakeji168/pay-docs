@@ -12,18 +12,18 @@ Content-Type: `application/json`
 
 ### 包体参数 <Badge type="tip" text="Body" vertical="top" />
 
-| 参数            | 类型    | 参与签名 | 说明                                                                                             |
-| --------------- | ------- | -------- | ------------------------------------------------------------------------------------------------ |
-| client_key      | string  | 是       | 商户标识。由大洋支付颁发。                                                                       |
-| signature       | string  | 否       | 签名值。                                                                                         |
-| amount          | string  | 是       | 代付金额。单位：`元`。                                                                           |
-| channel_id      | string  | 是       | 代付通道ID。                                                                                     |
-| transfer_no     | string  | 是       | 代付订单号。                                                                                     |
-| out_transfer_no | string  | 是       | 商户代付订单号。                                                                                 |
-| created_at      | string  | 是       | 下单时间。UTC 时间。                                                                             |
-| paid_at         | string  | 是       | 付款时间。UTC 时间。<br><span style="color: red">代付订单状态为代付成功，才会传递此参数。</span> |
-| message         | string  | 是       | 代付失败的原因。<br><span style="color: red">代付订单状态为代付失败，才会传递此参数。</span>     |
-| status          | integer | 是       | 订单状态。 `1: 代付成功, 3: 代付失败`                                                            |
+| 参数              | 类型      | 参与签名 | 说明                                                                   |
+|-----------------|---------|------|----------------------------------------------------------------------|
+| client_key      | string  | 是    | 商户标识。由大洋支付颁发。                                                        |
+| signature       | string  | 否    | 签名值。                                                                 |
+| amount          | string  | 是    | 代付金额。单位：`元`。                                                         |
+| channel_id      | string  | 是    | 代付通道ID。                                                              |
+| transfer_no     | string  | 是    | 代付订单号。                                                               |
+| out_transfer_no | string  | 是    | 商户代付订单号。                                                             |
+| created_at      | string  | 是    | 下单时间。UTC 时间。                                                         |
+| paid_at         | string  | 是    | 付款时间。UTC 时间。<br><span style="color: red">代付订单状态为代付成功，才会传递此参数。</span> |
+| message         | string  | 是    | 代付失败的原因。<br><span style="color: red">代付订单状态为代付失败，才会传递此参数。</span>     |
+| status          | integer | 是    | 订单状态。 `1: 代付成功, 3: 代付失败`                                             |
 
 ### 通知示例
 
@@ -69,8 +69,8 @@ curl -X POST \
 
 ### 商户应答
 
-| 参数 | 说明                                                                                                                       |
-| ---- | -------------------------------------------------------------------------------------------------------------------------- |
+| 参数   | 说明                                                                                         |
+|------|--------------------------------------------------------------------------------------------|
 | code | 状态码。值为 `SUCCESS` 表示成功，**区分大小写**。<br>其他代码表示失败。 <span style="color: red">请响应 JSON 数据。</span> |
 
 示例：

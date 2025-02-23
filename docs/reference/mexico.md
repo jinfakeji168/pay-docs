@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 1006 |             |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5011 |             |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
@@ -69,7 +69,7 @@ curl -X GET \
 `extra`
 
 | Key       | Required | Description                                            |
-| --------- | -------- | ------------------------------------------------------ |
+|-----------|----------|--------------------------------------------------------|
 | bank_code | Yes      | Bank codes. Bank code. Please fill the value as `BANK` |
 
 ### Request example for send money

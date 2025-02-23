@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 1028 | GCash       |
 | 1029 | Maya        |
 
@@ -62,7 +62,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5032 | GCash       |
 | 5033 | Maya        |
 

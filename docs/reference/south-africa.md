@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description           |
-| ---- | --------------------- |
+|------|-----------------------|
 | 1046 | Banks in South Africa |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description           |
-| ---- | --------------------- |
+|------|-----------------------|
 | 5052 | Banks in South Africa |
 
 ### Extra parameter <Badge type="warning" text="extra" vertical="top" />
@@ -69,10 +69,10 @@ curl -X GET \
 `extra`
 
 | Field     | Required | Description               |
-| --------- | -------- | ------------------------- |
+|-----------|----------|---------------------------|
 | bank_code | Yes      | [Bank codes](#bank-codes) |
 
-### Request example of send money
+### Request example for send money
 
 ```shell{8,13}
 curl -X POST \
@@ -133,7 +133,7 @@ curl -X GET \
 `extra.bank_code`
 
 | Bank code | Bank name           |
-| --------- | ------------------- |
+|-----------|---------------------|
 | 10010     | Absa                |
 | 10011     | NedBank             |
 | 10012     | Capitec             |

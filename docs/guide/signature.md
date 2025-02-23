@@ -1,6 +1,6 @@
 # Signing API requests
 
-### Create string to sign
+## Build the string to sign
 
 Request parameters example:
 
@@ -18,7 +18,9 @@ Request parameters example:
 }
 ```
 
-Remove empty strings, null values, or parameters that should not be included in `stringToSign`.
+### Filter parameters
+
+Exclude null, empty, and specified keys.
 
 ```json
 {
@@ -31,7 +33,9 @@ Remove empty strings, null values, or parameters that should not be included in 
 }
 ```
 
-Sort the keys.
+### Sort the parameters
+
+Sort the parameters by key in ascending order.
 
 ```json
 {
@@ -44,35 +48,88 @@ Sort the keys.
 }
 ```
 
-Use `&` to concatenate the request parameter, and use `=` to concatenate key and value.
+### Concatenate strings
 
-`amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000`
+Use & to concatenate request parameters and = to join keys and values.
 
-### HmacSHA256 example
+`
+amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000
+`
+
+## HmacSHA256 example
 
 ::: code-tabs
 
 @tab Java
 
 ```java
+import com.google.gson.Gson;
+
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        String secretKey = "CLIENT_SECRET";
-        String stringToSign = "amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
+        String accessKey = "01h6tn69wfcpy5q5x3vpb3x9me"; // Your client key
+        String secretKey = "your-client-secret";
 
+        // Request parameters
+        Map<String, Object> params = new HashMap<>();
+        params.put("client_key", accessKey);
+        params.put("amount", "50000.00");
+        params.put("channel_id", "1001");
+        params.put("out_trade_no", "20230101000000");
+        params.put("notify_url", "https://your-domain.com/webhook");
+
+        // Ensure 'extra' is always a JSON string
+        //
+        // Note: Not every request requires the "extra" parameter,
+        // Please refer to the request examples for each country.
+        // The following example is for a specific bank in Vietnam to receive money.
+        Map<String, String> extra = new HashMap<>();
+        extra.put("bank_code", "VCB");
+        params.put("extra", new Gson().toJson(extra));
+
+        params.put("empty_string", ""); // Empty string (excluded from signature)
+        params.put("null_value", null); // NULL value (excluded from signature)
+        params.put("should_not_include", "example"); // Parameter to be excluded from the signature
+
+        // Parameters to exclude from the signature
+        Set<String> except = new HashSet<>(List.of("should_not_include"));
+
+        // Filter parameters (exclude null, empty, and specified keys)
+        Map<String, Object> filteredParams = params.entrySet().stream()
+                .filter(entry -> !except.contains(entry.getKey()) && entry.getValue() != null && !entry.getValue().toString().isEmpty())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        // Sort the parameters by key in ascending order
+        TreeMap<String, Object> sortedParams = new TreeMap<>(filteredParams);
+
+        // Build the string to sign
+        String stringToSign = sortedParams.entrySet().stream()
+                .map(entry -> entry.getKey() + "=" + entry.getValue())
+                .collect(Collectors.joining("&"));
+
+        System.out.println("String to Sign: " + stringToSign);
+        // Output:
+        // amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000
+
+        // Generate the HMAC-SHA256 signature
         byte[] hmacSha256 = calcHmacSha256(
-            secretKey.getBytes(StandardCharsets.UTF_8),
-            stringToSign.getBytes(StandardCharsets.UTF_8)
+                secretKey.getBytes(StandardCharsets.UTF_8),
+                stringToSign.getBytes(StandardCharsets.UTF_8)
         );
 
         System.out.printf("Signature: %064x%n", new BigInteger(1, hmacSha256));
+        // Output:
+        // 32db0797717edf25775a95cbbf61c4f693b47604a309fb63d46e36faf75e58ce
     }
 
+    // Calculate the HMAC-SHA256 signature
     public static byte[] calcHmacSha256(byte[] secretKey, byte[] stringToSign) {
         byte[] hmacSha256 = null;
 
@@ -82,7 +139,7 @@ public class Main {
             mac.init(secretKeySpec);
             hmacSha256 = mac.doFinal(stringToSign);
         } catch (Exception e) {
-            throw new RuntimeException("Failed to calculate hmac-sha256", e);
+            throw new RuntimeException("Failed to calculate HMAC-SHA256", e);
         }
 
         return hmacSha256;
@@ -95,19 +152,68 @@ public class Main {
 ```php
 <?php
 
-$secretKey = "CLIENT_SECRET";
-$stringToSign = "amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000";
+$accessKey = "01h6tn69wfcpy5q5x3vpb3x9me"; // Your client key
+$secretKey = "your-client-secret";
 
+// Request parameters
+$params = [
+    "client_key" => $accessKey,
+    "amount" => "50000.00",
+    "channel_id" => "1001",
+    "out_trade_no" => "20230101000000",
+    "notify_url" => "https://your-domain.com/webhook",
+
+    // Ensure 'extra' is always a JSON string
+    //
+    // Note: Not every request requires the "extra" parameter,
+    // Please refer to the request examples for each country.
+    // The following example is for a specific bank in Vietnam to receive money.
+    "extra" => json_encode([
+        "bank_code" => "VCB",
+    ]),
+
+    "empty_string" => "", // Empty string (excluded from the signature)
+    "null_value" => null, // NULL value (excluded from the signature)
+    "should_not_include" => "example", // Parameter to be excluded from the signature
+];
+
+// Define parameters to exclude from the signature
+$except = [
+    "should_not_include",
+];
+
+// Filter parameters
+$params = array_filter($params, function ($value, $key) use ($except) {
+    return !in_array($key, $except) && $value !== '' && !is_null($value);
+}, ARRAY_FILTER_USE_BOTH);
+
+// Sort the parameters by key in ascending (lexicographical) order
+ksort($params);
+
+// Build the string to sign
+$stringToSign = implode('&', array_map(function ($key, $value) {
+    return "{$key}={$value}";
+}, array_keys($params), $params));
+
+var_dump($stringToSign);
+// Output:
+// amount=50000.00&channel_id=1001&client_key=01h6tn69wfcpy5q5x3vpb3x9me&extra={"bank_code":"VCB"}&notify_url=https://your-domain.com/webhook&out_trade_no=20230101000000
+
+// Generate the HMAC-SHA256 signature
+// Use the hash_hmac() function to create the signature with the secret key
 $signature = hash_hmac('sha256', $stringToSign, $secretKey);
 
-echo $signature;
+var_dump($signature);
+// Output:
+// 32db0797717edf25775a95cbbf61c4f693b47604a309fb63d46e36faf75e58ce
+
 ```
 
 :::
 
-`ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082`
+## Signed request example
 
-### Signed request example
+**Note: Not every request requires the `extra` parameter, Please refer to the request examples for each country.**
 
 ```shell
 curl -X POST \
@@ -120,6 +226,7 @@ curl -X POST \
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
+    "extra": "{\"bank_code\":\"VCB\"}",
+    "signature": "32db0797717edf25775a95cbbf61c4f693b47604a309fb63d46e36faf75e58ce"
   }'
 ```

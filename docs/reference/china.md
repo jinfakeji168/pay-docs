@@ -9,7 +9,7 @@ Not supported.
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5031 | Banks       |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
@@ -17,7 +17,7 @@ Not supported.
 `extra`
 
 | Key         | Required | Description       |
-| ----------- | -------- | ----------------- |
+|-------------|----------|-------------------|
 | bank_name   | Yes      | Bank name.        |
 | bank_branch | No       | Bank branch name. |
 

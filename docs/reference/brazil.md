@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 1003 | PIX         |
 
 ### Request example for receive money
@@ -62,7 +62,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5003 | PIX         |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
@@ -70,14 +70,14 @@ curl -X GET \
 `extra`
 
 | Key          | Required | Description                        |
-| ------------ | -------- | ---------------------------------- |
+|--------------|----------|------------------------------------|
 | account_type | Yes      | `EMAIL` `PHONE` `CPF` `CNPJ` `EVP` |
 | id_number    | Yes      | `CPF` or `CNPJ`                    |
 
 `extra.account_type`
 
 | Type  | Description                                     |
-| ----- | ----------------------------------------------- |
+|-------|-------------------------------------------------|
 | EMAIL | E-mail address                                  |
 | PHONE | 11 chars (Include the prefix `+55` is optional) |
 | CPF   | 11 chars                                        |

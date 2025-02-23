@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description       |
-| ---- | ----------------- |
+|------|-------------------|
 | 1009 | Banks in Thailand |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description       |
-| ---- | ----------------- |
+|------|-------------------|
 | 5014 | Banks in Thailand |
 
 ### Extra parameter <Badge type="warning" text="extra" vertical="top" />
@@ -69,7 +69,7 @@ curl -X GET \
 `extra`
 
 | Field     | Required | Description               |
-| --------- | -------- | ------------------------- |
+|-----------|----------|---------------------------|
 | bank_code | Yes      | [Bank codes](#bank-codes) |
 
 ### Request example of send money
@@ -133,7 +133,7 @@ curl -X GET \
 `extra.bank_code`
 
 | Bank code | Bank name                                          |
-| --------- | -------------------------------------------------- |
+|-----------|----------------------------------------------------|
 | KBANK     | Kasikorn Bank Plc.                                 |
 | BBL       | Bangkok Bank Plc.                                  |
 | KTB       | Krung Thai Bank                                    |

@@ -11,7 +11,7 @@ GET `/api/v1/user/balances`
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
 | Key        | Type   | Required | Sign | Description         |
-| ---------- | ------ | -------- | ---- | ------------------- |
+|------------|--------|----------|------|---------------------|
 | client_key | string | Yes      | Yes  | The API access key. |
 | signature  | string | Yes      | No   | Signed value.       |
 

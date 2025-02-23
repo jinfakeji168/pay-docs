@@ -5,7 +5,7 @@
 ### Channels for receive money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 1013 |             |
 
 ### Request example for receive money
@@ -61,7 +61,7 @@ curl -X GET \
 ### Channels for send money
 
 | ID   | Description |
-| ---- | ----------- |
+|------|-------------|
 | 5018 |             |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
@@ -69,7 +69,7 @@ curl -X GET \
 `extra`
 
 | Key       | Required | Description               |
-| --------- | -------- | ------------------------- |
+|-----------|----------|---------------------------|
 | bank_code | Yes      | [Bank codes](#bank-codes) |
 
 ### Request example for send money
@@ -133,7 +133,7 @@ curl -X GET \
 `extra.bank_code`
 
 | Code                    | Name                                           |
-| ----------------------- | ---------------------------------------------- |
+|-------------------------|------------------------------------------------|
 | ACEH                    | Bank Aceh Syariah                              |
 | ACEH_UUS                | Bank Agris UUS                                 |
 | ACEH_SYR                | BPD ISTIMEWA ACEH SYARIAH                      |

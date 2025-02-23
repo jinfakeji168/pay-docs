@@ -5,7 +5,7 @@
 ### 代收通道
 
 | ID   | 说明 |
-| ---- | ---- |
+|------|----|
 | 1046 | 银行 |
 
 ### 代收下单
@@ -61,16 +61,16 @@ curl -X GET \
 ### 代付通道
 
 | ID   | 说明 |
-| ---- | ---- |
+|------|----|
 | 5052 | 银行 |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数      | 必填 | 说明                  |
-| --------- | ---- | --------------------- |
-| bank_code | 是   | [银行编码](#银行编码) |
+| 参数        | 必填 | 说明            |
+|-----------|----|---------------|
+| bank_code | 是  | [银行编码](#银行编码) |
 
 ### 代付下单
 
@@ -132,28 +132,28 @@ curl -X GET \
 
 `extra.bank_code`
 
-| 银行编码 | 银行名称            |
-| -------- | ------------------- |
-| 10010    | Absa                |
-| 10011    | NedBank             |
-| 10012    | Capitec             |
-| 10013    | Standard            |
-| 10014    | Fnb                 |
-| 10015    | African Bank        |
-| 10016    | Bidvest Bank        |
-| 10017    | Discovery           |
-| 10018    | FirstRand Bank      |
-| 10019    | Grindrod Bank       |
-| 10020    | Imperial Bank       |
-| 10021    | Investec Bank       |
-| 10022    | Sasfin Bank         |
-| 10023    | Ubank               |
-| 10024    | TymeBank            |
-| 10025    | Mercantile Bank     |
-| 10026    | Albaraka Bank       |
-| 10027    | HBZ Bank            |
-| 10028    | Habib Overseas Bank |
-| 10029    | Wesbank             |
-| 10030    | Rand Merchant Bank  |
-| 10031    | Bank of Athens      |
-| 10032    | Access Bank         |
+| 银行编码  | 银行名称                |
+|-------|---------------------|
+| 10010 | Absa                |
+| 10011 | NedBank             |
+| 10012 | Capitec             |
+| 10013 | Standard            |
+| 10014 | Fnb                 |
+| 10015 | African Bank        |
+| 10016 | Bidvest Bank        |
+| 10017 | Discovery           |
+| 10018 | FirstRand Bank      |
+| 10019 | Grindrod Bank       |
+| 10020 | Imperial Bank       |
+| 10021 | Investec Bank       |
+| 10022 | Sasfin Bank         |
+| 10023 | Ubank               |
+| 10024 | TymeBank            |
+| 10025 | Mercantile Bank     |
+| 10026 | Albaraka Bank       |
+| 10027 | HBZ Bank            |
+| 10028 | Habib Overseas Bank |
+| 10029 | Wesbank             |
+| 10030 | Rand Merchant Bank  |
+| 10031 | Bank of Athens      |
+| 10032 | Access Bank         |

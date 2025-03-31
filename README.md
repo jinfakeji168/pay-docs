@@ -18,4 +18,4 @@ pnpm run docs:dev
 pnpm run docs:build
 ```
 
-output path: `pay-docs/docs/.vuepress/dist`
+output path: `/path/to/docs/.vuepress/dist`

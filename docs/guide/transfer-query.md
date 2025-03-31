@@ -10,9 +10,9 @@ GET `/api/v1/transfers/:transfer`
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| Key      | Type   | Required | Sign | Description                                            |
-| -------- | ------ | -------- | ---- | ------------------------------------------------------ |
-| transfer | string | Yes      | No   | The transaction ID you provided or DaYangPay provided. |
+| Key      | Type   | Required | Sign | Description                                     |
+| -------- | ------ | -------- | ---- |-------------------------------------------------|
+| transfer | string | Yes      | No   | The transaction ID you provided or we provided. |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
@@ -31,18 +31,18 @@ curl -X GET \
 
 ### Response parameters
 
-| Key             | Type    | Description                            |
-| --------------- | ------- | -------------------------------------- |
-| client_key      | string  | The API access key.                    |
-| amount          | string  | The amount for send money.             |
-| transfer_no     | string  | The transaction ID DaYangPay provided. |
-| out_transfer_no | string  | The transaction ID you provided.       |
-| channel_id      | string  | The payment method.                    |
-| payee_account   | string  | Send money to the account.             |
-| payee_name      | string  | Full name for the account.             |
-| created_at      | string  | Created time. `UTC±00:00`              |
-| paid_at         | string  | Paid time. `UTC±00:00`                 |
-| status          | integer | The transaction status.                |
+| Key             | Type    | Description                      |
+| --------------- | ------- |----------------------------------|
+| client_key      | string  | The API access key.              |
+| amount          | string  | The amount for send money.       |
+| transfer_no     | string  | The transaction ID we provided.  |
+| out_transfer_no | string  | The transaction ID you provided. |
+| channel_id      | string  | The payment method.              |
+| payee_account   | string  | Send money to the account.       |
+| payee_name      | string  | Full name for the account.       |
+| created_at      | string  | Created time. `UTC±00:00`        |
+| paid_at         | string  | Paid time. `UTC±00:00`           |
+| status          | integer | The transaction status.          |
 
 #### Status code
 

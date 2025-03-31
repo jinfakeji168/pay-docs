@@ -5,22 +5,22 @@ Request method: `POST`
 Content-Type: `application/json`
 
 :::warning NOTE
-DaYangPay will request the webhook URL you provided when the transaction status is `Paid`.
+We will request the webhook URL you provided when the transaction status is `Paid`.
 :::
 
 ### Body parameters <Badge type="tip" text="Body" vertical="top" />
 
-| Key          | Type    | Sign | Description                            |
-|--------------|---------|------|----------------------------------------|
-| client_key   | string  | Yes  | The API access key.                    |
-| signature    | string  | No   | Signed value.                          |
-| amount       | string  | Yes  | The amount for receive money.          |
-| channel_id   | string  | Yes  | The payment method.                    |
-| trade_no     | string  | Yes  | The transaction ID DaYangPay provided. |
-| out_trade_no | string  | Yes  | The transaction ID you provided.       |
-| created_at   | string  | Yes  | Created time. `UTC±00:00`              |
-| paid_at      | string  | Yes  | Paid time. `UTC±00:00`                 |
-| status       | integer | Yes  | The transaction status.                |
+| Key          | Type    | Sign | Description                      |
+|--------------|---------|------|----------------------------------|
+| client_key   | string  | Yes  | The API access key.              |
+| signature    | string  | No   | Signed value.                    |
+| amount       | string  | Yes  | The amount for receive money.    |
+| channel_id   | string  | Yes  | The payment method.              |
+| trade_no     | string  | Yes  | The transaction ID we provided.  |
+| out_trade_no | string  | Yes  | The transaction ID you provided. |
+| created_at   | string  | Yes  | Created time. `UTC±00:00`        |
+| paid_at      | string  | Yes  | Paid time. `UTC±00:00`           |
+| status       | integer | Yes  | The transaction status.          |
 
 #### Status code
 

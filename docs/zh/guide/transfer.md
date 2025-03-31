@@ -176,7 +176,7 @@ curl -X POST \
     "channel_id": "5001",
     "client_key": "01j****************7h",
     "extra": "{\"bank_code\":\"AGR\"}",
-    "notify_url": "https://api.your-domain.com/webhook-for-dayangpay",
+    "notify_url": "https://api.your-domain.com/webhook",
     "out_transfer_no": "20240101000000123456",
     "payee_account": "1234567890",
     "payee_name": "PAYEE NAME",

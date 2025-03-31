@@ -45,16 +45,16 @@ curl -X POST \
 
 ### Response parameters
 
-| Key             | Type   | Description                            |
-| --------------- | ------ | -------------------------------------- |
-| client_key      | string | The API access key.                    |
-| amount          | string | The amount for send money.             |
-| transfer_no     | string | The transaction ID DaYangPay provided. |
-| out_transfer_no | string | The transaction ID you provided.       |
-| channel_id      | string | The payment method.                    |
-| payee_account   | string | Send money to the account.             |
-| payee_name      | string | Full name for the account.             |
-| created_at      | string | Created time. `UTC±00:00`              |
+| Key             | Type   | Description                      |
+| --------------- | ------ |----------------------------------|
+| client_key      | string | The API access key.              |
+| amount          | string | The amount for send money.       |
+| transfer_no     | string | The transaction ID we provided.  |
+| out_transfer_no | string | The transaction ID you provided. |
+| channel_id      | string | The payment method.              |
+| payee_account   | string | Send money to the account.       |
+| payee_name      | string | Full name for the account.       |
+| created_at      | string | Created time. `UTC±00:00`        |
 
 ### Response example
 
@@ -156,10 +156,10 @@ public class HttpClientExample {
 ### Important Information
 
 ::: warning Important
-Due to communication issues, when you request DaYangPay, there may be a timeout, or you may not receive any response. However, in reality, DaYangPay has responded normally. In this case, to avoid any loss of funds, you should set your transaction status to 'successful' and not process it through other third parties.
+Due to communication issues, when you request our servers, there may be a timeout, or you may not receive any response. However, in reality, Our servers has responded normally. In this case, to avoid any loss of funds, you should set your transaction status to 'successful' and not process it through other third parties.
 :::
 
-Communication Test Example with the DaYangPay Server:
+Communication Test Example with the servers:
 
 ```bash
 curl -X POST \
@@ -171,7 +171,7 @@ curl -X POST \
     "channel_id": "5001",
     "client_key": "01j****************7h",
     "extra": "{\"bank_code\":\"AGR\"}",
-    "notify_url": "https://api.your-domain.com/webhook-for-dayangpay",
+    "notify_url": "https://api.your-domain.com/webhook",
     "out_transfer_no": "20240101000000123456",
     "payee_account": "1234567890",
     "payee_name": "PAYEE NAME",

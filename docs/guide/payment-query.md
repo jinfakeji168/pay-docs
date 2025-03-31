@@ -10,9 +10,9 @@ GET `/api/v1/trades/:trade`
 
 ### Path parameters <Badge type="tip" text="Path" vertical="top" />
 
-| Key   | Type   | Required | Sign | Description                                            |
-|-------|--------|----------|------|--------------------------------------------------------|
-| trade | string | Yes      | No   | The transaction ID you provided or DaYangPay provided. |
+| Key   | Type   | Required | Sign | Description                                     |
+|-------|--------|----------|------|-------------------------------------------------|
+| trade | string | Yes      | No   | The transaction ID you provided or we provided. |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
@@ -31,16 +31,16 @@ curl -X GET \
 
 ### Response parameters
 
-| Key          | Type    | Description                            |
-|--------------|---------|----------------------------------------|
-| client_key   | string  | The API access key.                    |
-| amount       | string  | The amount for receive money.          |
-| trade_no     | string  | The transaction ID DaYangPay provided. |
-| out_trade_no | string  | The transaction ID you provided.       |
-| payment_url  | string  | The Cashier URL.                       |
-| created_at   | string  | Created time. `UTC±00:00`              |
-| paid_at      | string  | Paid time. `UTC±00:00`                 |
-| status       | integer | The transaction status.                |
+| Key          | Type    | Description                      |
+|--------------|---------|----------------------------------|
+| client_key   | string  | The API access key.              |
+| amount       | string  | The amount for receive money.    |
+| trade_no     | string  | The transaction ID we provided.  |
+| out_trade_no | string  | The transaction ID you provided. |
+| payment_url  | string  | The Cashier URL.                 |
+| created_at   | string  | Created time. `UTC±00:00`        |
+| paid_at      | string  | Paid time. `UTC±00:00`           |
+| status       | integer | The transaction status.          |
 
 #### Status codes
 

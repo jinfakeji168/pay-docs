@@ -12,13 +12,13 @@ GET `/api/v1/trades/:trade`
 
 | 参数    | 类型     | 必填 | 参与签名 | 说明              |
 |-------|--------|----|------|-----------------|
-| trade | string | 是  | 否    | 大洋支付订单号 或 商户订单号 |
+| trade | string | 是  | 否    | Cashnest 订单号 或 商户订单号 |
 
 ### 查询参数 <Badge type="tip" text="Query" vertical="top" />
 
 | 参数         | 类型     | 必填 | 参与签名 | 说明            |
 |------------|--------|----|------|---------------|
-| client_key | string | 是  | 是    | 商户标识。由大洋支付颁发。 |
+| client_key | string | 是  | 是    | 商户标识。由 Cashnest 颁发。 |
 | signature  | string | 是  | 否    | 签名值。          |
 
 ### 请求示例
@@ -33,7 +33,7 @@ curl -X GET \
 
 | 参数           | 类型      | 说明                           |
 |--------------|---------|------------------------------|
-| client_key   | string  | 商户标识。由大洋支付颁发。                |
+| client_key   | string  | 商户标识。由 Cashnest 颁发。                |
 | amount       | string  | 代收金额。单位：`元`。                 |
 | trade_no     | string  | 代收订单号。                       |
 | out_trade_no | string  | 商户代收订单号。                     |

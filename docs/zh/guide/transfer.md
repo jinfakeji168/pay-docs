@@ -28,7 +28,7 @@ POST `/api/v1/transfers`
 
 ### 请求示例
 
-**注意：以下示例仅适用于巴西的业务。**
+**注意：以下示例仅适用于印度的业务。**
 
 ```shell{8,13}
 curl -X POST \
@@ -43,7 +43,7 @@ curl -X POST \
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
     "payee_name": "Sammy Shark",
-    "extra": "{\"account_type\":\"CPF\", \"id_number\":\"1234567890\"}",
+    "extra": "{\"ifsc\":\"IFSC0123456\", \"bank_code\":\"ICIC\"}",
     "signature": ""
   }'
 ```

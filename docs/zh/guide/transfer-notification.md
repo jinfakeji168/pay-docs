@@ -14,7 +14,7 @@ Content-Type: `application/json`
 
 | 参数              | 类型      | 参与签名 | 说明                                                                   |
 |-----------------|---------|------|----------------------------------------------------------------------|
-| client_key      | string  | 是    | 商户标识。由大洋支付颁发。                                                        |
+| client_key      | string  | 是    | 商户标识。由 Cashnest 颁发。                                                        |
 | signature       | string  | 否    | 签名值。                                                                 |
 | amount          | string  | 是    | 代付金额。单位：`元`。                                                         |
 | channel_id      | string  | 是    | 代付通道ID。                                                              |

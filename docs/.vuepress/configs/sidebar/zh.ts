@@ -37,6 +37,7 @@ export const sidebarZh: SidebarOptions = {
         '/zh/reference/thailand.md',
         '/zh/reference/ukraine.md',
         '/zh/reference/vietnam.md',
+        '/zh/reference/usdt.md',
       ],
     },
   ],

@@ -37,6 +37,7 @@ export const sidebar: SidebarOptions = {
         '/reference/thailand.md',
         '/reference/ukraine.md',
         '/reference/vietnam.md',
+        '/reference/usdt.md',
       ],
     },
   ],

@@ -11,3 +11,4 @@
 - [泰国](thailand.md)
 - [乌克兰](ukraine.md)
 - [越南](vietnam.md)
+- [美元](usdt.md)

@@ -5,8 +5,8 @@
 ### 代收通道
 
 | ID   | 说明 |
-|------|----|
-| 1009 | 银行 |
+| ---- | ---- |
+| 1074 | 银行 |
 
 ### 代收下单
 
@@ -18,7 +18,7 @@ curl -X POST \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "100.00",
-    "channel_id": "1009",
+    "channel_id": "1074",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
@@ -61,16 +61,25 @@ curl -X GET \
 ### 代付通道
 
 | ID   | 说明 |
-|------|----|
-| 5014 | 银行 |
+| ---- | ---- |
+| 5069 | 银行 |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 
 `extra`
 
-| 参数        | 必填 | 说明            |
-|-----------|----|---------------|
-| bank_code | 是  | [银行编码](#银行编码) |
+| 参数      | 必填 | 说明                  |
+| --------- | ---- | --------------------- |
+| bank_code | 是   | [银行编码](#银行编码) |
+
+::: warning NOTE
+`extra` 必须是有效的 JSON 字符串,泰国地区必填且银行卡号需9位数字以上。
+例如：
+:::
+
+```json{4,6}
+{"banc_code":"CPF", "id_number":"123456789"，"name":"BRAIN TECHNOLOGIES"}
+```
 
 ### 代付下单
 
@@ -82,7 +91,7 @@ curl -X POST \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
     "amount": "100.00",
-    "channel_id": "5014",
+    "channel_id": "5069",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
@@ -98,7 +107,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5014",
+  "channel_id": "5069",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -119,7 +128,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5014",
+  "channel_id": "5069",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",
@@ -132,23 +141,23 @@ curl -X GET \
 
 `extra.bank_code`
 
-| 银行编码   | 银行名称                                               |
-|--------|----------------------------------------------------|
-| KBANK  | Kasikorn Bank Plc.                                 |
-| BBL    | Bangkok Bank Plc.                                  |
-| KTB    | Krung Thai Bank                                    |
-| ABN    | ABN Amro Bank N.V.                                 |
-| TTB    | TMBThanachart                                      |
-| SCB    | Siam Commercial Bank                               |
-| UOB    | UOB Bank Plc.                                      |
-| BAY    | Bank of Ayudhya / Krungsri                         |
-| CIMB   | CIMB Thai Bank Public Company Limited              |
-| LHBANK | Land and Houses Bank Public Company Limited        |
-| GSB    | Government Savings Bank                            |
-| KKP    | Kiatnakin Phatra Bank Public Company Limited       |
-| CITI   | Citibank N.A.                                      |
-| GHB    | Government Housing Bank                            |
-| BAAC   | Bank for Agriculture and Agricultural Cooperatives |
-| MHCB   | Mizuho Corporate Bank Limited                      |
-| IBANK  | Islamic Bank of Thailand                           |
-| TISCO  | TISCO Bank Plc.                                    |
+| 银行编码 | 银行名称                                           |
+| -------- | -------------------------------------------------- |
+| KBANK    | Kasikorn Bank Plc.                                 |
+| BBL      | Bangkok Bank Plc.                                  |
+| KTB      | Krung Thai Bank                                    |
+| ABN      | ABN Amro Bank N.V.                                 |
+| TTB      | TMBThanachart                                      |
+| SCB      | Siam Commercial Bank                               |
+| UOB      | UOB Bank Plc.                                      |
+| BAY      | Bank of Ayudhya / Krungsri                         |
+| CIMB     | CIMB Thai Bank Public Company Limited              |
+| LHBANK   | Land and Houses Bank Public Company Limited        |
+| GSB      | Government Savings Bank                            |
+| KKP      | Kiatnakin Phatra Bank Public Company Limited       |
+| CITI     | Citibank N.A.                                      |
+| GHB      | Government Housing Bank                            |
+| BAAC     | Bank for Agriculture and Agricultural Cooperatives |
+| MHCB     | Mizuho Corporate Bank Limited                      |
+| IBANK    | Islamic Bank of Thailand                           |
+| TISCO    | TISCO Bank Plc.                                    |

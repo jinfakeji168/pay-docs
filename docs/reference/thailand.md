@@ -8,6 +8,24 @@
 | ---- | ----------------- |
 | 1074 | Banks in Thailand |
 
+### Extra parameter <Badge type="warning" text="extra" vertical="top" />
+
+`extra`
+
+| Field            | Required | Description                                |
+| ---------------- | -------- | ------------------------------------------ |
+| bank_code        | Yes      | [Bank codes](#bank-codes)                  |
+| holder_name      | Yes      | Payer name                                 |
+| bank_card_number | Yes      | Card number, must be greater than 9 digits |
+
+::: warning NOTE
+The `extra` It must be a valid JSON string, required in Thailand, and the bank card number must be at least 9 digits. for example:
+:::
+
+```json{4,6}
+{"banc_code":"CPF", "bank_card_number":"123456789"，"holder_name":"BRAIN TECHNOLOGIES"}
+```
+
 ### Request example for receive money
 
 ```shell{8}
@@ -68,16 +86,18 @@ curl -X GET \
 
 `extra`
 
-| Field     | Required | Description               |
-| --------- | -------- | ------------------------- |
-| bank_code | Yes      | [Bank codes](#bank-codes) |
+| Field            | Required | Description                                |
+| ---------------- | -------- | ------------------------------------------ |
+| bank_code        | Yes      | [Bank codes](#bank-codes)                  |
+| holder_name      | Yes      | Payer name                                 |
+| bank_card_number | Yes      | Card number, must be greater than 9 digits |
 
 ::: warning NOTE
 The `extra` It must be a valid JSON string, required in Thailand, and the bank card number must be at least 9 digits. for example:
 :::
 
 ```json{4,6}
-{"banc_code":"CPF", "id_number":"123456789"，"name":"BRAIN TECHNOLOGIES"}
+{"banc_code":"CPF", "bank_card_number":"123456789"，"holder_name":"BRAIN TECHNOLOGIES"}
 ```
 
 ### Request example of send money

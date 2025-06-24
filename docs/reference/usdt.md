@@ -255,41 +255,4 @@ Status
 | 2    | Processing  |
 | 3    | Failed      |
 
-### Bank codes
 
-`extra.bank_code`
-
-| Code      | Name                                |
-| --------- | ----------------------------------- |
-| TCB       | Techcombank                         |
-| VPB       | VPBank                              |
-| VIB       | VIB                                 |
-| BIDV      | BIDV                                |
-| MBB       | MB                                  |
-| TPB       | TPBank                              |
-| STB       | Sacombank                           |
-| VCB       | Vietcombank                         |
-| ACB       | ACB                                 |
-| AGR       | Agribank                            |
-| CTG       | Vietinbank                          |
-| SEAB      | SeAbank                             |
-| HDB       | HDBank                              |
-| MSB       | MSB                                 |
-| OCB       | OCB                                 |
-| PVC       | PVcomBank                           |
-| KLB       | Kien Long Bank                      |
-| SHB       | SHB                                 |
-| ABB       | An Binh Commercial Joint Stock Bank |
-| DAB       | DongA Bank                          |
-| BAB       | BacAbank                            |
-| LPB       | LPBank                              |
-| BVB       | BaoVietBank                         |
-| VBB       | Vietbank                            |
-| VCCB      | BVBank                              |
-| SGB       | Saigonbank                          |
-| PGB       | PG Bank                             |
-| SCB       | Sai Gon Joint Stock Commercial Bank |
-| EIB       | Eximbank                            |
-| SHBVN     | Shinhan Bank Vietnam                |
-| Oceanbank | Oceanbank                           |
-| NAB       | NAM A bank                          |

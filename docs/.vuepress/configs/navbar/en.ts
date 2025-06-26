@@ -22,18 +22,7 @@ export const navbar: NavbarOptions = [
   {
     text: 'Reference',
     children: [
-      '/reference/brazil.md',
-      '/reference/china.md',
-      '/reference/india.md',
-      '/reference/indonesia.md',
-      '/reference/mexico.md',
-      '/reference/nigeria.md',
-      '/reference/philippines.md',
-      '/reference/south-africa.md',
-      '/reference/thailand.md',
-      '/reference/ukraine.md',
       '/reference/vietnam.md',
-      '/reference/usdt.md',
     ],
   },
 ]

@@ -7,11 +7,10 @@
 | ID   | 说明           |
 |------|--------------|
 | 1001 | 银行           |
-| 1047 | 银行 (新版收银台页面) |
 | 1002 | MoMo         |
-| 1024 | Zalo         |
+| 1003 | Zalo         |
 
-### 代收下单示例
+### 代收下单示例:
 
 ```shell{8}
 curl -X POST \
@@ -20,18 +19,18 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
+    "amount": "50000.00",
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
-
+#### 响应示例：
 ```json{4,6}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-  "amount": "100.00",
+  "amount": "50000.00",
   "trade_no": "100000012023072123389872",
   "out_trade_no": "20230101000000",
   "payment_url": "https://example.com/cashier",
@@ -70,7 +69,7 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
+    "amount": "50000.00",
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
@@ -85,18 +84,20 @@ curl -X POST \
 curl -X GET \
   https://example.com/api/v1/trades/20230101000000?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
   -H "Accept: application/json"
+
 ```
 
 ```json{8}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-  "amount": "100.00",
+  "amount": "50000.00",
   "trade_no": "100000012023072123389872",
   "out_trade_no": "1698896652712",
   "created_at": "2023-01-01T01:01:01.000000Z",
   "paid_at": "2023-01-01T01:02:03.000000Z",
   "status": 1
 }
+
 ```
 
 订单状态码
@@ -113,8 +114,6 @@ curl -X GET \
 | ID   | 说明   |
 |------|------|
 | 5001 | 银行   |
-| 5002 | MoMo |
-| 5029 | Zalo |
 
 ### 业务参数 <Badge type="warning" text="extra" vertical="top" />
 

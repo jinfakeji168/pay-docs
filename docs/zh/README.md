@@ -9,5 +9,5 @@ actions:
   - text: 参考
     link: /zh/reference/README.md
     type: secondary
-footer: Copyright © 2018-present DaYangPay
+footer: Copyright © 2018-present Vnpay
 ---

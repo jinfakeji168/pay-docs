@@ -4,12 +4,11 @@
 
 ### Channels for receive money
 
-| ID   | Description                                        |
-|------|----------------------------------------------------|
-| 1001 | Banks in Vietnam                                   |
-| 1047 | Banks in Vietnam (New Version of The Cashier Page) |
-| 1002 | MoMo                                               |
-| 1024 | Zalo                                               |
+| ID   | Description      |
+|------|------------------|
+| 1001 | Banks in Vietnam |
+| 1002 | MoMo             |
+| 1003 | Zalo             |
 
 ### Request example for receive money
 
@@ -20,18 +19,18 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
+    "amount": "50000.00",
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
-
+#### Response example:
 ```json{4,6}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-  "amount": "100.00",
+  "amount": "50000.00",
   "trade_no": "100000012023072123389872",
   "out_trade_no": "20230101000000",
   "payment_url": "https://example.com/cashier",
@@ -47,7 +46,6 @@ If you want specific a bank to receive money. You may include the `extra.bank_co
 
 | Code | Name        |
 |------|-------------|
-| BIDV | BIDV        |
 | VCB  | Vietcombank |
 | TCB  | Techcombank |
 | MBB  | MB Bank     |
@@ -59,7 +57,7 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
+    "amount": "50000.00",
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
@@ -86,7 +84,7 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
+    "amount": "50000.00",
     "channel_id": "1001",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
@@ -106,7 +104,7 @@ curl -X GET \
 ```json{8}
 {
   "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-  "amount": "100.00",
+  "amount": "50000.00",
   "trade_no": "100000012023072123389872",
   "out_trade_no": "1698896652712",
   "created_at": "2023-01-01T01:01:01.000000Z",
@@ -130,8 +128,6 @@ Status
 | ID   | Description      |
 |------|------------------|
 | 5001 | Banks in Vietnam |
-| 5002 | MoMo             |
-| 5029 | Zalo             |
 
 ### Extra parameter <Badge type="warning" text="extra" vertical="top" />
 
@@ -157,7 +153,7 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-    "amount": "10000",
+    "amount": "50000.00",
     "channel_id": "5001",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
@@ -168,48 +164,11 @@ curl -X POST \
   }'
 ```
 
-Send money to MoMo:
-
-```shell{8}
-curl -X POST \
-  https://example.com/api/v1/transfers \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-    "amount": "10000",
-    "channel_id": "5002",
-    "out_transfer_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "payee_account": "1234567890",
-    "payee_name": "Sammy Shark",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
-  }'
-```
-
-Send money to Zalo:
-
-```shell{8}
-curl -X POST \
-  https://example.com/api/v1/transfers \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-    "amount": "10000",
-    "channel_id": "5029",
-    "out_transfer_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "payee_account": "1234567890",
-    "payee_name": "Sammy Shark",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
-  }'
-```
-
+Response example:
 ```json{4}
 {
   "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-  "amount": "100.00",
+  "amount": "50000.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
   "channel_id": "5001",

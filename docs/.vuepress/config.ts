@@ -9,12 +9,12 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'DaYangPay',
+      title: 'Vnpay',
       description: ' Documentation for Merchants',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: '大洋支付',
+      title: 'Vnpay',
       description: '商户接口文档',
     },
   },

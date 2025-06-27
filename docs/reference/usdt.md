@@ -7,9 +7,6 @@
 | ID   | Description                                        |
 | ---- | -------------------------------------------------- |
 | 1052 | Banks in Vietnam                                   |
-| 1047 | Banks in Vietnam (New Version of The Cashier Page) |
-| 1002 | MoMo                                               |
-| 1024 | Zalo                                               |
 
 ### Request example for receive money
 
@@ -39,62 +36,6 @@ curl -X POST \
 }
 ```
 
-### Specific a bank (Optional)
-
-If you want specific a bank to receive money. You may include the `extra.bank_code` field in your request.
-
-`extra.bank_code`
-
-| Code | Name        |
-| ---- | ----------- |
-| BIDV | BIDV        |
-| VCB  | Vietcombank |
-| TCB  | Techcombank |
-| MBB  | MB Bank     |
-
-```shell{8,11}
-curl -X POST \
-  https://example.com/api/v1/trades \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
-    "channel_id": "1052",
-    "out_trade_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "extra": "{\"bank_code\":\"VCB\"}",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
-  }'
-```
-
-### Different cashier page (Optional)
-
-If you wish to display a different cashier page to your customers, you may include the field `extra.type` in your request. By the default: display full information.
-
-`extra.type`
-
-| Type | Description                    |
-| ---- | ------------------------------ |
-| 1    | Display Bank information only. |
-| 2    | Display QR-Code only.          |
-
-```shell{8,11}
-curl -X POST \
-  https://example.com/api/v1/trades \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
-    "amount": "10000",
-    "channel_id": "1052",
-    "out_trade_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "extra": "{\"type\":\"1\"}",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
-  }'
-```
-
 ### Get a transaction for receive money
 
 ```shell
@@ -121,7 +62,6 @@ Status
 | ---- | --------------- |
 | 0    | Pending payment |
 | 1    | Paid            |
-| 2    | Closed          |
 
 ## Send money
 
@@ -129,14 +69,11 @@ Status
 
 | ID   | Description      |
 | ---- | ---------------- |
-| 5001 | Banks in Vietnam |
-| 5002 | MoMo             |
-| 5029 | Zalo             |
+| 5056 | Banks in Vietnam |
 
 ### Extra parameter <Badge type="warning" text="extra" vertical="top" />
 
 If you send money to a bank in Vietnam, The `extra.bank_code` field is **required**.
-If you send money to Zalo or MoMo, Please DO NOT include the `extra` field in your request.
 
 | Field     | Required | Description               |
 | --------- | -------- | ------------------------- |
@@ -147,7 +84,7 @@ The `extra` It must be a valid JSON string, required in Thailand, and the bank c
 :::
 
 ```json{4,6}
-{"banc_code":"CPF", "id_number":"123456789"，"name":"BRAIN TECHNOLOGIES"}
+{"banc_code":"USDT", "id_number":"123456789"，"name":"BRAIN TECHNOLOGIES"}
 ```
 
 ### Request examples for send money
@@ -162,7 +99,7 @@ curl -X POST \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
     "amount": "10000",
-    "channel_id": "5001",
+    "channel_id": "5056",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
@@ -172,43 +109,6 @@ curl -X POST \
   }'
 ```
 
-Send money to MoMo:
-
-```shell{8}
-curl -X POST \
-  https://example.com/api/v1/transfers \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-    "amount": "10000",
-    "channel_id": "5002",
-    "out_transfer_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "payee_account": "1234567890",
-    "payee_name": "Sammy Shark",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
-  }'
-```
-
-Send money to Zalo:
-
-```shell{8}
-curl -X POST \
-  https://example.com/api/v1/transfers \
-  -H "Accept: application/json" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-    "amount": "10000",
-    "channel_id": "5029",
-    "out_transfer_no": "20230101000000",
-    "notify_url": "https://your-domain.com/webhook",
-    "payee_account": "1234567890",
-    "payee_name": "Sammy Shark",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
-  }'
-```
 
 ```json{4}
 {
@@ -216,35 +116,13 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5001",
+  "channel_id": "5056",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
 }
 ```
 
-### Get a transaction for send money
-
-```shell
-curl -X GET \
-  https://example.com/api/v1/transfers/20230101000000?client_key=01h6tn69wfcpy5q5x3vpb3x9me&signature=ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082 \
-  -H "Accept: application/json"
-```
-
-```json{11}
-{
-  "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
-  "amount": "100.00",
-  "transfer_no": "100000012023072123389872",
-  "out_transfer_no": "20230101000000",
-  "channel_id": "5001",
-  "payee_account": "1234567890",
-  "payee_name": "Sammy Shark",
-  "created_at": "2023-01-01T01:01:01.000000Z",
-  "paid_at": "2023-01-01T01:02:03.000000Z",
-  "status": 1
-}
-```
 
 Status
 

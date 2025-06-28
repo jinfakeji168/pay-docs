@@ -238,37 +238,48 @@ curl -X GET \
 
 `extra.bank_code`
 
-| 银行编码      | 银行名称                                |
-|-----------|-------------------------------------|
-| TCB       | Techcombank                         |
-| VPB       | VPBank                              |
-| VIB       | VIB                                 |
-| BIDV      | BIDV                                |
-| MBB       | MB                                  |
-| TPB       | TPBank                              |
-| STB       | Sacombank                           |
-| VCB       | Vietcombank                         |
-| ACB       | ACB                                 |
-| AGR       | Agribank                            |
-| CTG       | Vietinbank                          |
-| SEAB      | SeAbank                             |
-| HDB       | HDBank                              |
-| MSB       | MSB                                 |
-| OCB       | OCB                                 |
-| PVC       | PVcomBank                           |
-| KLB       | Kien Long Bank                      |
-| SHB       | SHB                                 |
-| ABB       | An Binh Commercial Joint Stock Bank |
-| DAB       | DongA Bank                          |
-| BAB       | BacAbank                            |
-| LPB       | LPBank                              |
-| BVB       | BaoVietBank                         |
-| VBB       | Vietbank                            |
-| VCCB      | BVBank                              |
-| SGB       | Saigonbank                          |
-| PGB       | PG Bank                             |
-| SCB       | Sai Gon Joint Stock Commercial Bank |
-| EIB       | Eximbank                            |
-| SHBVN     | Shinhan Bank Vietnam                |
-| Oceanbank | Oceanbank                           |
-| NAB       | NAM A bank                          |
+| 银行编码      | 银行名称                                 |
+|-----------|--------------------------------------|
+| TCB       | Techcombank                          |
+| VPB       | VPBank                               |
+| VIB       | VIB                                  |
+| BIDV      | BIDV                                 |
+| MBB       | MB                                   |
+| TPB       | TPBank                               |
+| STB       | Sacombank                            |
+| VCB       | Vietcombank                          |
+| ACB       | ACB                                  |
+| AGR       | Agribank                             |
+| CTG       | Vietinbank                           |
+| SEAB      | SeAbank                              |
+| HDB       | HDBank                               |
+| MSB       | MSB                                  |
+| OCB       | OCB                                  |
+| PVC       | PVcomBank                            |
+| KLB       | Kien Long Bank                       |
+| SHB       | SHB                                  |
+| ABB       | An Binh Commercial Joint Stock Bank  |
+| DAB       | DongA Bank                           |
+| BAB       | BacAbank                             |
+| LPB       | LPBank                               |
+| BVB       | BaoVietBank                          |
+| VBB       | Vietbank                             |
+| VCCB      | BVBank                               |
+| SGB       | Saigonbank                           |
+| PGB       | PG Bank                              |
+| SCB       | Sai Gon Joint Stock Commercial Bank  |
+| EIB       | Eximbank                             |
+| SHBVN     | Shinhan Bank Vietnam                 |
+| Oceanbank | Oceanbank                            |
+| NAB       | NAM A bank                           |
+| CAKE      | Cake Digital Bank                    |
+| Coop      | Co-opBank                            |
+| FIRST     | FIRST BANK                           |
+| GPBANK    | GPBANK                               |
+| HSBC      | HSBC                                 |
+| IVB       | INDOVINA BANK                        |
+| NCB       | National Citizen Bank                |
+| SEABank   | SEABank                              |
+| VAB       | VietABank                            |
+| vikki     | vikki BANK                           |
+| WOORI     | WOORIBANK                            |

@@ -289,3 +289,14 @@ Status
 | SHBVN     | Shinhan Bank Vietnam                |
 | Oceanbank | Oceanbank                           |
 | NAB       | NAM A bank                          |
+| CAKE      | Cake Digital Bank                   |
+| Coop      | Co-opBank                           |
+| FIRST     | FIRST BANK                          |
+| GPBANK    | GPBANK                              |
+| HSBC      | HSBC                                |
+| IVB       | INDOVINA BANK                       |
+| NCB       | National Citizen Bank               |
+| SEABank   | SEABank                             |
+| VAB       | VietABank                           |
+| vikki     | vikki BANK                          |
+| WOORI     | WOORIBANK                           |

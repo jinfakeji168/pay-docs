@@ -14,7 +14,7 @@
 | 1003 | Brazil (PIX)        | BRL           | No               |
 | 1006 | Mexico              | MXN           | No               |
 | 1000 | India (UPI)         | INR           | No               |
-| 1009 | Thailand            | THB           | No               |
+| 1074 | Thailand            | THB           | No               |
 | 1013 | Indonesia           | IDR           | No               |
 | 1028 | Philippines (GCash) | PHP           | No               |
 | 1029 | Philippines (Maya)  | PHP           | No               |
@@ -33,7 +33,7 @@
 | 5058 | Vietnam (Business)  | VND           | Required. [View](/reference/india.md#extra-parameter)        |
 | 5003 | Brazil (PIX)        | BRL           | Required. [View](/reference/brazil.md#extra-parameter)       |
 | 5011 | Mexico              | MXN           | Required. [View](/reference/mexico.md#extra-parameter)       |
-| 5014 | Thailand            | THB           | Required. [View](/reference/thailand.md#extra-parameter)     |
+| 5069 | Thailand            | THB           | Required. [View](/reference/thailand.md#extra-parameter)     |
 | 5018 | Indonesia           | IDR           | Required. [View](/reference/indonesia.md#extra-parameter)    |
 | 5031 | China (Banks)       | CNY           | Required. [View](/reference/china.md#extra-parameter)        |
 | 5032 | Philippines (GCash) | PHP           | No                                                           |

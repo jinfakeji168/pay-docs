@@ -6,7 +6,7 @@
 
 | ID   | Description                                        |
 | ---- | -------------------------------------------------- |
-| 1052 | Banks in Vietnam                                   |
+| 1052 |                                    |
 
 ### Request example for receive money
 
@@ -69,7 +69,7 @@ Status
 
 | ID   | Description      |
 | ---- | ---------------- |
-| 5056 | Banks in Vietnam |
+| 5056 |  |
 
 ### Extra parameter <Badge type="warning" text="extra" vertical="top" />
 
@@ -77,14 +77,14 @@ If you send money to a bank in Vietnam, The `extra.bank_code` field is **require
 
 | Field     | Required | Description               |
 | --------- | -------- | ------------------------- |
-| bank_code | Yes      | [Bank codes](#bank-codes) |
+| bank_code | Yes      |  |
 
 ::: warning NOTE
 The `extra` It must be a valid JSON string, required in Thailand, and the bank card number must be at least 9 digits. for example:
 :::
 
 ```json{4,6}
-{"banc_code":"USDT", "id_number":"123456789"，"name":"BRAIN TECHNOLOGIES"}
+{ "banc_code":"USDT" }
 ```
 
 ### Request examples for send money

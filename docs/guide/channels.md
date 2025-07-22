@@ -5,7 +5,7 @@
 ### Vietnam
 
 | ID   | Name                | Currency code | Extra parameters |
-|------|---------------------|---------------|------------------|
+| ---- | ------------------- | ------------- | ---------------- |
 | 1001 | Vietnam (Banks)     | VND           | Optional         |
 | 1047 | Vietnam (Banks)     | VND           | Optional         |
 | 1002 | Vietnam (MoMo)      | VND           | No               |
@@ -21,11 +21,12 @@
 | 1038 | Ukraine             | UAH           | No               |
 | 1046 | South Africa        | ZAR           | No               |
 | 1057 | Nigeria             | NGN           | No               |
+| 1052 | USDT                | USDT          | No               |
 
 ## Channels for send money
 
 | ID   | Name                | Currency code | Extra parameters                                             |
-|------|---------------------|---------------|--------------------------------------------------------------|
+| ---- | ------------------- | ------------- | ------------------------------------------------------------ |
 | 5000 | India               | INR           | Required. [View](/reference/india.md#extra-parameter)        |
 | 5001 | Vietnam (Banks)     | VND           | Required. [View](/reference/vietnam.md#extra-parameter)      |
 | 5002 | Vietnam (MoMo)      | VND           | No                                                           |
@@ -41,3 +42,4 @@
 | 5047 | Ukraine             | UAH           | No                                                           |
 | 5052 | South Africa        | ZAR           | Required. [View](/reference/south-africa.md#extra-parameter) |
 | 5060 | Nigeria             | NGN           | Required. [View](/reference/nigeria.md#extra-parameter)      |
+| 5056 | USDT                | USDT          | Required. [View](/reference/usdt.md#extra-parameter)         |

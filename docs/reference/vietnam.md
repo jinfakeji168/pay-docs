@@ -6,9 +6,9 @@
 
 | ID   | Description      |
 |------|------------------|
-| 1001 | Banks in Vietnam |
-| 1002 | MoMo             |
-| 1003 | Zalo             |
+| 1004 | Banks in Vietnam |
+| 1005 | MoMo             |
+| 1006 | Zalo             |
 
 ### Request example for receive money
 
@@ -20,7 +20,7 @@ curl -X POST \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "50000.00",
-    "channel_id": "1001",
+    "channel_id": "1004",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
@@ -58,7 +58,7 @@ curl -X POST \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "50000.00",
-    "channel_id": "1001",
+    "channel_id": "1004",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "extra": "{\"bank_code\":\"VCB\"}",
@@ -85,7 +85,7 @@ curl -X POST \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "50000.00",
-    "channel_id": "1001",
+    "channel_id": "1004",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "extra": "{\"type\":\"1\"}",

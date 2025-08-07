@@ -9,19 +9,19 @@ export default defineUserConfig({
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Vnpay',
+      title: 'DaBaoPay',
       description: ' Documentation for Merchants',
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'Vnpay',
+      title: 'DaBaoPay',
       description: '商户接口文档',
     },
   },
 
   bundler: viteBundler(),
   theme: defaultTheme({
-    logo: 'https://vuejs.press/images/hero.png',
+    logo: '../hero.png',
     editLink: false,
     contributors: false,
     lastUpdated: false,

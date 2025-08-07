@@ -21,7 +21,7 @@ export default defineUserConfig({
 
   bundler: viteBundler(),
   theme: defaultTheme({
-    logo: '../hero.png',
+    logo: 'https://pktenpatti.com/dabaopay.png',
     editLink: false,
     contributors: false,
     lastUpdated: false,

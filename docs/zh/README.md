@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: https://pktenpatti.com/dabaopay.png
+heroImage: https://storage.dabaopay.com/DaBaologo.jpeg
 actions:
   - text: 接入指引
     link: /zh/guide/introduction.md

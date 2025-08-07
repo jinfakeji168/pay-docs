@@ -1,7 +1,7 @@
 ---
 home: true
 title: Home
-heroImage: https://pktenpatti.com/dabaopay.png
+heroImage: https://storage.dabaopay.com/DaBaologo.jpeg
 actions:
   - text: Introduction
     link: /guide/introduction.html

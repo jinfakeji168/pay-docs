@@ -76,13 +76,13 @@ curl -X GET \
 
 `extra.account_type`
 
-| Type  | Description                                     |
-|-------|-------------------------------------------------|
-| EMAIL | E-mail address                                  |
-| PHONE | 11 chars (Include the prefix `+55` is optional) |
-| CPF   | 11 chars                                        |
-| CNPJ  | 14 chars                                        |
-| EVP   | UUID                                            |
+| Type  | Description    |
+|-------|----------------|
+| EMAIL | E-mail address |
+| PHONE | 11 chars       |
+| CPF   | 11 chars       |
+| CNPJ  | 14 chars       |
+| EVP   | UUID           |
 
 ### Request example for send money
 

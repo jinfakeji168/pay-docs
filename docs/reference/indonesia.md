@@ -6,7 +6,11 @@
 
 | ID   | Description |
 |------|-------------|
-| 1013 |             |
+| 1081 | IDR_QRIS    |
+| 1082 | DANA        |
+| 1083 | IDR_VA      |
+| 1084 | OVO         |
+| 1085 | LINKAJA     |
 
 ### Request example for receive money
 
@@ -18,7 +22,7 @@ curl -X POST \
   -d '{
     "client_key": "01h6tn69wfcpy5q5x3vpb3x9me",
     "amount": "100.00",
-    "channel_id": "1013",
+    "channel_id": "1081",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
@@ -62,7 +66,7 @@ curl -X GET \
 
 | ID   | Description |
 |------|-------------|
-| 5018 |             |
+| 5078 |             |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 
@@ -82,7 +86,7 @@ curl -X POST \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
     "amount": "100.00",
-    "channel_id": "5018",
+    "channel_id": "5078",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
@@ -98,7 +102,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5018",
+  "channel_id": "5078",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -119,7 +123,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5018",
+  "channel_id": "5078",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",

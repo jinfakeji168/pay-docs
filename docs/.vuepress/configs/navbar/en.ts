@@ -24,6 +24,7 @@ export const navbar: NavbarOptions = [
     children: [
       '/reference/vietnam.md',
       '/reference/brazil.md',
+      '/reference/indonesia.md',
     ],
   },
 ]

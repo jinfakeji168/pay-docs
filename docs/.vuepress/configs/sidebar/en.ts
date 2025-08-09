@@ -28,6 +28,7 @@ export const sidebar: SidebarOptions = {
         '/reference/README.md',
         '/reference/vietnam.md',
         '/reference/brazil.md',
+        '/reference/indonesia.md',
       ],
     },
   ],

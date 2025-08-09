@@ -23,6 +23,7 @@ export const navbarZh: NavbarOptions = [
     text: '参考',
     children: [
       '/zh/reference/vietnam.md',
+      '/zh/reference/brazil.md',
     ],
   },
 ]

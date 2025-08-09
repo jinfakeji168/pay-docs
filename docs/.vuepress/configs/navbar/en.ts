@@ -23,6 +23,7 @@ export const navbar: NavbarOptions = [
     text: 'Reference',
     children: [
       '/reference/vietnam.md',
+      '/reference/brazil.md',
     ],
   },
 ]

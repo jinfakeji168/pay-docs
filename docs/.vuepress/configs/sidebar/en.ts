@@ -27,6 +27,7 @@ export const sidebar: SidebarOptions = {
       children: [
         '/reference/README.md',
         '/reference/vietnam.md',
+        '/reference/brazil.md',
       ],
     },
   ],

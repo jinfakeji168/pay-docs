@@ -28,7 +28,7 @@ export const sidebarZh: SidebarOptions = {
         '/zh/reference/README.md',
         '/zh/reference/vietnam.md',
         '/zh/reference/brazil.md',
-        '/zh/reference/indonesia.md',
+        // '/zh/reference/indonesia.md',
       ],
     },
   ],

@@ -5,7 +5,7 @@
 ### Vietnam
 
 | ID   | Name                | Currency code | Extra parameters |
-| ---- | ------------------- | ------------- | ---------------- |
+| ---- |---------------------|---------------| ---------------- |
 | 1001 | Vietnam (Banks)     | VND           | Optional         |
 | 1047 | Vietnam (Banks)     | VND           | Optional         |
 | 1002 | Vietnam (MoMo)      | VND           | No               |
@@ -16,6 +16,11 @@
 | 1000 | India (UPI)         | INR           | No               |
 | 1074 | Thailand            | THB           | No               |
 | 1013 | Indonesia           | IDR           | No               |
+| 1081 | Indonesia           | IDR_QRIS      | No               |
+| 1082 | Indonesia           | DANA          | No               |
+| 1083 | Indonesia           | IDR_VA        | No               |
+| 1084 | Indonesia           | OVO           | No               |
+| 1085 | Indonesia           | LINKAJA       | No               |
 | 1028 | Philippines (GCash) | PHP           | No               |
 | 1029 | Philippines (Maya)  | PHP           | No               |
 | 1038 | Ukraine             | UAH           | No               |
@@ -36,6 +41,7 @@
 | 5011 | Mexico              | MXN           | Required. [View](/reference/mexico.md#extra-parameter)       |
 | 5069 | Thailand            | THB           | Required. [View](/reference/thailand.md#extra-parameter)     |
 | 5018 | Indonesia           | IDR           | Required. [View](/reference/indonesia.md#extra-parameter)    |
+| 5078 | Indonesia           | IDR           | Required. [View](/reference/indonesia.md#extra-parameter)    |
 | 5031 | China (Banks)       | CNY           | Required. [View](/reference/china.md#extra-parameter)        |
 | 5032 | Philippines (GCash) | PHP           | No                                                           |
 | 5033 | Philippines (Maya)  | PHP           | No                                                           |

@@ -4,9 +4,14 @@
 
 ### Channels for receive money
 
-| ID   | Description |
-|------|-------------|
-| 1013 |             |
+| ID   | Description     |
+|------|-----------------|
+| 1013 |                 |
+| 1081 | IDR_QRIS        |
+| 1082 | DANA            |
+| 1083 | IDR_VA          |
+| 1084 | OVO             |
+| 1085 | LINKAJA         |
 
 ### Request example for receive money
 
@@ -63,6 +68,7 @@ curl -X GET \
 | ID   | Description |
 |------|-------------|
 | 5018 |             |
+| 5078 |             |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 

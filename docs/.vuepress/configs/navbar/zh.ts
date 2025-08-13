@@ -24,7 +24,7 @@ export const navbarZh: NavbarOptions = [
     children: [
       '/zh/reference/vietnam.md',
       '/zh/reference/brazil.md',
-      // '/zh/reference/indonesia.md',
+      '/zh/reference/china.md',
     ],
   },
 ]

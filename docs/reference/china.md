@@ -10,7 +10,7 @@ Not supported.
 
 | ID   | Description |
 |------|-------------|
-| 5031 | Banks       |
+| 5005 | Banks       |
 
 ### Extra parameters <Badge type="warning" text="extra" vertical="top" />
 
@@ -31,7 +31,7 @@ curl -X POST \
   -d '{
     "client_key": "01hcd0d0c2qh9wy5efm5sxrk38",
     "amount": "100.00",
-    "channel_id": "5031",
+    "channel_id": "5005",
     "out_transfer_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
     "payee_account": "1234567890",
@@ -47,7 +47,7 @@ curl -X POST \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5031",
+  "channel_id": "5005",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z"
@@ -68,7 +68,7 @@ curl -X GET \
   "amount": "100.00",
   "transfer_no": "100000012023072123389872",
   "out_transfer_no": "20230101000000",
-  "channel_id": "5031",
+  "channel_id": "5005",
   "payee_account": "1234567890",
   "payee_name": "Sammy Shark",
   "created_at": "2023-01-01T01:01:01.000000Z",

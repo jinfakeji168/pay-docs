@@ -18,3 +18,4 @@
 |------|-------------------|---------------|---------------------------------------------------------|
 | 5001 | Vietnam (Banks)   | VND           | Required. [View](/reference/vietnam.md#extra-parameter) |
 | 5003 | Brazil  (BRL-UPI) | BRL           | Required. [View](/reference/brazil.md#extra-parameter)  |
+| 5005 | China (Banks)     | CNY           | Required. [View](/reference/china.md#extra-parameter)   |

@@ -13,7 +13,7 @@ POST `/api/v1/trades`
 
 | 参数           | 类型     | 必填 | 参与签名 | 说明                                                          |
 |--------------|--------|----|------|-------------------------------------------------------------|
-| client_key   | string | 是  | 是    | 商户标识。由大洋支付颁发。                                               |
+| client_key   | string | 是  | 是    | 商户标识。由大宝支付颁发。                                               |
 | amount       | string | 是  | 是    | 代收金额。单位：`元`。                                                |
 | channel_id   | string | 是  | 是    | 代收通道ID。                                                     |
 | out_trade_no | string | 是  | 是    | 商户代收订单号。<br><span style="color: red">最大长度 64，必须是唯一的。</span> |
@@ -47,7 +47,7 @@ curl -X POST \
 
 | 参数           | 类型     | 说明            |
 |--------------|--------|---------------|
-| client_key   | string | 商户标识。由大洋支付颁发。 |
+| client_key   | string | 商户标识。由大宝支付颁发。 |
 | amount       | string | 代收金额。单位：`元`。  |
 | trade_no     | string | 代收订单号。        |
 | out_trade_no | string | 商户代收订单号。      |

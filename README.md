@@ -1,4 +1,4 @@
-# Docs for DaYangPay merchants
+# Docs for DaBaoPay merchants
 
 ### Dependencies
 

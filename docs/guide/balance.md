@@ -1,4 +1,4 @@
-# DaYangPay Balance
+# DaBaoPay Balance
 
 GET `/api/v1/user/balances`
 

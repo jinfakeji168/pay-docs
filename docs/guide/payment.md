@@ -51,7 +51,7 @@ curl -X POST \
 |--------------|--------|----------------------------------------|
 | client_key   | string | The API access key.                    |
 | amount       | string | The amount for receive money.          |
-| trade_no     | string | The transaction ID DaYangPay provided. |
+| trade_no     | string | The transaction ID DaBaoPay provided. |
 | out_trade_no | string | The transaction ID you provided.       |
 | payment_url  | string | The Cashier page URL.                  |
 | created_at   | string | Created time. `UTC±00:00`              |

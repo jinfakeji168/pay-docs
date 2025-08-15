@@ -12,7 +12,7 @@ GET `/api/v1/transfers/:transfer`
 
 | Key      | Type   | Required | Sign | Description                                            |
 | -------- | ------ | -------- | ---- | ------------------------------------------------------ |
-| transfer | string | Yes      | No   | The transaction ID you provided or DaYangPay provided. |
+| transfer | string | Yes      | No   | The transaction ID you provided or DaBaoPay provided. |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
@@ -35,7 +35,7 @@ curl -X GET \
 | --------------- | ------- | -------------------------------------- |
 | client_key      | string  | The API access key.                    |
 | amount          | string  | The amount for send money.             |
-| transfer_no     | string  | The transaction ID DaYangPay provided. |
+| transfer_no     | string  | The transaction ID DaBaoPay provided. |
 | out_transfer_no | string  | The transaction ID you provided.       |
 | channel_id      | string  | The payment method.                    |
 | payee_account   | string  | Send money to the account.             |

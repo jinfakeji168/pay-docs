@@ -49,7 +49,7 @@ curl -X POST \
 | --------------- | ------ | -------------------------------------- |
 | client_key      | string | The API access key.                    |
 | amount          | string | The amount for send money.             |
-| transfer_no     | string | The transaction ID DaYangPay provided. |
+| transfer_no     | string | The transaction ID DaBaoPay provided. |
 | out_transfer_no | string | The transaction ID you provided.       |
 | channel_id      | string | The payment method.                    |
 | payee_account   | string | Send money to the account.             |
@@ -156,10 +156,10 @@ public class HttpClientExample {
 ### Important Information
 
 ::: warning Important
-Due to communication issues, when you request DaYangPay, there may be a timeout, or you may not receive any response. However, in reality, DaYangPay has responded normally. In this case, to avoid any loss of funds, you should set your transaction status to 'successful' and not process it through other third parties.
+Due to communication issues, when you request DaBaoPay, there may be a timeout, or you may not receive any response. However, in reality, DaBaoPay has responded normally. In this case, to avoid any loss of funds, you should set your transaction status to 'successful' and not process it through other third parties.
 :::
 
-Communication Test Example with the DaYangPay Server:
+Communication Test Example with the DaBaoPay Server:
 
 ```bash
 curl -X POST \

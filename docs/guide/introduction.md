@@ -18,7 +18,7 @@
 
 `GET` `/api/v1/transfers/:transfer`
 
-### DaYangPay Balance
+### DaBaoPay Balance
 
 `GET` `/api/v1/user/balances`
 

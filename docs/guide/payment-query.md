@@ -12,7 +12,7 @@ GET `/api/v1/trades/:trade`
 
 | Key   | Type   | Required | Sign | Description                                            |
 |-------|--------|----------|------|--------------------------------------------------------|
-| trade | string | Yes      | No   | The transaction ID you provided or DaYangPay provided. |
+| trade | string | Yes      | No   | The transaction ID you provided or DaBaoPay provided. |
 
 ### Query parameters <Badge type="tip" text="Query" vertical="top" />
 
@@ -35,7 +35,7 @@ curl -X GET \
 |--------------|---------|----------------------------------------|
 | client_key   | string  | The API access key.                    |
 | amount       | string  | The amount for receive money.          |
-| trade_no     | string  | The transaction ID DaYangPay provided. |
+| trade_no     | string  | The transaction ID DaBaoPay provided. |
 | out_trade_no | string  | The transaction ID you provided.       |
 | payment_url  | string  | The Cashier URL.                       |
 | created_at   | string  | Created time. `UTC±00:00`              |

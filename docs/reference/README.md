@@ -8,7 +8,6 @@
 - [Nigeria](nigeria.md)
 - [Philippines](philippines.md)
 - [South Africa](south-africa.md)
-- [Thailand](thailand.md)
 - [Ukraine](ukraine.md)
 - [Vietnam](vietnam.md)
 - [Usdt](usdt.md)

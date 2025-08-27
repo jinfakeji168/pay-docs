@@ -8,6 +8,7 @@
 - [尼日利亚](nigeria.md)
 - [菲律宾](philippines.md)
 - [南非](south-africa.md)
+- [泰国](thailand.md)
 - [乌克兰](ukraine.md)
 - [越南](vietnam.md)
 - [美元](usdt.md)

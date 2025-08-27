@@ -30,7 +30,7 @@ export const navbarZh: NavbarOptions = [
       '/zh/reference/nigeria.md',
       '/zh/reference/philippines.md',
       '/zh/reference/south-africa.md',
-      // '/zh/reference/thailand.md',
+      '/zh/reference/thailand.md',
       '/zh/reference/ukraine.md',
       '/zh/reference/vietnam.md',
       '/zh/reference/usdt.md',

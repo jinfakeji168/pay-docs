@@ -8,24 +8,37 @@
 | ---- | ---- |
 | 1074 | 银行 |
 
-### 业务参数 <Badge type="warning" text="extra" vertical="top" />
+[//]: # (### 业务参数 <Badge type="warning" text="extra" vertical="top" />)
 
-`extra`
+[//]: # ()
+[//]: # (`extra`)
 
-| 参数             | 必填 | 说明                  |
-| ---------------- | ---- | --------------------- |
-| bank_code        | 是   | [银行编码](#银行编码) |
-| holder_name      | 是   | 付款人姓名            |
-| bank_card_number | 是   | 卡号，必须大于9位数   |
+[//]: # ()
+[//]: # (| 参数             | 必填 | 说明                  |)
 
-::: warning NOTE
-`extra` 必须是有效的 JSON 字符串,泰国地区必填且银行卡号需9位数字以上。
-例如：
-:::
+[//]: # (| ---------------- | ---- | --------------------- |)
 
-```json{4,6}
-{"banc_code":"CPF", "bank_card_number":"123456789"，"holder_name":"BRAIN TECHNOLOGIES"}
-```
+[//]: # (| bank_code        | 是   | [银行编码]&#40;#银行编码&#41; |)
+
+[//]: # (| holder_name      | 是   | 付款人姓名            |)
+
+[//]: # (| bank_card_number | 是   | 卡号，必须大于9位数   |)
+
+[//]: # ()
+[//]: # (::: warning NOTE)
+
+[//]: # (`extra` 必须是有效的 JSON 字符串,泰国地区必填且银行卡号需9位数字以上。)
+
+[//]: # (例如：)
+
+[//]: # (:::)
+
+[//]: # ()
+[//]: # (```json{4,6})
+
+[//]: # ({"banc_code":"CPF", "bank_card_number":"123456789"，"holder_name":"BRAIN TECHNOLOGIES"})
+
+[//]: # (```)
 
 ### 代收下单
 
@@ -40,10 +53,13 @@ curl -X POST \
     "channel_id": "1074",
     "out_trade_no": "20230101000000",
     "notify_url": "https://your-domain.com/webhook",
-    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082",
-    "extra": "banc_code":"CPF", "holder_name":"123456789"，"bank_card_number":"BRAIN TECHNOLOGIES"
+    "signature": "ba5df26991273c746960ce5238c6479e8ca6116381ac46cea96ffd30fafed082"
   }'
 ```
+
+
+
+[//]: # (    "extra": "banc_code":"CPF", "holder_name":"123456789","bank_card_number":"BRAIN TECHNOLOGIES")
 
 ```json{4,6}
 {
